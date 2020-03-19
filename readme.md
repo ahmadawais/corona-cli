@@ -1,6 +1,6 @@
 <h4 align="center">
     <a href="https://github.com/ahmadawais/corona-cli">
-        <img src="./.github/logo.jpg" alt="corona-cli" width="750px" />
+        <img src="./.github/logo.jpg" alt="corona-cli" />
     </a>
     <br>
 
