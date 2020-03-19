@@ -16,7 +16,8 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 # corona-cli
 
 - 🚀 Get worldwide Coronavirus disease (COVID-19) reporting
-- 🤯 Daily reporting of your country's COVID-19 data
+- 🤯 Active daily reporting of your country's COVID-19 statistics
+- 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million
 
 <br>
 
@@ -25,11 +26,11 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 ## Install
 
 ```sh
-# Run directly with npx.
-npx corona-cli
-
-# OR Install globally.
+# Install globally (recommended).
 npm install -g corona-cli
+
+# Or run directly with npx (installs CLI on every run).
+npx corona-cli
 ```
 
 <br>
@@ -40,25 +41,25 @@ npm install -g corona-cli
 
 ```sh
 # Display data for all countries.
-npx corona-cli
+corona
 
 # Display data for all countries in single color.
-npx corona-cli --xcolor
+corona --xcolor
 
-# Display data for all countries in single color.
-npx corona-cli -x
+# Alias: Display data for all countries in single color.
+corona -x
 
 # Display data for given country.
-npx corona-cli country
+corona <countryName>
 
 # Display data for given country i.e. China.
-npx corona-cli china
+corona china
 
 # Display data for given country i.e. USA.
-npx corona-cli usa
+corona usa
 
-# Display data for given country.
-npx corona-cli --help
+# Display the help data.
+corona --help
 ```
 
 <br>

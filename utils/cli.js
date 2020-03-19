@@ -8,7 +8,7 @@ const dim = chalk.dim;
 module.exports = meow(
 	`
 	Usage
-	  ${green(`npx corona-cli`)} ${cyan(`<command>`)} ${yellow(`[--option]`)}
+	  ${green(`corona`)} ${cyan(`<command>`)} ${yellow(`[--option]`)}
 
 	Commands
 	  ${cyan(`country-name`)}         Get data for a given country
@@ -17,11 +17,11 @@ module.exports = meow(
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 
 	Examples
-	  ${green(`npx corona-cli`)} ${cyan(`china`)}
-	  ${green(`npx corona-cli`)} ${yellow(`-x`)}
+	  ${green(`corona`)} ${cyan(`china`)}
+	  ${green(`corona`)} ${yellow(`-x`)}
 
 	❯ You can also run command + option at once:
-	  ${green(`npx corona-cli`)} ${cyan(`china`)} ${yellow(`-x`)}
+	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)}
 `,
 	{
 		booleanDefault: undefined,
