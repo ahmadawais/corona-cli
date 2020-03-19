@@ -7,18 +7,19 @@ process.on('unhandledRejection', err => {
 	handleError(`UNHANDLED ERROR`, err);
 });
 
-const Table = require('cli-table3');
-const welcome = require('cli-welcome');
-const handleError = require('cli-handle-error');
-const pkgJSON = require('./package.json');
-const axios = require('axios');
 const chalk = require('chalk');
+const axios = require('axios');
+const Table = require('cli-table3');
+const comma = require('comma-number');
+const cli = require('./utils/cli.js');
+const welcome = require('cli-welcome');
+const pkgJSON = require('./package.json');
+const handleError = require('cli-handle-error');
+const updateNotifier = require('update-notifier');
+const xcolor = cli.flags.xcolor;
 const green = chalk.green;
 const red = chalk.red;
 const dim = chalk.dim;
-const cli = require('./utils/cli.js');
-const xcolor = cli.flags.xcolor;
-const comma = require('comma-number');
 
 (async () => {
 	welcome(
@@ -34,6 +35,10 @@ const comma = require('comma-number');
 			version: `v${pkgJSON.version}`
 		}
 	);
+	updateNotifier({
+		pkg: pkgJSON,
+		shouldNotifyInNpmScript: true
+	}).notify({ isGlobal: true });
 
 	// Init.
 	const [country] = cli.input;
