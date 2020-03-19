@@ -3,7 +3,7 @@
 [![DOWNLOADS](https://img.shields.io/npm/dt/corona-cli?label=DOWNLOADS%20%20❯&colorA=6A788D&colorB=6A788D&style=flat)](https://www.npmjs.com/package/corona-cli) [![Learn VSCode](https://img.shields.io/badge/-VSCODE.pro%20%E2%86%92-gray.svg?colorB=6A788D&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
 [![Follow @MrAhmadAwais on Twitter](https://img.shields.io/badge/FOLLOW%20@MRAHMADAWAIS%20%E2%86%92-gray.svg?colorA=6A788D&colorB=6A788D&style=flat)](https://twitter.com/mrahmadawais/)
 
-> Track the Coronavirus disease (COVID-19).
+> Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 
 <br>
 
@@ -12,11 +12,11 @@
 ## Install
 
 ```sh
-npm install -g corona-cli
-
-# OR run directly with npx.
-
+# Run directly with npx.
 npx corona-cli
+
+# OR Install globally.
+npm install -g corona-cli
 ```
 
 <br>
