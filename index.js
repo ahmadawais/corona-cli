@@ -102,4 +102,10 @@ const dim = chalk.dim;
 		});
 		console.log(table.toString());
 	}
+
+	console.log(
+		dim(
+			`\nFound a bug? Report here ↓\nhttps://github.com/ahmadawais/corona-cli/issues\nFollow on twitter → https://twitter.com/MrAhmadAwais\n`
+		)
+	);
 })();

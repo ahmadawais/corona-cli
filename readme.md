@@ -12,7 +12,11 @@
 ## Install
 
 ```sh
-npm install corona-cli
+npm install -g corona-cli
+
+# OR run directly with npx.
+
+npx corona-cli
 ```
 
 <br>
@@ -21,8 +25,16 @@ npm install corona-cli
 
 ## Usage
 
-```js
-const coronaCli = require('corona-cli');
+```sh
+npx corona-cli # Display data for all countries.
+npx corona-cli --xcolor # Display data for all countries in single color.
+npx corona-cli -x # Display data for all countries in single color.
+
+npx corona-cli country # Display data for given country.
+npx corona-cli china # Display data for given country i.e. China.
+npx corona-cli usa # Display data for given country i.e. USA.
+
+npx corona-cli --help # Display data for given country.
 ```
 
 <br>
@@ -49,6 +61,7 @@ const coronaCli = require('corona-cli');
 
 - MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/)
 - [Code of Conduct](code-of-conduct.md)
+- NovelCOVID API Data from [Worldmeter](https://www.worldometers.info/coronavirus/)
 
 <br>
 
