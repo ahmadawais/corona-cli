@@ -1,0 +1,24 @@
+{
+	"name": "corona-cli",
+	"version": "0.0.1",
+	"description": "Track the Coronavirus disease (COVID-19).",
+	"license": "MIT",
+	"repository": "ahmadawais/corona-cli",
+	"author": {
+		"name": "Ahmad Awais",
+		"email": "me@AhmadAwais.com",
+		"url": "https://twitter.com/MrAhmadAwais"
+	},
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"corona-cli",
+		"Ahmad Awais",
+		"ahmadawais"
+	],
+	"scripts": {
+		"test": "node test.js"
+	}
+}
