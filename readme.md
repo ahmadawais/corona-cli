@@ -26,15 +26,26 @@ npm install -g corona-cli
 ## Usage
 
 ```sh
-npx corona-cli # Display data for all countries.
-npx corona-cli --xcolor # Display data for all countries in single color.
-npx corona-cli -x # Display data for all countries in single color.
+# Display data for all countries.
+npx corona-cli
 
-npx corona-cli country # Display data for given country.
-npx corona-cli china # Display data for given country i.e. China.
-npx corona-cli usa # Display data for given country i.e. USA.
+# Display data for all countries in single color.
+npx corona-cli --xcolor
 
-npx corona-cli --help # Display data for given country.
+# Display data for all countries in single color.
+npx corona-cli -x
+
+# Display data for given country.
+npx corona-cli country
+
+# Display data for given country i.e. China.
+npx corona-cli china
+
+# Display data for given country i.e. USA.
+npx corona-cli usa
+
+# Display data for given country.
+npx corona-cli --help
 ```
 
 <br>
