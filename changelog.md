@@ -29,6 +29,22 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.8.0](https://github.com/ahmadawais/corona-cli/compare/1.7.0...1.8.0)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Wrong name [`52a37f8`](https://github.com/ahmadawais/corona-cli/commit/52a37f8a2e392b7de09d9ea04ff6cda54cc0f937) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 lingo [`f3d2327`](https://github.com/ahmadawais/corona-cli/commit/f3d2327fb664b760e7e978641d30eeae94b0dabe) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.7.0](https://github.com/ahmadawais/corona-cli/compare/1.6.0...1.7.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -37,6 +53,7 @@ I have released a video course to help you become a better developer — <a href
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+> 📖 Changelog update [`eec9fb4`](https://github.com/ahmadawais/corona-cli/commit/eec9fb4a2d4c6b4a63fa1cff0961ba25f8c41e34) <br>
 > 📖 Space [`5680241`](https://github.com/ahmadawais/corona-cli/commit/5680241f60fe3e30dbac678366ca820c9f109b6b) <br>
 > 📖 Color [`0a8d5ae`](https://github.com/ahmadawais/corona-cli/commit/0a8d5aea809cb58eef5578589ec0277c8ffd21b8) <br>
 > 📖 Logo [`cb7dfc8`](https://github.com/ahmadawais/corona-cli/commit/cb7dfc858f0bc636b5b57a7dbd6d487a67a15cea) <br>
