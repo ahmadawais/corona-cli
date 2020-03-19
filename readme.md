@@ -33,6 +33,8 @@ npm install -g corona-cli
 npx corona-cli
 ```
 
+[![📟](./.github/install.gif)](./../../)
+
 <br>
 
 [![⚙️](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/usage.png)](./../../)
@@ -48,7 +50,11 @@ corona --xcolor
 
 # Alias: Display data for all countries in single color.
 corona -x
+```
 
+[![📟](./.github/corona.gif)](./../../)
+
+```sh
 # Display data for given country.
 corona <countryName>
 
@@ -61,6 +67,8 @@ corona usa
 # Display the help data.
 corona --help
 ```
+
+[![📟](./.github/country.gif)](./../../)
 
 <br>
 
