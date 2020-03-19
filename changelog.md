@@ -29,6 +29,24 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.7.0](https://github.com/ahmadawais/corona-cli/compare/1.6.0...1.7.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Loading [`1dc84c6`](https://github.com/ahmadawais/corona-cli/commit/1dc84c6f544781bcb385e71164bcfb1e4e751eb8) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Space [`5680241`](https://github.com/ahmadawais/corona-cli/commit/5680241f60fe3e30dbac678366ca820c9f109b6b) <br>
+> 📖 Color [`0a8d5ae`](https://github.com/ahmadawais/corona-cli/commit/0a8d5aea809cb58eef5578589ec0277c8ffd21b8) <br>
+> 📖 Logo [`cb7dfc8`](https://github.com/ahmadawais/corona-cli/commit/cb7dfc858f0bc636b5b57a7dbd6d487a67a15cea) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.6.0](https://github.com/ahmadawais/corona-cli/compare/1.5.0...1.6.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -38,6 +56,7 @@ I have released a video course to help you become a better developer — <a href
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
 > 📖 Space [`adfd1e3`](https://github.com/ahmadawais/corona-cli/commit/adfd1e37ae195b24cfb908cb1bcd3248c64a141d) <br>
+> 📖 Changelog update [`c6a3101`](https://github.com/ahmadawais/corona-cli/commit/c6a3101400eb3e716bfbe4b48cea3317335b5273) <br>
 
 <br>
 
