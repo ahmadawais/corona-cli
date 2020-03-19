@@ -14,6 +14,7 @@ const comma = require('comma-number');
 const cli = require('./utils/cli.js');
 const welcome = require('cli-welcome');
 const pkgJSON = require('./package.json');
+const logSymbols = require('log-symbols');
 const handleError = require('cli-handle-error');
 const updateNotifier = require('update-notifier');
 const xcolor = cli.flags.xcolor;
@@ -81,6 +82,10 @@ const dim = chalk.dim;
 
 	if (country) {
 		const api = await axios.get(`https://corona.lmao.ninja/countries/${country}`);
+		if (api.data === 'Country not found') {
+			console.log(`${red(`${logSymbols.error} Nops. A country named "${country}" does not exist…`)}\n`);
+			process.exit(0);
+		}
 		let data = Object.values(api.data);
 		data = data.map(d => comma(d));
 		table.push(data);
