@@ -29,11 +29,27 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.4.0](https://github.com/ahmadawais/corona-cli/compare/1.3.0...1.4.0)
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 CLI Commands [`b352868`](https://github.com/ahmadawais/corona-cli/commit/b352868a760ee574778917dfa6c98807d86ee66b) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.3.0](https://github.com/ahmadawais/corona-cli/compare/1.2.0...1.3.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
 > 📦 Country name check [`b50f010`](https://github.com/ahmadawais/corona-cli/commit/b50f010643048f9a12fcf2666df20dad99713095) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog update [`70a93c9`](https://github.com/ahmadawais/corona-cli/commit/70a93c9970042f3944e26e5becdb1a2ed9d75412) <br>
 
 <br>
 
