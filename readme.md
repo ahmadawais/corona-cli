@@ -85,7 +85,7 @@ npx corona-cli --help
 
 - MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/)
 - [Code of Conduct](code-of-conduct.md)
-- NovelCOVID API Data from [Worldmeter](https://www.worldometers.info/coronavirus/)
+- NovelCOVID API & WorldMeter
 
 <br>
 
