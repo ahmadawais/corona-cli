@@ -29,11 +29,31 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.6.0](https://github.com/ahmadawais/corona-cli/compare/1.5.0...1.6.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Logo [`30a47bb`](https://github.com/ahmadawais/corona-cli/commit/30a47bbca5203573ae3c9e41d9bde6421d618637) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Space [`adfd1e3`](https://github.com/ahmadawais/corona-cli/commit/adfd1e37ae195b24cfb908cb1bcd3248c64a141d) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.5.0](https://github.com/ahmadawais/corona-cli/compare/1.4.0...1.5.0)
 
 ![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
 
 > 👌 Infra + messaging [`5e6fbac`](https://github.com/ahmadawais/corona-cli/commit/5e6fbac1334a41ca233e7f89359c63e0a41c687e) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog update [`142cf11`](https://github.com/ahmadawais/corona-cli/commit/142cf1129615f7e52fc09516c2e35547ec3dbf66) <br>
 
 <br>
 
