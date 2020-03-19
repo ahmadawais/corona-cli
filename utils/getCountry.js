@@ -4,7 +4,7 @@ const logSymbols = require('log-symbols');
 const comma = require('comma-number');
 const red = chalk.red;
 
-module.exports = async (table, country) => {
+module.exports = async (spinner, table, country) => {
 	if (country) {
 		const api = await axios.get(`https://corona.lmao.ninja/countries/${country}`);
 		if (api.data === 'Country not found') {
@@ -14,6 +14,7 @@ module.exports = async (table, country) => {
 		let data = Object.values(api.data);
 		data = data.map(d => comma(d));
 		table.push(data);
+		spinner.stopAndPersist();
 		console.log(table.toString());
 	}
 };

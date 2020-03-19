@@ -7,6 +7,8 @@ process.on('unhandledRejection', err => {
 	handleError(`UNHANDLED ERROR`, err);
 });
 
+const ora = require('ora');
+const spinner = ora({ text: '' });
 const Table = require('cli-table3');
 const cli = require('./utils/cli.js');
 const init = require('./utils/init.js');
@@ -28,9 +30,10 @@ const xcolor = cli.flags.xcolor;
 	const table = new Table({ head, style });
 
 	// Display data.
+	spinner.start();
 	await getWorldwide(table);
-	await getCountry(table, country);
-	await getAll(table, country);
+	await getCountry(spinner, table, country);
+	await getAll(spinner, table, country);
 
 	theEnd();
 })();
