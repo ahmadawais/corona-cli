@@ -86,7 +86,9 @@ corona --help
 
 - MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/)
 - [Code of Conduct](code-of-conduct.md)
-- NovelCOVID API & WorldMeter
+- SOURCES: , and all of the following:
+
+###  Sources
 
 <ol>
     <li id="ref-1">
@@ -239,6 +241,9 @@ corona --help
             Wuhan, China</a
         >
         - Wang et. al, JAMA, Feb. 7, 2020
+    </li>
+	<li id="ref-26">
+        NovelCOVID API based on top of <a href="https://www.worldometers.info/coronavirus/">WorldMeter</a>
     </li>
 </ol>
 
