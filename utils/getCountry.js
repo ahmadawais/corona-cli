@@ -8,6 +8,7 @@ module.exports = async (spinner, table, country) => {
 	if (country) {
 		const api = await axios.get(`https://corona.lmao.ninja/countries/${country}`);
 		if (api.data === 'Country not found') {
+			spinner.stopAndPersist();
 			console.log(`${red(`${logSymbols.error} Nops. A country named "${country}" does not exist…`)}\n`);
 			process.exit(0);
 		}
