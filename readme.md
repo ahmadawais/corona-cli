@@ -65,6 +65,7 @@ corona china
 corona usa
 
 # Display the help data.
+corona help
 corona --help
 ```
 

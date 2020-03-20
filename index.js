@@ -25,6 +25,9 @@ const sortBy = cli.flags.sort;
 	// Init.
 	init();
 	const [country] = cli.input;
+	if (country === 'help') {
+		cli.showHelp(0);
+	}
 
 	// Table
 	const head = xcolor ? single : colored;

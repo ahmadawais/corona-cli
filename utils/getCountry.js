@@ -7,11 +7,6 @@ const green = chalk.green;
 
 module.exports = async (spinner, table, country) => {
 	if (country) {
-		if (country === 'help') {
-			spinner.stopAndPersist();
-			console.log(`${red(`${logSymbols.error} Nops. For help run "${green(`corona --help`)}" command`)}\n`);
-			process.exit(1);
-		}
 		const api = await axios.get(`https://corona.lmao.ninja/countries/${country}`);
 		if (api.data === 'Country not found') {
 			spinner.stopAndPersist();
