@@ -29,6 +29,24 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [2.1.0](https://github.com/ahmadawais/corona-cli/compare/2.0.0...2.1.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Add an option to sort data (#3) via @smitp [`3e27c86`](https://github.com/ahmadawais/corona-cli/commit/3e27c86d9803129f09461e23c00704fe3f205530) <br>
+> 📦 Sort keys [`c113059`](https://github.com/ahmadawais/corona-cli/commit/c113059b599c83e70597f36aa42b4c60b19faf8e) <br>
+> 📦 Help [`84d6c6c`](https://github.com/ahmadawais/corona-cli/commit/84d6c6cfd8d6c194c657b18132a0a0ceac0cc0f6) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Help command [`4ede7d1`](https://github.com/ahmadawais/corona-cli/commit/4ede7d1776f31075b6059001fb4e238658ab42da) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [2.0.0](https://github.com/ahmadawais/corona-cli/compare/1.9.0...2.0.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -38,6 +56,7 @@ I have released a video course to help you become a better developer — <a href
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
 > 📖 Sources [`70364c1`](https://github.com/ahmadawais/corona-cli/commit/70364c1b5cc37c65e569557b449b9be63bd20550) <br>
+> 📖 Changelog update [`f302309`](https://github.com/ahmadawais/corona-cli/commit/f302309590523f842b2f3baae0a665fdf10b8eec) <br>
 > 📖 Sources [`1d9fede`](https://github.com/ahmadawais/corona-cli/commit/1d9fede5a02e74ba00607d97e19e18e26789e0b9) <br>
 
 <br>
