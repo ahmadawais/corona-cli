@@ -23,7 +23,7 @@ module.exports = meow(
 	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}
 
 	❯ You can also run command + option at once:
-	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)}
+	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)} ${yellow(`-s cases`)}
 `,
 	{
 		booleanDefault: undefined,
