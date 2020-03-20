@@ -63,13 +63,34 @@ corona china
 
 # Display data for given country i.e. USA.
 corona usa
+```
 
+[![📟](./.github/country.gif)](./../../)
+
+```sh
+# Sort data by type
+corona --sort country
+corona --s cases
+
+# All sorting parameters.
+corona -s country
+corona -s cases
+corona -s cases-today
+corona -s deaths
+corona -s deaths-today
+corona -s recovered
+corona -s active
+corona -s critical
+corona -s per-million
+```
+
+[![📟](./.github/sort.gif)](./../../)
+
+```sh
 # Display the help data.
 corona help
 corona --help
 ```
-
-[![📟](./.github/country.gif)](./../../)
 
 <br>
 
