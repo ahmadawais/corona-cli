@@ -29,12 +29,13 @@
 	"dependencies": {
 		"axios": "^0.19.2",
 		"chalk": "^3.0.0",
-		"cli-handle-error": "^2.0.0",
+		"cli-handle-error": "^3.0.0",
 		"cli-table3": "^0.5.1",
 		"cli-welcome": "^1.4.0",
 		"comma-number": "^2.0.1",
 		"country-emoji": "^1.5.0",
-		"meow": "^6.0.1",
+		"meow": "^6.1.0",
+		"ora": "^4.0.3",
 		"update-notifier": "^4.1.0"
 	}
 }
