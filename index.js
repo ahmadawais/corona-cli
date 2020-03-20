@@ -19,6 +19,7 @@ const getCountry = require('./utils/getCountry.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const { single, colored, style } = require('./utils/table.js');
 const xcolor = cli.flags.xcolor;
+const sortBy = cli.flags.sort;
 
 (async () => {
 	// Init.
@@ -33,7 +34,7 @@ const xcolor = cli.flags.xcolor;
 	spinner.start();
 	await getWorldwide(table);
 	await getCountry(spinner, table, country);
-	await getAll(spinner, table, country);
+	await getAll(spinner, table, country, {sort: sortBy});
 
 	theEnd();
 })();

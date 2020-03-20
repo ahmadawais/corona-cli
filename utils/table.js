@@ -26,5 +26,27 @@ module.exports = {
 		`${red(`Critical`)}`,
 		`Per Million`
 	],
+	sortKeys: [
+		`country`,
+		`cases`,
+		`cases-today`,
+		`deaths`,
+		`deaths-today`,
+		`recovered`,
+		`active`,
+		`critical`,
+		`per-million`
+	],
+	sortOrders: [
+		1,
+		-1,
+		-1,
+		-1,
+		-1,
+		-1,
+		-1,
+		-1,
+		-1
+	],
 	style: { head: ['cyan'] }
 };
