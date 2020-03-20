@@ -1,14 +1,23 @@
 const axios = require('axios');
 const comma = require('comma-number');
+const sortKeys = require('./table.js').sortKeys;
+const sortOrders = require('./table.js').sortOrders;
 
-module.exports = async (spinner, table, country) => {
+module.exports = async (spinner, table, country, options) => {
 	if (!country) {
 		const api = await axios.get(`https://corona.lmao.ninja/countries`);
-		const all = api.data;
+		let all = api.data.map(one => Object.values(one));
+
+		const sortIndex = sortKeys.indexOf(options.sort);
+
+		if (sortIndex != -1) {
+			const dir = sortOrders[sortIndex];
+			all = all.sort((a, b) => a[sortIndex] > b[sortIndex] ? dir : -dir );
+		}
+
 		all.map(one => {
-			let data = Object.values(one);
-			data = data.map(d => comma(d));
-			return table.push(data);
+			one = one.map(d => comma(d));
+			return table.push(one);
 		});
 		spinner.stopAndPersist();
 		console.log(table.toString());

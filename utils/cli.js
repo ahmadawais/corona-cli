@@ -3,7 +3,6 @@ const chalk = require('chalk');
 const green = chalk.green;
 const yellow = chalk.yellow;
 const cyan = chalk.cyan;
-const dim = chalk.dim;
 
 module.exports = meow(
 	`
@@ -15,10 +14,12 @@ module.exports = meow(
 
 	Options
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
+	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
 	  ${green(`corona`)} ${yellow(`-x`)}
+	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
 
 	❯ You can also run command + option at once:
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)}
@@ -32,6 +33,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'x'
+			},
+			sort: {
+				type: 'string',
+				default: 'cases-today',
+				alias: 's'
 			}
 		}
 	}
