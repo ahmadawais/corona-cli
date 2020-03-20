@@ -34,7 +34,7 @@ const sortBy = cli.flags.sort;
 	spinner.start();
 	await getWorldwide(table);
 	await getCountry(spinner, table, country);
-	await getAll(spinner, table, country, {sort: sortBy});
+	await getAll(spinner, table, country, { sort: sortBy });
 
 	theEnd();
 })();

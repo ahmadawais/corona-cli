@@ -1,4 +1,5 @@
 const axios = require('axios');
+const chalk = require('chalk');
 const comma = require('comma-number');
 const sortKeys = require('./table.js').sortKeys;
 const sortOrders = require('./table.js').sortOrders;
@@ -12,7 +13,7 @@ module.exports = async (spinner, table, country, options) => {
 
 		if (sortIndex != -1) {
 			const dir = sortOrders[sortIndex];
-			all = all.sort((a, b) => a[sortIndex] > b[sortIndex] ? dir : -dir );
+			all = all.sort((a, b) => (a[sortIndex] > b[sortIndex] ? dir : -dir));
 		}
 
 		all.map(one => {
@@ -20,6 +21,7 @@ module.exports = async (spinner, table, country, options) => {
 			return table.push(one);
 		});
 		spinner.stopAndPersist();
+		spinner.info(`${chalk.cyan(`Sorted by:`)} ${options.sort}`);
 		console.log(table.toString());
 	}
 };
