@@ -36,7 +36,7 @@ module.exports = meow(
 			},
 			sort: {
 				type: 'string',
-				default: '',
+				default: 'cases-today',
 				alias: 's'
 			}
 		}
