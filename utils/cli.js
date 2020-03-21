@@ -11,13 +11,15 @@ module.exports = meow(
 
 	Commands
 	  ${cyan(`country-name`)}         Get data for a given country
+	  ${cyan(`states`)}               Get data for all USA states
 
 	Options
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
 
 	Examples
-	  ${green(`corona`)} ${cyan(`china`)}
+		${green(`corona`)} ${cyan(`china`)}
+	  ${green(`corona`)} ${cyan(`states`)}
 	  ${green(`corona`)} ${yellow(`-x`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
 	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}
