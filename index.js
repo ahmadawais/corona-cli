@@ -16,10 +16,12 @@ const getAll = require('./utils/getAll.js');
 const theEnd = require('./utils/theEnd.js');
 const handleError = require('cli-handle-error');
 const getCountry = require('./utils/getCountry.js');
+const getStates = require('./utils/getStates.js');
 const getWorldwide = require('./utils/getWorldwide.js');
-const { single, colored, style } = require('./utils/table.js');
+const { single, colored, singleStates, coloredStates, style } = require('./utils/table.js');
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
+let isState = false;
 
 (async () => {
 	// Init.
@@ -28,16 +30,28 @@ const sortBy = cli.flags.sort;
 	if (country === 'help') {
 		cli.showHelp(0);
 	}
+	if (country === 'states') {
+		isState = true;
+	}
 
 	// Table
-	const head = xcolor ? single : colored;
+	let head;
+	if (xcolor) {
+		head = isState ? singleStates : single;
+	} else {
+		head = isState ? coloredStates : colored;
+	}
 	const table = new Table({ head, style });
 
 	// Display data.
 	spinner.start();
-	await getWorldwide(table);
-	await getCountry(spinner, table, country);
+	if (isState) {
+		await getStates(spinner, table);
+	} else {
+		await getWorldwide(table);
+		await getCountry(spinner, table, country);
+	}
 	await getAll(spinner, table, country, { sort: sortBy });
 
-	theEnd();
+	theEnd(isState);
 })();

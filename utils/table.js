@@ -37,6 +37,24 @@ module.exports = {
 		`critical`,
 		`per-million`
 	],
+	singleStates: [
+		`State`,
+		`Cases`,
+		`Cases ${dim(`(today)`)}`,
+		`Deaths`,
+		`Deaths ${dim(`(today)`)}`,
+		`Recovered`,
+		`Active`
+	],
+	coloredStates: [
+		`State`,
+		`Cases`,
+		`Cases ${dim(`(today)`)}`,
+		`${red(`Deaths`)}`,
+		`${red(`Deaths (today)`)}`,
+		`${green(`Recovered`)}`,
+		`Active`
+	],
 	sortOrders: [
 		1,
 		-1,
