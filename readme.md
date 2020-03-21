@@ -3,6 +3,7 @@
         <img src="./.github/logo.jpg" alt="corona-cli" />
     </a>
     <br>
+    <br>
 
 Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 
