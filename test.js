@@ -1,3 +1,1 @@
-const coronaCli = require('./index.js');
-
-coronaCli();
+require('./index.js');
