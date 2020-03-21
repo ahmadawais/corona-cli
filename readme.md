@@ -4,7 +4,7 @@
     </a>
     <br>
 
-[![DOWNLOADS](https://img.shields.io/npm/dt/corona-cli?label=DOWNLOADS%20%20❯&colorA=007C92&colorB=007C92&style=flat)](https://www.npmjs.com/package/corona-cli) [![Learn VSCode](https://img.shields.io/badge/-VSCODE.pro%20%E2%86%92-gray.svg?colorB=007C92&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
+[![Learn VSCode](https://img.shields.io/badge/-VSCODE.pro%20%E2%86%92-gray.svg?colorB=007C92&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
 [![Follow @MrAhmadAwais on Twitter](https://img.shields.io/badge/FOLLOW%20@MRAHMADAWAIS%20%E2%86%92-gray.svg?colorA=007C92&colorB=007C92&style=flat)](https://twitter.com/mrahmadawais/)
 
 Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
