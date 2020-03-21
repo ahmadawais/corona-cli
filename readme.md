@@ -4,10 +4,10 @@
     </a>
     <br>
 
+Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
+
 [![Learn VSCode](https://img.shields.io/badge/-VSCODE.pro%20%E2%86%92-gray.svg?colorB=007C92&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
 [![Follow @MrAhmadAwais on Twitter](https://img.shields.io/badge/FOLLOW%20@MRAHMADAWAIS%20%E2%86%92-gray.svg?colorA=007C92&colorB=007C92&style=flat)](https://twitter.com/mrahmadawais/)
-
-Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 
 </h4>
 
