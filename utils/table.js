@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+const chalk = require("chalk");
 const green = chalk.green;
 const red = chalk.red;
 const dim = chalk.dim;
@@ -55,16 +55,16 @@ module.exports = {
 		`${green(`Recovered`)}`,
 		`Active`
 	],
-	sortOrders: [
-		1,
-		-1,
-		-1,
-		-1,
-		-1,
-		-1,
-		-1,
-		-1,
-		-1
+	sortStateKeys: [
+		`state`,
+		`cases`,
+		`cases-today`,
+		`deaths`,
+		`deaths-today`,
+		`recovered`,
+		`active`
 	],
-	style: { head: ['cyan'] }
+	sortOrders: [1, -1, -1, -1, -1, -1, -1, -1, -1],
+	sortStateOrders: [1, -1, -1, -1, -1, -1, -1],
+	style: { head: ["cyan"] }
 };

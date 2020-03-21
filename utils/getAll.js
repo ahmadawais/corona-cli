@@ -1,11 +1,10 @@
-const axios = require('axios');
-const chalk = require('chalk');
-const comma = require('comma-number');
-const sortKeys = require('./table.js').sortKeys;
-const sortOrders = require('./table.js').sortOrders;
+const axios = require("axios");
+const chalk = require("chalk");
+const comma = require("comma-number");
+const { sortKeys, sortOrders } = require("./table.js");
 
-module.exports = async (spinner, table, country, options) => {
-	if (!country) {
+module.exports = async (spinner, table, states, country, options) => {
+	if (!country && !states) {
 		const api = await axios.get(`https://corona.lmao.ninja/countries`);
 		let all = api.data.map(one => Object.values(one));
 
