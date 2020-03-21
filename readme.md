@@ -42,6 +42,8 @@ npx corona-cli
 
 ## Usage
 
+### All Countries
+
 ```sh
 # Display data for all countries.
 corona
@@ -55,6 +57,8 @@ corona -x
 
 [![📟](./.github/corona.gif)](./../../)
 
+### Single Country
+
 ```sh
 # Display data for given country.
 corona <countryName>
@@ -67,6 +71,23 @@ corona usa
 ```
 
 [![📟](./.github/country.gif)](./../../)
+
+### US States Data
+
+```sh
+# Display data for all US states.
+corona states
+
+# Display states data sorted by active cases.
+corona states --sort active
+
+# Display states data sorted by Cases today.
+corona states -s cases-today
+```
+
+[![📟](./.github/states.gif)](./../../)
+
+### Sort Data
 
 ```sh
 # Sort data by type
