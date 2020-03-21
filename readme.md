@@ -279,6 +279,17 @@ corona --help
 
 <br>
 
+## Related Projects
+
+* <https://github.com/warengonzaga/covid19-tracker-cli>
+* <https://github.com/sagarkarira/coronavirus-tracker-cli>
+
+## Resources
+
+* <https://github.com/soroushchehresa/awesome-coronavirus>
+
+<br>
+
 [![🙌](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/connect.png)](./../../)
 
 ## Connect
