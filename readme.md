@@ -75,7 +75,7 @@ corona usa
 ### US States Data
 
 ```sh
-# Display data for all US states.
+# Display data for all the US states.
 corona states
 
 # Display states data sorted by active cases.
@@ -107,6 +107,8 @@ corona -s per-million
 ```
 
 [![📟](./.github/sort.gif)](./../../)
+
+#### CLI Help
 
 ```sh
 # Display the help data.
@@ -140,7 +142,7 @@ corona --help
 - [Code of Conduct](code-of-conduct.md)
 - SOURCES: , and all of the following:
 
-###  Sources
+### Sources
 
 <ol>
     <li id="ref-1">
