@@ -38,7 +38,7 @@ module.exports = {
 		`per-million`
 	],
 	singleStates: [
-		`Country`,
+		`State`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
 		`Deaths`,
