@@ -11,6 +11,7 @@ module.exports = {
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
 		`Recovered`,
+		`Recovery Rate`,
 		`Active`,
 		`Critical`,
 		`Per Million`
@@ -22,6 +23,7 @@ module.exports = {
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
 		`${green(`Recovered`)}`,
+		`${green(`Recovery Rate`)}`,
 		`Active`,
 		`${red(`Critical`)}`,
 		`Per Million`
@@ -33,6 +35,7 @@ module.exports = {
 		`deaths`,
 		`deaths-today`,
 		`recovered`,
+		`recovery-rate`,
 		`active`,
 		`critical`,
 		`per-million`
@@ -44,6 +47,7 @@ module.exports = {
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
 		`Recovered`,
+		`Recovery Rate`,
 		`Active`
 	],
 	coloredStates: [
@@ -53,6 +57,7 @@ module.exports = {
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
 		`${green(`Recovered`)}`,
+		`${green(`Recovery Rate`)}`,
 		`Active`
 	],
 	sortStateKeys: [
@@ -62,9 +67,10 @@ module.exports = {
 		`deaths`,
 		`deaths-today`,
 		`recovered`,
+		`recovery-rate`,
 		`active`
 	],
-	sortOrders: [1, -1, -1, -1, -1, -1, -1, -1, -1],
-	sortStateOrders: [1, -1, -1, -1, -1, -1, -1],
+	sortOrders: [1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+	sortStateOrders: [1, -1, -1, -1, -1, -1, -1, -1],
 	style: { head: ["cyan"] }
 };

@@ -1,5 +1,6 @@
 const axios = require("axios");
 const comma = require("comma-number");
+const { calculateWorldwideRecoveryRate } = require("./calcRecoveryRate");
 
 module.exports = async (table, states) => {
 	if (!states) {
@@ -13,6 +14,7 @@ module.exports = async (table, states) => {
 			data[1],
 			`—`,
 			data[2],
+			calculateWorldwideRecoveryRate(data[1], data[2]),
 			`—`,
 			`—`,
 			`—`

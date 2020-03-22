@@ -2,11 +2,13 @@ const axios = require("axios");
 const chalk = require("chalk");
 const comma = require("comma-number");
 const { sortKeys, sortOrders } = require("./table.js");
+const { calculateMultipleRecoveryRate } = require("./calcRecoveryRate");
 
 module.exports = async (spinner, table, states, country, options) => {
 	if (!country && !states) {
 		const api = await axios.get(`https://corona.lmao.ninja/countries`);
 		let all = api.data.map(one => Object.values(one));
+		all = calculateMultipleRecoveryRate(all);
 
 		const sortIndex = sortKeys.indexOf(options.sort);
 
