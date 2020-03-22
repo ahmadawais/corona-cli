@@ -17,7 +17,9 @@ function calcRecoveryRate(numDeaths, numRecoveries) {
  * @return {Array} A spliced array almost as it was before but now with a string formatted recovery rate.
  */
 function spliceRecoveryRate(one) {
-    let oneRecovery = ((one[5] / (one[5] + one[3])) * 100);
+    const numRecoveries = one[5];
+    const numDeaths = one[3];
+    const oneRecovery = ((numRecoveries / (numRecoveries + numDeaths)) * 100);
     var oneRecoveryStr = oneRecovery.toFixed(1) + '%';
     if(isNaN(oneRecovery) || oneRecovery === 0){
         oneRecoveryStr = '—';
@@ -34,8 +36,8 @@ module.exports = {
      * @return {String} A parsed string percentage string of recoveries rounded to one decimal place.
      */
     calculateWorldwideRecoveryRate: function(deaths, recoveries) {
-        let numDeaths = parseInt(deaths.replace(/,/g,''));
-		let numRecoveries = parseInt(recoveries.replace(/,/g,''));
+        const numDeaths = parseInt(deaths.replace(/,/g,''));
+		const numRecoveries = parseInt(recoveries.replace(/,/g,''));
 		return calcRecoveryRate(numDeaths, numRecoveries);
     },
 
