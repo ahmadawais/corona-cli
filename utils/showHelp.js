@@ -1,5 +1,5 @@
-module.exports = async country => {
-	if (country === "help") {
+module.exports = async input => {
+	if (input === "help") {
 		await cli.showHelp(0);
 	}
 };
