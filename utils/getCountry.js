@@ -20,11 +20,9 @@ module.exports = async (spinner, table, states, country) => {
 			process.exit(0);
 		}
 		let dataPerCountry = Object.values(api.data);
-		dataPerCountry = [
-			dataPerCountry[0],
-			...dataPerCountry.slice(2, dataPerCountry.length)
-		];
-		dataPerCountry = dataPerCountry.map(stat => comma(stat));
+		dataPerCountry = dataPerCountry
+			.filter(stat => typeof stat !== "object")
+			.map(stat => comma(stat));
 		table.push([`—`, ...dataPerCountry]);
 		spinner.stopAndPersist();
 		console.log(table.toString());

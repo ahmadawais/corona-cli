@@ -18,8 +18,9 @@ module.exports = async (spinner, table, states, country, options) => {
 		}
 
 		allCountries.map((oneCountry, count) => {
-			oneCountry = [oneCountry[0], ...oneCountry.slice(2, oneCountry.length)];
-			oneCountry = oneCountry.map(stat => comma(stat));
+			oneCountry = oneCountry
+				.filter(stat => typeof stat !== "object")
+				.map(stat => comma(stat));
 			return table.push([count + 1, ...oneCountry]);
 		});
 		spinner.stopAndPersist();
