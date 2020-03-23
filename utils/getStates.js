@@ -6,18 +6,20 @@ const { sortStateKeys, sortStateOrders } = require("./table.js");
 module.exports = async (spinner, table, states, options) => {
 	if (states) {
 		const api = await axios.get(`https://corona.lmao.ninja/states`);
-		let all = api.data.map(one => Object.values(one));
+		let allStates = api.data.map(one => Object.values(one));
 
 		const sortIndex = sortStateKeys.indexOf(options.sort);
 
 		if (sortIndex != -1) {
 			const dir = sortStateOrders[sortIndex];
-			all = all.sort((a, b) => (a[sortIndex] > b[sortIndex] ? dir : -dir));
+			allStates = allStates.sort((a, b) =>
+				a[sortIndex] > b[sortIndex] ? dir : -dir
+			);
 		}
 
-		all.map(one => {
-			one = one.map(d => comma(d));
-			return table.push(one);
+		allStates.map((oneState, count) => {
+			oneState = oneState.map(d => comma(d));
+			return table.push([count + 1, ...oneState]);
 		});
 
 		spinner.stopAndPersist();

@@ -5,6 +5,7 @@ const dim = chalk.dim;
 
 module.exports = {
 	single: [
+		`#`,
 		`Country`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -16,6 +17,7 @@ module.exports = {
 		`Per Million`
 	],
 	colored: [
+		`#`,
 		`Country`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -28,6 +30,7 @@ module.exports = {
 	],
 	sortKeys: [
 		`country`,
+		`country-info`,
 		`cases`,
 		`cases-today`,
 		`deaths`,
@@ -38,6 +41,7 @@ module.exports = {
 		`per-million`
 	],
 	singleStates: [
+		`#`,
 		`State`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -47,6 +51,7 @@ module.exports = {
 		`Active`
 	],
 	coloredStates: [
+		`#`,
 		`State`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -64,7 +69,7 @@ module.exports = {
 		`recovered`,
 		`active`
 	],
-	sortOrders: [1, -1, -1, -1, -1, -1, -1, -1, -1],
+	sortOrders: [1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
 	sortStateOrders: [1, -1, -1, -1, -1, -1, -1],
 	style: { head: ["cyan"] }
 };
