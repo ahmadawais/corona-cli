@@ -21,7 +21,7 @@ module.exports = async (spinner, table, states, country) => {
 		}
 		let data = Object.values(api.data);
 		data = data.map(d => comma(d));
-		table.push(data);
+		table.push([`#`, ...data]);
 		spinner.stopAndPersist();
 		console.log(table.toString());
 	}

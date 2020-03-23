@@ -5,6 +5,7 @@ const dim = chalk.dim;
 
 module.exports = {
 	single: [
+		`#`,
 		`Country`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -16,6 +17,7 @@ module.exports = {
 		`Per Million`
 	],
 	colored: [
+		`#`,
 		`Country`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -38,6 +40,7 @@ module.exports = {
 		`per-million`
 	],
 	singleStates: [
+		`#`,
 		`State`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -47,6 +50,7 @@ module.exports = {
 		`Active`
 	],
 	coloredStates: [
+		`#`,
 		`State`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,

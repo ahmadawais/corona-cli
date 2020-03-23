@@ -15,9 +15,9 @@ module.exports = async (spinner, table, states, country, options) => {
 			all = all.sort((a, b) => (a[sortIndex] > b[sortIndex] ? dir : -dir));
 		}
 
-		all.map(one => {
+		all.map((one, i) => {
 			one = one.map(d => comma(d));
-			return table.push(one);
+			return table.push([i + 1, ...one]);
 		});
 		spinner.stopAndPersist();
 		spinner.info(`${chalk.cyan(`Sorted by:`)} ${options.sort}`);

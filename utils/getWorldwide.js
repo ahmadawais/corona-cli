@@ -7,6 +7,7 @@ module.exports = async (table, states) => {
 		let data = Object.values(all.data);
 		data = data.map(d => comma(d));
 		table.push([
+			`—`,
 			`Worldwide`,
 			data[0],
 			`—`,

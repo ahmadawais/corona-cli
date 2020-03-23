@@ -27,7 +27,10 @@
 		"test": "node test.js"
 	},
 	"dependencies": {
+		"asciichart": "^1.5.11",
 		"axios": "^0.19.2",
+		"blessed": "^0.1.81",
+		"blessed-contrib": "^4.8.19",
 		"chalk": "^3.0.0",
 		"cli-handle-error": "^3.0.0",
 		"cli-table3": "^0.5.1",
