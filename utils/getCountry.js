@@ -19,7 +19,9 @@ module.exports = async (spinner, table, states, country) => {
 			);
 			process.exit(0);
 		}
-		let data = Object.values(api.data);
+		// we don't need the countryInfo data so seperate that from the rest of data (restData)
+		const {countryInfo, ...restData} = api.data
+		let data = Object.values(restData);
 		data = data.map(d => comma(d));
 		table.push(data);
 		spinner.stopAndPersist();
