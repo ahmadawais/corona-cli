@@ -29,12 +29,28 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [3.1.0](https://github.com/ahmadawais/corona-cli/compare/3.0.0...3.1.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Perf filter [`8eb48fd`](https://github.com/ahmadawais/corona-cli/commit/8eb48fd410411a0b4123ee915dde307a9d29f79e) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [3.0.0](https://github.com/ahmadawais/corona-cli/compare/2.5.0...3.0.0)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Sort + API Outcome [`f35cf99`](https://github.com/ahmadawais/corona-cli/commit/f35cf993f6b629aa6bd9bfed076db5bc962e3e71) <br>
 > 🐛 Extraneous [`5e54736`](https://github.com/ahmadawais/corona-cli/commit/5e547362783a9950b852b5540d5bfa065aa7d332) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`4484d34`](https://github.com/ahmadawais/corona-cli/commit/4484d341ba79830500ab24da5e601ebc5213dc42) <br>
 
 <br>
 
