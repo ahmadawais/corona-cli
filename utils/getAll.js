@@ -6,7 +6,10 @@ const { sortKeys, sortOrders } = require("./table.js");
 module.exports = async (spinner, table, states, country, options) => {
 	if (!country && !states) {
 		const api = await axios.get(`https://corona.lmao.ninja/countries`);
-		let all = api.data.map(one => Object.values(one));
+		let all = api.data.map(one => {
+			const {countryInfo, ...rest } = one;
+			return Object.values(rest)
+		});
 
 		const sortIndex = sortKeys.indexOf(options.sort);
 
