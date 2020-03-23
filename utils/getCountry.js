@@ -20,6 +20,8 @@ module.exports = async (spinner, table, states, country) => {
 			process.exit(0);
 		}
 		let data = Object.values(api.data);
+		let flagIndex = 1;
+		data.splice(flagIndex, 1);
 		data = data.map(d => comma(d));
 		table.push(data);
 		spinner.stopAndPersist();
