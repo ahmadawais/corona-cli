@@ -16,7 +16,7 @@ module.exports = async (spinner, table, states, country, options) => {
 		}
 
 		all.map(one => {
-			one = one.map(d => comma(d));
+			one = one.map(d => comma(d)).filter(o => typeof o !== "object");
 			return table.push(one);
 		});
 		spinner.stopAndPersist();
