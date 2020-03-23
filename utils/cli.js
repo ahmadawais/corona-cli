@@ -1,5 +1,5 @@
-const meow = require('meow');
-const chalk = require('chalk');
+const meow = require("meow");
+const chalk = require("chalk");
 const green = chalk.green;
 const yellow = chalk.yellow;
 const cyan = chalk.cyan;
@@ -18,7 +18,7 @@ module.exports = meow(
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
 
 	Examples
-		${green(`corona`)} ${cyan(`china`)}
+	  ${green(`corona`)} ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`states`)}
 	  ${green(`corona`)} ${yellow(`-x`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
@@ -33,14 +33,14 @@ module.exports = meow(
 		inferType: false,
 		flags: {
 			xcolor: {
-				type: 'boolean',
+				type: "boolean",
 				default: false,
-				alias: 'x'
+				alias: "x"
 			},
 			sort: {
-				type: 'string',
-				default: 'cases-today',
-				alias: 's'
+				type: "string",
+				default: "cases-today",
+				alias: "s"
 			}
 		}
 	}
