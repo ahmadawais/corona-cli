@@ -3,13 +3,16 @@ const axios = require("axios");
 const logSymbols = require("log-symbols");
 const comma = require("comma-number");
 const red = chalk.red;
-const green = chalk.green;
+const to = require("await-to-js").default;
+const handleError = require("cli-handle-error");
 
 module.exports = async (spinner, table, states, country) => {
 	if (country && !states) {
-		const api = await axios.get(
-			`https://corona.lmao.ninja/countries/${country}`
+		const [err, api] = await to(
+			axios.get(`https://corona.lmao.ninja/countries/${country}`)
 		);
+		handleError(`API is down, try again later.`, err, false);
+
 		if (api.data === "Country not found") {
 			spinner.stopAndPersist();
 			console.log(

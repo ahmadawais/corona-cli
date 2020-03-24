@@ -2,10 +2,16 @@ const axios = require("axios");
 const chalk = require("chalk");
 const comma = require("comma-number");
 const { sortKeys, sortOrders } = require("./table.js");
+const to = require("await-to-js").default;
+const handleError = require("cli-handle-error");
 
 module.exports = async (spinner, table, states, country, options) => {
 	if (!country && !states) {
-		const api = await axios.get(`https://corona.lmao.ninja/countries`);
+		const [err, api] = await to(
+			axios.get(`https://corona.lmao.ninja/countries`)
+		);
+		handleError(`API is down, try again later.`, err, false);
+
 		let allCountries = api.data.map(country => Object.values(country));
 
 		const sortIndex = sortKeys.indexOf(options.sort);

@@ -27,6 +27,7 @@
 		"test": "node test.js"
 	},
 	"dependencies": {
+		"await-to-js": "^2.1.1",
 		"axios": "^0.19.2",
 		"chalk": "^3.0.0",
 		"cli-handle-error": "^3.0.0",
