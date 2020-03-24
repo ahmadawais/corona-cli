@@ -12,7 +12,7 @@ const spinner = ora({ text: "" });
 const Table = require("cli-table3");
 const cli = require("./utils/cli.js");
 const init = require("./utils/init.js");
-const getAll = require("./utils/getAll.js");
+const getCountries = require("./utils/getCountries.js");
 const showHelp = require("./utils/showHelp.js");
 const theEnd = require("./utils/theEnd.js");
 const handleError = require("cli-handle-error");
@@ -49,7 +49,7 @@ const sortBy = cli.flags.sort;
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country);
 	await getStates(spinner, table, states, sortBy);
-	await getAll(spinner, table, states, country, sortBy);
+	await getCountries(spinner, table, states, country, sortBy);
 
 	theEnd(lastUpdated, states);
 })();
