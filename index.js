@@ -47,11 +47,10 @@ const sortBy = cli.flags.sort;
 
 	// Display data.
 	spinner.start();
-	await getWorldwide(table, states);
+	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country);
 	await getStates(spinner, table, states, { sort: sortBy });
 	await getAll(spinner, table, states, country, { sort: sortBy });
 
-	getUpdated();
-	theEnd(states);
+	theEnd(lastUpdated, states);
 })();

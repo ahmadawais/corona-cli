@@ -1,6 +1,6 @@
 const chalk = require("chalk");
 const axios = require("axios");
-const logSymbols = require("log-symbols");
+const sym = require("log-symbols");
 const comma = require("comma-number");
 const red = chalk.red;
 const to = require("await-to-js").default;
@@ -17,7 +17,7 @@ module.exports = async (spinner, table, states, country) => {
 			spinner.stopAndPersist();
 			console.log(
 				`${red(
-					`${logSymbols.error} Nops. A country named "${country}" does not exist…`
+					`${sym.error} Nops. A country named "${country}" does not exist…`
 				)}\n`
 			);
 			process.exit(0);
