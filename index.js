@@ -29,6 +29,7 @@ const {
 } = require("./utils/table.js");
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
+const reverse = cli.flags.reverse;
 
 (async () => {
 	// Init.
@@ -49,8 +50,8 @@ const sortBy = cli.flags.sort;
 	spinner.start();
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country);
-	await getStates(spinner, table, states, { sort: sortBy });
-	await getAll(spinner, table, states, country, { sort: sortBy });
+	await getStates(spinner, table, states, { sort: sortBy, order: reverse });
+	await getAll(spinner, table, states, country, { sort: sortBy, order: reverse });
 
 	theEnd(lastUpdated, states);
 })();

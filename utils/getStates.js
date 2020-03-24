@@ -15,9 +15,12 @@ module.exports = async (spinner, table, states, options) => {
 
 		if (sortIndex != -1) {
 			const dir = sortStateOrders[sortIndex];
-			allStates = allStates.sort((a, b) =>
-				a[sortIndex] > b[sortIndex] ? dir : -dir
-			);
+			allStates = allStates.sort((a, b) => {
+				if ( options.order !== undefined ) {
+					return a[sortIndex] < b[sortIndex] ? dir : -dir;
+				}
+				return a[sortIndex] > b[sortIndex] ? dir : -dir;
+			});
 		}
 
 		allStates.map((oneState, count) => {
@@ -27,6 +30,9 @@ module.exports = async (spinner, table, states, options) => {
 
 		spinner.stopAndPersist();
 		spinner.info(`${chalk.cyan(`Sorted by:`)} ${options.sort}`);
+		if ( options.order !== undefined ) {
+			spinner.info(`${chalk.cyan(`Order:`)} reverse`);
+		}
 		console.log(table.toString());
 	}
 };

@@ -18,9 +18,12 @@ module.exports = async (spinner, table, states, country, options) => {
 
 		if (sortIndex != -1) {
 			const dir = sortOrders[sortIndex];
-			allCountries = allCountries.sort((a, b) =>
-				a[sortIndex] > b[sortIndex] ? dir : -dir
-			);
+			allCountries = allCountries.sort((a, b) => {
+				if ( options.order !== undefined ) {
+					return a[sortIndex] < b[sortIndex] ? dir : -dir;
+				}
+				return a[sortIndex] > b[sortIndex] ? dir : -dir;
+			});
 		}
 
 		allCountries.map((oneCountry, count) => {
@@ -31,6 +34,9 @@ module.exports = async (spinner, table, states, country, options) => {
 		});
 		spinner.stopAndPersist();
 		spinner.info(`${chalk.cyan(`Sorted by:`)} ${options.sort}`);
+		if ( options.order !== undefined ) {
+			spinner.info(`${chalk.cyan(`Order:`)} reverse`);
+		}
 		console.log(table.toString());
 	}
 };
