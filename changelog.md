@@ -29,6 +29,22 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [3.3.0](https://github.com/ahmadawais/corona-cli/compare/3.2.0...3.3.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Time update [`c8f2f6a`](https://github.com/ahmadawais/corona-cli/commit/c8f2f6a23a25b56ed65fd052c1b8da0524d67b8a) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Order + Flexibility [`7a6e824`](https://github.com/ahmadawais/corona-cli/commit/7a6e824c60a0f50793ca7536a47ac151e82c81e1) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [3.2.0](https://github.com/ahmadawais/corona-cli/compare/3.1.4...3.2.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -39,6 +55,10 @@ I have released a video course to help you become a better developer — <a href
 
 > 👌 Update notifier [`d60b318`](https://github.com/ahmadawais/corona-cli/commit/d60b3183974d1d046fd40d9b88ef544e1f26865e) <br>
 > 👌 Update modules [`b50586e`](https://github.com/ahmadawais/corona-cli/commit/b50586ed6693a5957b5eb19cc66c7c06de125c2d) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`2c14ada`](https://github.com/ahmadawais/corona-cli/commit/2c14ada19f109ac584e89d8f085ca465cdb8c92c) <br>
 
 <br>
 
