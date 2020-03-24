@@ -19,6 +19,7 @@ const handleError = require("cli-handle-error");
 const getCountry = require("./utils/getCountry.js");
 const getStates = require("./utils/getStates.js");
 const getWorldwide = require("./utils/getWorldwide.js");
+const getUpdated = require("./utils/getupdated.js");
 const {
 	single,
 	colored,
@@ -51,5 +52,6 @@ const sortBy = cli.flags.sort;
 	await getStates(spinner, table, states, { sort: sortBy });
 	await getAll(spinner, table, states, country, { sort: sortBy });
 
+	getUpdated();
 	theEnd(states);
 })();
