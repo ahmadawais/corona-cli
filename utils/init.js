@@ -1,6 +1,6 @@
-const welcome = require('cli-welcome');
-const pkgJSON = require('./../package.json');
-const updateNotifier = require('update-notifier');
+const welcome = require("cli-welcome");
+const pkgJSON = require("./../package.json");
+const updateNotifier = require("update-notifier");
 
 module.exports = async () => {
 	welcome(`corona-cli`, `by Awais.dev\n${pkgJSON.description}`, {
@@ -12,6 +12,7 @@ module.exports = async () => {
 	});
 	updateNotifier({
 		pkg: pkgJSON,
-		shouldNotifyInNpmScript: true
+		shouldNotifyInNpmScript: true,
+		updateCheckInterval: 1000 * 60 * 60 * 24 // 24 hours.
 	}).notify({ isGlobal: true });
 };
