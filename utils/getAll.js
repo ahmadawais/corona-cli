@@ -1,36 +1,40 @@
 const axios = require("axios");
 const chalk = require("chalk");
 const comma = require("comma-number");
-const { sortKeys, sortOrders } = require("./table.js");
+const { sortingKeys } = require("./table.js");
 const to = require("await-to-js").default;
 const handleError = require("cli-handle-error");
+const orderBy = require("lodash.orderby");
 
-module.exports = async (spinner, table, states, country, options) => {
-	if (!country && !states) {
-		const [err, api] = await to(
+module.exports = async (spinner, table, states, countryName, sortBy) => {
+	if (!countryName && !states) {
+		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/countries`)
 		);
 		handleError(`API is down, try again later.`, err, false);
+		let allCountries = response.data;
 
-		let allCountries = api.data.map(country => Object.values(country));
+		// Sort.
+		allCountries = orderBy(allCountries, [sortingKeys[sortBy]], ["desc"]);
 
-		const sortIndex = sortKeys.indexOf(options.sort);
-
-		if (sortIndex != -1) {
-			const dir = sortOrders[sortIndex];
-			allCountries = allCountries.sort((a, b) =>
-				a[sortIndex] > b[sortIndex] ? dir : -dir
-			);
-		}
-
+		// Push selected data.
 		allCountries.map((oneCountry, count) => {
-			oneCountry = oneCountry
-				.filter(stat => typeof stat !== "object")
-				.map(stat => comma(stat));
-			return table.push([count + 1, ...oneCountry]);
+			table.push([
+				count + 1,
+				oneCountry.country,
+				comma(oneCountry.cases),
+				comma(oneCountry.todayCases),
+				comma(oneCountry.deaths),
+				comma(oneCountry.todayDeaths),
+				comma(oneCountry.recovered),
+				comma(oneCountry.active),
+				comma(oneCountry.critical),
+				comma(oneCountry.casesPerOneMillion)
+			]);
 		});
+
 		spinner.stopAndPersist();
-		spinner.info(`${chalk.cyan(`Sorted by:`)} ${options.sort}`);
+		spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
 		console.log(table.toString());
 	}
 };
