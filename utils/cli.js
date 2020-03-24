@@ -16,6 +16,7 @@ module.exports = meow(
 	Options
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
+	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse the order of sorted data
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
@@ -41,6 +42,10 @@ module.exports = meow(
 				type: "string",
 				default: "cases-today",
 				alias: "s"
+			},
+			reverse: {
+				type: "string",
+				alias: "r"
 			}
 		}
 	}
