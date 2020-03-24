@@ -47,6 +47,10 @@ module.exports = {
 		`Active`
 	],
 	style: { head: ["cyan"] },
+	tab_borderless: { 'top': '' , 'top-mid': '' , 'top-left': '' , 'top-right': ''
+			, 'bottom': '' , 'bottom-mid': '' , 'bottom-left': '' , 'bottom-right': ''
+			, 'left': '' , 'left-mid': '' , 'mid': '' , 'mid-mid': ''
+			, 'right': '' , 'right-mid': '' , 'middle': ' ' },
 	sortingKeys: {
 		country: "country",
 		cases: "cases",

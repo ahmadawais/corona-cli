@@ -24,14 +24,17 @@ const {
 	colored,
 	singleStates,
 	coloredStates,
-	style
+	style,
+	tab_borderless
 } = require("./utils/table.js");
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
+const quiet = cli.flags.quiet;
+const borderless = cli.flags.borderless;
 
 (async () => {
 	// Init.
-	init();
+	init(quiet);
 	const [input] = cli.input;
 	await showHelp();
 	const states = input === "states" ? true : false;
@@ -41,8 +44,13 @@ const sortBy = cli.flags.sort;
 	const head = xcolor ? single : colored;
 	const headStates = xcolor ? singleStates : coloredStates;
 	const table = !states
-		? new Table({ head, style })
-		: new Table({ head: headStates, style });
+		? borderless
+			? new Table({ head, style, chars:tab_borderless })
+			: new Table({ head, style })
+		: borderless
+			? new Table({ head: headStates, style, chars:tab_borderless })
+			: new Table({ head: headStates, style});
+	
 
 	// Display data.
 	spinner.start();
@@ -50,6 +58,5 @@ const sortBy = cli.flags.sort;
 	await getCountry(spinner, table, states, country);
 	await getStates(spinner, table, states, sortBy);
 	await getAll(spinner, table, states, country, sortBy);
-
-	theEnd(lastUpdated, states);
+	theEnd(lastUpdated, states, quiet);
 })();
