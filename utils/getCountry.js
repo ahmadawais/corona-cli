@@ -37,8 +37,10 @@ module.exports = async ({ spinner, table, states, countryName, tableHead }) => {
 			comma(thisCountry.critical),
 			comma(thisCountry.casesPerOneMillion)
 		]);
-
 		const input = parseCli(states);
 		deleteColumns(table, tableHead, input);
+
+		spinner.stopAndPersist();
+		console.log(table.toString());
 	}
 };

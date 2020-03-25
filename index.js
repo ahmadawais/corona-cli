@@ -18,7 +18,6 @@ const getStates = require('./utils/getStates.js');
 const getCountry = require('./utils/getCountry.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
-
 const {
 	style,
 	single,
