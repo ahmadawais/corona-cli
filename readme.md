@@ -105,6 +105,10 @@ corona -s recovered
 corona -s active
 corona -s critical
 corona -s per-million
+
+# Reverse sort data
+corona --sort country --reverse
+corona -s country -r
 ```
 
 [![📟](./.github/sort.gif)](./../../)
