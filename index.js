@@ -28,6 +28,9 @@ const {
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
 const reverse = cli.flags.reverse;
+const limit = Math.abs(cli.flags.limit);
+
+const options = { sortBy, limit, reverse };
 
 (async () => {
 	// Init.
@@ -48,8 +51,8 @@ const reverse = cli.flags.reverse;
 	spinner.start();
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country);
-	await getStates(spinner, table, states, sortBy, reverse);
-	await getCountries(spinner, table, states, country, sortBy, reverse);
+	await getStates(spinner, table, states, options);
+	await getCountries(spinner, table, states, country, options);
 
 	theEnd(lastUpdated, states);
 })();

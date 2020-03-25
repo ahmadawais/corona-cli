@@ -113,6 +113,14 @@ corona -s active -r
 
 [![📟](./.github/sort.gif)](./../../)
 
+### Limit output
+
+Only output the top N results (depending on your sort criteria). Defaults to showing all entries.
+
+````sh
+corona --sort cases -n 10
+````
+
 #### CLI Help
 
 ```sh
