@@ -4,7 +4,7 @@ const cli = require('./cli');
 // returns indices of table rows which user wants to omit form output in descending order
 const parseCli = (states, separator = '_') => {
 	const input = cli.flags.omit;
-	if (!input || typeof input !== 'string' || input === '') return [];
+	if (!input || typeof input !== 'string') return [];
 	return input
 		.split(separator)
 		.reduce((accumulator, current) => {
