@@ -58,4 +58,5 @@ const minimal = cli.flags.minimal;
 	await getCountries(spinner, table, states, country, sortBy);
 	
 	theEnd(lastUpdated, states, minimal);
+
 })();
