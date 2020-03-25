@@ -17,7 +17,7 @@ module.exports = meow(
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
 	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
-	  ${yellow(`--limit`)}, ${yellow(`-n`)}          Limit output to N entries
+	  ${yellow(`--limit`)}, ${yellow(`-l`)}          Limit the output to N entries
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
