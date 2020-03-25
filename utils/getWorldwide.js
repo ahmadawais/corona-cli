@@ -20,7 +20,7 @@ module.exports = async (table, states) => {
 			data[2],
 			`—`,
 			`—`,
-			`—`,
+			`—`
 		]);
 	}
 

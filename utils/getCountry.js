@@ -34,7 +34,7 @@ module.exports = async (spinner, table, states, countryName) => {
 			comma(thisCountry.recovered),
 			comma(thisCountry.active),
 			comma(thisCountry.critical),
-			comma(thisCountry.casesPerOneMillion),
+			comma(thisCountry.casesPerOneMillion)
 		]);
 		spinner.stopAndPersist();
 		console.log(table.toString());

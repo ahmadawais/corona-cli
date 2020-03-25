@@ -15,7 +15,7 @@ module.exports = {
 		`Recovered`,
 		`Active`,
 		`Critical`,
-		`Per Million`,
+		`Per Million`
 	],
 	colored: [
 		`#`,
@@ -27,7 +27,7 @@ module.exports = {
 		`${green(`Recovered`)}`,
 		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
-		`Per Million`,
+		`Per Million`
 	],
 	singleStates: [
 		`#`,
@@ -36,7 +36,7 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
-		`Active`,
+		`Active`
 	],
 	coloredStates: [
 		`#`,
@@ -45,7 +45,7 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
-		`${yellow(`Active`)}`,
+		`${yellow(`Active`)}`
 	],
 	style: { head: ['cyan'] },
 	borderless: {
@@ -63,7 +63,7 @@ module.exports = {
 		'mid-mid': '',
 		right: '',
 		'right-mid': '',
-		middle: ' ',
+		middle: ' '
 	},
 	sortingKeys: {
 		country: 'country',
@@ -74,7 +74,7 @@ module.exports = {
 		recovered: 'recovered',
 		active: 'active',
 		critical: 'critical',
-		'per-million': 'casesPerOneMillion',
+		'per-million': 'casesPerOneMillion'
 	},
 	sortingStateKeys: {
 		state: 'state',
@@ -82,6 +82,6 @@ module.exports = {
 		'cases-today': 'todayCases',
 		deaths: 'deaths',
 		'deaths-today': 'todayDeaths',
-		active: 'active',
-	},
+		active: 'active'
+	}
 };

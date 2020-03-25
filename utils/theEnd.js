@@ -33,8 +33,8 @@ ${dim(`❯ `)}${cyan(`Per Million:`)} Affected patients per million
 `)
 	);
 
-module.exports = async (lastUpdated, states, quiet) => {
-	if (quiet) return
+module.exports = async (lastUpdated, states, minimal) => {
+	if (minimal) return console.log();
 	console.log(dim(`${sym.info} ${cyan(`Last Updated:`)} ${lastUpdated}`));
 	states && infoStates();
 	!states && infoCountries();
