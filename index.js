@@ -24,7 +24,7 @@ const {
 	colored,
 	singleStates,
 	coloredStates,
-	borderless,
+	borderless
 } = require('./utils/table.js');
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
@@ -56,5 +56,5 @@ const options = { sortBy, limit, reverse, minimal };
 	await getStates(spinner, table, states, options);
 	await getCountries(spinner, table, states, country, options);
 
-	!minimal && theEnd(lastUpdated, states);
+	theEnd(lastUpdated, states, minimal);
 })();
