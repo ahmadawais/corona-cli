@@ -107,8 +107,8 @@ corona -s critical
 corona -s per-million
 
 # Reverse sort data
-corona --sort country --reverse
-corona -s country -r
+corona --sort active --reverse
+corona -s active -r
 ```
 
 [![📟](./.github/sort.gif)](./../../)
