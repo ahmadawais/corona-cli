@@ -1,10 +1,10 @@
-const axios = require("axios");
-const chalk = require("chalk");
-const comma = require("comma-number");
-const { sortingStateKeys } = require("./table.js");
-const to = require("await-to-js").default;
-const handleError = require("cli-handle-error");
-const orderBy = require("lodash.orderby");
+const axios = require('axios');
+const chalk = require('chalk');
+const comma = require('comma-number');
+const { sortingStateKeys } = require('./table.js');
+const to = require('await-to-js').default;
+const handleError = require('cli-handle-error');
+const orderBy = require('lodash.orderby');
 
 module.exports = async (spinner, table, states, sortBy, reverse) => {
 	if (states) {
@@ -14,12 +14,9 @@ module.exports = async (spinner, table, states, sortBy, reverse) => {
 		handleError(`API is down, try again later.`, err, false);
 		let allStates = response.data;
 
-		// Sort.
-		if ( reverse !== undefined ) {
-			allStates = orderBy(allStates, [sortingStateKeys[sortBy]], ["asc"]);
-		} else {
-			allStates = orderBy(allStates, [sortingStateKeys[sortBy]], ["desc"]);
-		}
+		// Sort & reverse.
+		const direction = reverse ? 'asc' : 'desc';
+		allStates = orderBy(allStates, [sortingStateKeys[sortBy]], [direction]);
 
 		// Push selected data.
 		allStates.map((oneState, count) => {
@@ -30,13 +27,13 @@ module.exports = async (spinner, table, states, sortBy, reverse) => {
 				comma(oneState.todayCases),
 				comma(oneState.deaths),
 				comma(oneState.todayDeaths),
-				comma(oneState.active)
+				comma(oneState.active),
 			]);
 		});
 
 		spinner.stopAndPersist();
 		spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
-		if ( reverse !== undefined ) {
+		if (reverse !== undefined) {
 			spinner.info(`${chalk.cyan(`Order:`)} reverse`);
 		}
 		console.log(table.toString());

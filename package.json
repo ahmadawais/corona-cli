@@ -24,6 +24,7 @@
 		"ahmadawais"
 	],
 	"scripts": {
+		"format": "prettier --write \"./**/*.{js,json}\"",
 		"test": "node test.js"
 	},
 	"dependencies": {
@@ -39,5 +40,8 @@
 		"meow": "^6.1.0",
 		"ora": "^4.0.3",
 		"update-notifier": "^4.1.0"
+	},
+	"devDependencies": {
+		"prettier": "^2.0.2"
 	}
 }

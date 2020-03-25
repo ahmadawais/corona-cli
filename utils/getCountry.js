@@ -1,10 +1,10 @@
-const chalk = require("chalk");
-const axios = require("axios");
-const sym = require("log-symbols");
-const comma = require("comma-number");
+const chalk = require('chalk');
+const axios = require('axios');
+const sym = require('log-symbols');
+const comma = require('comma-number');
 const red = chalk.red;
-const to = require("await-to-js").default;
-const handleError = require("cli-handle-error");
+const to = require('await-to-js').default;
+const handleError = require('cli-handle-error');
 
 module.exports = async (spinner, table, states, countryName) => {
 	if (countryName && !states) {
@@ -14,7 +14,7 @@ module.exports = async (spinner, table, states, countryName) => {
 		handleError(`API is down, try again later.`, err, false);
 		const thisCountry = response.data;
 
-		if (response.data === "Country not found") {
+		if (response.data === 'Country not found') {
 			spinner.stopAndPersist();
 			console.log(
 				`${red(
@@ -34,7 +34,7 @@ module.exports = async (spinner, table, states, countryName) => {
 			comma(thisCountry.recovered),
 			comma(thisCountry.active),
 			comma(thisCountry.critical),
-			comma(thisCountry.casesPerOneMillion)
+			comma(thisCountry.casesPerOneMillion),
 		]);
 		spinner.stopAndPersist();
 		console.log(table.toString());

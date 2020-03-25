@@ -1,12 +1,19 @@
-const axios = require("axios");
-const chalk = require("chalk");
-const comma = require("comma-number");
-const { sortingKeys } = require("./table.js");
-const to = require("await-to-js").default;
-const handleError = require("cli-handle-error");
-const orderBy = require("lodash.orderby");
+const axios = require('axios');
+const chalk = require('chalk');
+const comma = require('comma-number');
+const { sortingKeys } = require('./table.js');
+const to = require('await-to-js').default;
+const handleError = require('cli-handle-error');
+const orderBy = require('lodash.orderby');
 
-module.exports = async (spinner, table, states, countryName, sortBy, reverse) => {
+module.exports = async (
+	spinner,
+	table,
+	states,
+	countryName,
+	sortBy,
+	reverse
+) => {
 	if (!countryName && !states) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/countries`)
@@ -14,12 +21,13 @@ module.exports = async (spinner, table, states, countryName, sortBy, reverse) =>
 		handleError(`API is down, try again later.`, err, false);
 		let allCountries = response.data;
 
-		// Sort.
-		if ( reverse !== undefined ) {
-			allCountries = orderBy(allCountries, [sortingKeys[sortBy]], ["asc"]);
-		} else {
-			allCountries = orderBy(allCountries, [sortingKeys[sortBy]], ["desc"]);
-		}
+		// Sort & reverse.
+		const direction = reverse ? 'asc' : 'desc';
+		allCountries = orderBy(
+			allCountries,
+			[sortingKeys[sortBy]],
+			[direction]
+		);
 
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {
@@ -33,13 +41,13 @@ module.exports = async (spinner, table, states, countryName, sortBy, reverse) =>
 				comma(oneCountry.recovered),
 				comma(oneCountry.active),
 				comma(oneCountry.critical),
-				comma(oneCountry.casesPerOneMillion)
+				comma(oneCountry.casesPerOneMillion),
 			]);
 		});
 
 		spinner.stopAndPersist();
 		spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
-		if ( reverse !== undefined ) {
+		if (reverse !== undefined) {
 			spinner.info(`${chalk.cyan(`Order:`)} reverse`);
 		}
 		console.log(table.toString());
