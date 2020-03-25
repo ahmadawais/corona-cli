@@ -29,10 +29,27 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [3.8.0](https://github.com/ahmadawais/corona-cli/compare/3.7.2...3.8.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Node Engine [`96cc8f4`](https://github.com/ahmadawais/corona-cli/commit/96cc8f4008f6579a7ed785590f0368a9c4fa4713) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Dependency [`b4a62b8`](https://github.com/ahmadawais/corona-cli/commit/b4a62b8b95bdf063aedc424bbebb182cf28f02a0) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [3.7.2](https://github.com/ahmadawais/corona-cli/compare/3.7.1...3.7.2)
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+> 📖 Changelog [`1c58641`](https://github.com/ahmadawais/corona-cli/commit/1c586414b74cd8db855f5398911beb485058aaff) <br>
 > 📖 Alias [`44a9360`](https://github.com/ahmadawais/corona-cli/commit/44a9360fa47fef837a94d31174f126c39d100d60) <br>
 
 <br>
