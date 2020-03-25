@@ -37,23 +37,28 @@ module.exports = meow(
 			xcolor: {
 				type: 'boolean',
 				default: false,
-				alias: 'x'
+				alias: 'x',
 			},
 			sort: {
 				type: 'string',
 				default: 'cases',
-				alias: 's'
+				alias: 's',
 			},
 			reverse: {
 				type: 'boolean',
 				default: false,
-				alias: 'r'
+				alias: 'r',
 			},
 			limit: {
 				type: 'number',
 				default: Number.MAX_SAFE_INTEGER,
-				alias: 'l'
-			}
-		}
+				alias: 'l',
+			},
+			minimal: {
+				type: 'boolean',
+				defualt: false,
+				alias: 'm',
+			},
+		},
 	}
 );
