@@ -8,14 +8,7 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 
-module.exports = async (
-	spinner,
-	table,
-	states,
-	countryName,
-	sortBy,
-	reverse
-) => {
+module.exports = async (spinner, table, states, countryName, { sortBy, limit, reverse }) => {
 	if (!countryName && !states) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/countries`)
@@ -30,6 +23,9 @@ module.exports = async (
 			[sortingKeys[sortBy]],
 			[direction]
 		);
+
+		// Limit
+		allCountries = allCountries.slice(0, limit);
 
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {
