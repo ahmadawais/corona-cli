@@ -118,6 +118,9 @@ corona -s active -r
 ````sh
 # Print a limited number of entries to the output.
 corona --limit 10
+
+# Print a bare bones table with no info.
+corona --minimal
 ````
 
 #### CLI Help
