@@ -1,5 +1,7 @@
 const axios = require('axios');
 const chalk = require('chalk');
+const cyan = chalk.cyan;
+const dim = chalk.dim;
 const comma = require('comma-number');
 const { sortingKeys } = require('./table.js');
 const to = require('await-to-js').default;
@@ -41,15 +43,13 @@ module.exports = async (
 				comma(oneCountry.recovered),
 				comma(oneCountry.active),
 				comma(oneCountry.critical),
-				comma(oneCountry.casesPerOneMillion),
+				comma(oneCountry.casesPerOneMillion)
 			]);
 		});
 
 		spinner.stopAndPersist();
-		spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
-		if (reverse !== undefined) {
-			spinner.info(`${chalk.cyan(`Order:`)} reverse`);
-		}
+		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
+		spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		console.log(table.toString());
 	}
 };
