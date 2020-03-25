@@ -1,5 +1,4 @@
 const axios = require("axios");
-const chalk = require("chalk");
 const comma = require("comma-number");
 const { sortingKeys } = require("./table.js");
 const to = require("await-to-js").default;
@@ -33,8 +32,5 @@ module.exports = async (spinner, table, states, countryName, sortBy) => {
 			]);
 		});
 
-		spinner.stopAndPersist();
-		spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
-		console.log(table.toString());
 	}
 };

@@ -23,6 +23,8 @@ module.exports = meow(
 	  ${green(`corona`)} ${yellow(`-x`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
 	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}
+	  ${green(`corona`)} ${yellow(`--omit`)} ${cyan(`deaths-today_cases_critical`)}
+	  ${green(`corona`)} ${yellow(`--o`)} ${cyan(`country`)}
 
 	❯ You can also run command + option at once:
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)} ${yellow(`-s cases`)}
@@ -41,6 +43,11 @@ module.exports = meow(
 				type: "string",
 				default: "cases",
 				alias: "s"
+			},
+			'omit': {
+				type: "string",
+				default: '',
+				alias: 'o'
 			}
 		}
 	}
