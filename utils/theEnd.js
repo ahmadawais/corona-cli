@@ -1,5 +1,5 @@
-const sym = require("log-symbols");
-const chalk = require("chalk");
+const sym = require('log-symbols');
+const chalk = require('chalk');
 const cyan = chalk.cyan;
 const dim = chalk.dim;
 

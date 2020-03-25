@@ -1,6 +1,6 @@
 {
 	"name": "corona-cli",
-	"version": "3.4.0",
+	"version": "3.6.0",
 	"description": "Track the Coronavirus disease (COVID-19).",
 	"license": "MIT",
 	"repository": "ahmadawais/corona-cli",
@@ -24,6 +24,7 @@
 		"ahmadawais"
 	],
 	"scripts": {
+		"format": "prettier --write \"./**/*.{js,json}\"",
 		"test": "node test.js"
 	},
 	"dependencies": {
@@ -39,5 +40,8 @@
 		"meow": "^6.1.0",
 		"ora": "^4.0.3",
 		"update-notifier": "^4.1.0"
+	},
+	"devDependencies": {
+		"prettier": "^2.0.2"
 	}
 }

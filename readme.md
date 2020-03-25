@@ -19,7 +19,7 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 - 🤯 Active daily reporting of your country's COVID-19 statistics
 - 🇺🇸 Get US States data for Coronavirus disease reports across the US
 - 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million
-- 📟 Sort: `cases`,`cases-today`,`deaths`,`deaths-today`,`recovered`,`active`,`critical`,`per-million`
+- 📟 Sort: `cases`, `cases-today`, `deaths`, `deaths-today`, `recovered`, `active`, `critical`, `per-million`
 
 <br>
 
@@ -105,9 +105,20 @@ corona -s recovered
 corona -s active
 corona -s critical
 corona -s per-million
+
+# Reverse sort data
+corona --sort active --reverse
+corona -s active -r
 ```
 
 [![📟](./.github/sort.gif)](./../../)
+
+### Limit the output
+
+````sh
+# Print a limited number of entries to the output.
+corona --limit 10
+````
 
 #### CLI Help
 

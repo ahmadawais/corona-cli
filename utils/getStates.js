@@ -1,12 +1,14 @@
-const axios = require("axios");
-const chalk = require("chalk");
-const comma = require("comma-number");
-const { sortingStateKeys } = require("./table.js");
-const to = require("await-to-js").default;
-const handleError = require("cli-handle-error");
-const orderBy = require("lodash.orderby");
+const axios = require('axios');
+const chalk = require('chalk');
+const cyan = chalk.cyan;
+const dim = chalk.dim;
+const comma = require('comma-number');
+const { sortingStateKeys } = require('./table.js');
+const to = require('await-to-js').default;
+const handleError = require('cli-handle-error');
+const orderBy = require('lodash.orderby');
 
-module.exports = async (spinner, table, states, sortBy) => {
+module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
 	if (states) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/states`)
@@ -14,8 +16,12 @@ module.exports = async (spinner, table, states, sortBy) => {
 		handleError(`API is down, try again later.`, err, false);
 		let allStates = response.data;
 
-		// Sort.
-		allStates = orderBy(allStates, [sortingStateKeys[sortBy]], ["desc"]);
+		// Limit.
+		allStates = allStates.slice(0, limit);
+
+		// Sort & reverse.
+		const direction = reverse ? 'asc' : 'desc';
+		allStates = orderBy(allStates, [sortingStateKeys[sortBy]], [direction]);
 
 		// Push selected data.
 		allStates.map((oneState, count) => {
@@ -31,7 +37,8 @@ module.exports = async (spinner, table, states, sortBy) => {
 		});
 
 		spinner.stopAndPersist();
-		spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
+		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
+		spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		console.log(table.toString());
 	}
 };
