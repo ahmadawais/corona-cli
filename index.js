@@ -10,7 +10,6 @@ process.on("unhandledRejection", err => {
 const ora = require("ora");
 const spinner = ora({ text: "" });
 const Table = require("cli-table3");
-const chalk = require("chalk");
 const cli = require("./utils/cli.js");
 const init = require("./utils/init.js");
 const getCountries = require("./utils/getCountries.js");
@@ -20,7 +19,6 @@ const handleError = require("cli-handle-error");
 const getCountry = require("./utils/getCountry.js");
 const getStates = require("./utils/getStates.js");
 const getWorldwide = require("./utils/getWorldwide.js");
-const deleteColumns = require('./utils/deleteColumns');
 const {
 	single,
 	colored,
@@ -30,13 +28,7 @@ const {
 } = require("./utils/table.js");
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
-
-const consoleLogTable = (spinner, table, sortBy) => {
-	spinner.stopAndPersist();
-	if(sortBy) spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
-	console.log(table.toString())
-};
-
+const reverse = cli.flags.reverse;
 
 (async () => {
 	// Init.
@@ -49,17 +41,16 @@ const consoleLogTable = (spinner, table, sortBy) => {
 	// Table
 	const head = xcolor ? single : colored;
 	const headStates = xcolor ? singleStates : coloredStates;
-  let tableHead = states ? headStates : head;
-  const table = new Table( { head: tableHead, style });
+	const table = !states
+		? new Table({ head, style })
+		: new Table({ head: headStates, style });
 
 	// Display data.
 	spinner.start();
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country);
-	await getStates(spinner, table, states, sortBy);
-	await getCountries(spinner, table, states, country, sortBy);
-	deleteColumns(table, states, tableHead);
-	consoleLogTable(spinner, table, sortBy );
+	await getStates(spinner, table, states, sortBy, reverse);
+	await getCountries(spinner, table, states, country, sortBy, reverse);
 
 	theEnd(lastUpdated, states);
 })();
