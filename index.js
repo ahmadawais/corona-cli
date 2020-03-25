@@ -12,7 +12,7 @@ const spinner = ora({ text: "" });
 const Table = require("cli-table3");
 const cli = require("./utils/cli.js");
 const init = require("./utils/init.js");
-const getAll = require("./utils/getAll.js");
+const getCountries = require("./utils/getCountries.js");
 const showHelp = require("./utils/showHelp.js");
 const theEnd = require("./utils/theEnd.js");
 const handleError = require("cli-handle-error");
@@ -25,16 +25,15 @@ const {
 	singleStates,
 	coloredStates,
 	style,
-	tab_borderless
+	borderless
 } = require("./utils/table.js");
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
-const quiet = cli.flags.quiet;
-const borderless = cli.flags.borderless;
+const minimal = cli.flags.minimal;
 
 (async () => {
 	// Init.
-	init(quiet);
+	init(minimal);
 	const [input] = cli.input;
 	await showHelp();
 	const states = input === "states" ? true : false;
@@ -43,13 +42,12 @@ const borderless = cli.flags.borderless;
 	// Table
 	const head = xcolor ? single : colored;
 	const headStates = xcolor ? singleStates : coloredStates;
-	const table = !states
+	const border = minimal
 		? borderless
-			? new Table({ head, style, chars:tab_borderless })
-			: new Table({ head, style })
-		: borderless
-			? new Table({ head: headStates, style, chars:tab_borderless })
-			: new Table({ head: headStates, style});
+		: {};
+	const table = !states
+		? new Table({ head, style, chars:border })
+		: new Table({ head: headStates, style, chars:border });
 	
 
 	// Display data.
@@ -57,6 +55,7 @@ const borderless = cli.flags.borderless;
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country);
 	await getStates(spinner, table, states, sortBy);
-	await getAll(spinner, table, states, country, sortBy);
-	theEnd(lastUpdated, states, quiet);
+	await getCountries(spinner, table, states, country, sortBy);
+	
+	theEnd(lastUpdated, states, minimal);
 })();

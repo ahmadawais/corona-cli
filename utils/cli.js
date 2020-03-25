@@ -42,15 +42,10 @@ module.exports = meow(
 				default: "cases",
 				alias: "s"
 			},
-			quiet: {
+			minimal: {
 				type: "boolean",
 				defualt: true,
-				alias: "q"
-			},
-			borderless: {
-				type: "boolean",
-				defualt: true,
-				alias: "b"
+				alias: "m"
 			}
 		}
 	}

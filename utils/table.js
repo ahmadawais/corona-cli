@@ -1,6 +1,7 @@
 const chalk = require("chalk");
 const green = chalk.green;
 const red = chalk.red;
+const yellow = chalk.yellow;
 const dim = chalk.dim;
 
 module.exports = {
@@ -24,7 +25,7 @@ module.exports = {
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
 		`${green(`Recovered`)}`,
-		`Active`,
+		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
 		`Per Million`
 	],
@@ -44,10 +45,10 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
-		`Active`
+		`${yellow(`Active`)}`
 	],
 	style: { head: ["cyan"] },
-	tab_borderless: { 'top': '' , 'top-mid': '' , 'top-left': '' , 'top-right': ''
+	borderless: { 'top': '' , 'top-mid': '' , 'top-left': '' , 'top-right': ''
 			, 'bottom': '' , 'bottom-mid': '' , 'bottom-left': '' , 'bottom-right': ''
 			, 'left': '' , 'left-mid': '' , 'mid': '' , 'mid-mid': ''
 			, 'right': '' , 'right-mid': '' , 'middle': ' ' },
