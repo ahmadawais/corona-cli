@@ -1,6 +1,6 @@
 {
 	"name": "corona-cli",
-	"version": "3.2.0",
+	"version": "3.4.0",
 	"description": "Track the Coronavirus disease (COVID-19).",
 	"license": "MIT",
 	"repository": "ahmadawais/corona-cli",
@@ -34,6 +34,8 @@
 		"cli-table3": "^0.5.1",
 		"cli-welcome": "^1.4.0",
 		"comma-number": "^2.0.1",
+		"lodash.orderby": "^4.6.0",
+		"lodash.sortby": "^4.7.0",
 		"meow": "^6.1.0",
 		"ora": "^4.0.3",
 		"update-notifier": "^4.1.0"

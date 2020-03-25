@@ -1,6 +1,7 @@
 const chalk = require("chalk");
 const green = chalk.green;
 const red = chalk.red;
+const yellow = chalk.yellow;
 const dim = chalk.dim;
 
 module.exports = {
@@ -24,21 +25,9 @@ module.exports = {
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
 		`${green(`Recovered`)}`,
-		`Active`,
+		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
 		`Per Million`
-	],
-	sortKeys: [
-		`country`,
-		`country-info`,
-		`cases`,
-		`cases-today`,
-		`deaths`,
-		`deaths-today`,
-		`recovered`,
-		`active`,
-		`critical`,
-		`per-million`
 	],
 	singleStates: [
 		`#`,
@@ -47,7 +36,6 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
-		`Recovered`,
 		`Active`
 	],
 	coloredStates: [
@@ -57,19 +45,26 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
-		`${green(`Recovered`)}`,
-		`Active`
+		`${yellow(`Active`)}`
 	],
-	sortStateKeys: [
-		`state`,
-		`cases`,
-		`cases-today`,
-		`deaths`,
-		`deaths-today`,
-		`recovered`,
-		`active`
-	],
-	sortOrders: [1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	sortStateOrders: [1, -1, -1, -1, -1, -1, -1],
-	style: { head: ["cyan"] }
+	style: { head: ["cyan"] },
+	sortingKeys: {
+		country: "country",
+		cases: "cases",
+		"cases-today": "todayCases",
+		deaths: "deaths",
+		"deaths-today": "todayDeaths",
+		recovered: "recovered",
+		active: "active",
+		critical: "critical",
+		"per-million": "casesPerOneMillion"
+	},
+	sortingStateKeys: {
+		state: "state",
+		cases: "cases",
+		"cases-today": "todayCases",
+		deaths: "deaths",
+		"deaths-today": "todayDeaths",
+		active: "active"
+	}
 };

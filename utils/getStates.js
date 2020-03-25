@@ -1,36 +1,42 @@
 const axios = require("axios");
 const chalk = require("chalk");
 const comma = require("comma-number");
-const { sortStateKeys, sortStateOrders } = require("./table.js");
+const { sortingStateKeys } = require("./table.js");
 const to = require("await-to-js").default;
 const handleError = require("cli-handle-error");
+const orderBy = require("lodash.orderby");
 
-module.exports = async (spinner, table, states, options) => {
+module.exports = async (spinner, table, states, sortBy, reverse) => {
 	if (states) {
-		const [err, api] = await to(axios.get(`https://corona.lmao.ninja/states`));
+		const [err, response] = await to(
+			axios.get(`https://corona.lmao.ninja/states`)
+		);
 		handleError(`API is down, try again later.`, err, false);
+		let allStates = response.data;
 
-		let allStates = api.data.map(one => Object.values(one));
-		const sortIndex = sortStateKeys.indexOf(options.sort);
-
-		if (sortIndex != -1) {
-			const dir = sortStateOrders[sortIndex];
-			allStates = allStates.sort((a, b) => {
-				if ( options.order !== undefined ) {
-					return a[sortIndex] < b[sortIndex] ? dir : -dir;
-				}
-				return a[sortIndex] > b[sortIndex] ? dir : -dir;
-			});
+		// Sort.
+		if ( reverse !== undefined ) {
+			allStates = orderBy(allStates, [sortingStateKeys[sortBy]], ["asc"]);
+		} else {
+			allStates = orderBy(allStates, [sortingStateKeys[sortBy]], ["desc"]);
 		}
 
+		// Push selected data.
 		allStates.map((oneState, count) => {
-			oneState = oneState.map(d => comma(d));
-			return table.push([count + 1, ...oneState]);
+			table.push([
+				count + 1,
+				oneState.state,
+				comma(oneState.cases),
+				comma(oneState.todayCases),
+				comma(oneState.deaths),
+				comma(oneState.todayDeaths),
+				comma(oneState.active)
+			]);
 		});
 
 		spinner.stopAndPersist();
-		spinner.info(`${chalk.cyan(`Sorted by:`)} ${options.sort}`);
-		if ( options.order !== undefined ) {
+		spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
+		if ( reverse !== undefined ) {
 			spinner.info(`${chalk.cyan(`Order:`)} reverse`);
 		}
 		console.log(table.toString());

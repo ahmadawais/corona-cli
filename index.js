@@ -12,14 +12,13 @@ const spinner = ora({ text: "" });
 const Table = require("cli-table3");
 const cli = require("./utils/cli.js");
 const init = require("./utils/init.js");
-const getAll = require("./utils/getAll.js");
+const getCountries = require("./utils/getCountries.js");
 const showHelp = require("./utils/showHelp.js");
 const theEnd = require("./utils/theEnd.js");
 const handleError = require("cli-handle-error");
 const getCountry = require("./utils/getCountry.js");
 const getStates = require("./utils/getStates.js");
 const getWorldwide = require("./utils/getWorldwide.js");
-const getUpdated = require("./utils/getupdated.js");
 const {
 	single,
 	colored,
@@ -50,8 +49,8 @@ const reverse = cli.flags.reverse;
 	spinner.start();
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country);
-	await getStates(spinner, table, states, { sort: sortBy, order: reverse });
-	await getAll(spinner, table, states, country, { sort: sortBy, order: reverse });
+	await getStates(spinner, table, states, sortBy, reverse);
+	await getCountries(spinner, table, states, country, sortBy, reverse);
 
 	theEnd(lastUpdated, states);
 })();

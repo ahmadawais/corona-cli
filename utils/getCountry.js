@@ -6,27 +6,36 @@ const red = chalk.red;
 const to = require("await-to-js").default;
 const handleError = require("cli-handle-error");
 
-module.exports = async (spinner, table, states, country) => {
-	if (country && !states) {
-		const [err, api] = await to(
-			axios.get(`https://corona.lmao.ninja/countries/${country}`)
+module.exports = async (spinner, table, states, countryName) => {
+	if (countryName && !states) {
+		const [err, response] = await to(
+			axios.get(`https://corona.lmao.ninja/countries/${countryName}`)
 		);
 		handleError(`API is down, try again later.`, err, false);
+		const thisCountry = response.data;
 
-		if (api.data === "Country not found") {
+		if (response.data === "Country not found") {
 			spinner.stopAndPersist();
 			console.log(
 				`${red(
-					`${sym.error} Nops. A country named "${country}" does not exist…`
+					`${sym.error} Nops. A country named "${countryName}" does not exist…`
 				)}\n`
 			);
 			process.exit(0);
 		}
-		let dataPerCountry = Object.values(api.data);
-		dataPerCountry = dataPerCountry
-			.filter(stat => typeof stat !== "object")
-			.map(stat => comma(stat));
-		table.push([`—`, ...dataPerCountry]);
+
+		table.push([
+			`—`,
+			thisCountry.country,
+			comma(thisCountry.cases),
+			comma(thisCountry.todayCases),
+			comma(thisCountry.deaths),
+			comma(thisCountry.todayDeaths),
+			comma(thisCountry.recovered),
+			comma(thisCountry.active),
+			comma(thisCountry.critical),
+			comma(thisCountry.casesPerOneMillion)
+		]);
 		spinner.stopAndPersist();
 		console.log(table.toString());
 	}
