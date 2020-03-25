@@ -16,12 +16,12 @@ module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
 		handleError(`API is down, try again later.`, err, false);
 		let allStates = response.data;
 
+		// Limit.
+		allStates = allStates.slice(0, limit);
+
 		// Sort & reverse.
 		const direction = reverse ? 'asc' : 'desc';
 		allStates = orderBy(allStates, [sortingStateKeys[sortBy]], [direction]);
-
-		// Limit
-		allStates = allStates.slice(0, limit);
 
 		// Push selected data.
 		allStates.map((oneState, count) => {
