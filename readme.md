@@ -19,7 +19,7 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 - 🤯 Active daily reporting of your country's COVID-19 statistics
 - 🇺🇸 Get US States data for Coronavirus disease reports across the US
 - 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million
-- 📟 Sort: `cases`,`cases-today`,`deaths`,`deaths-today`,`recovered`,`active`,`critical`,`per-million`
+- 📟 Sort: `cases`, `cases-today`, `deaths`, `deaths-today`, `recovered`, `active`, `critical`, `per-million`
 
 <br>
 

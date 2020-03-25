@@ -1,5 +1,5 @@
-const meow = require("meow");
-const chalk = require("chalk");
+const meow = require('meow');
+const chalk = require('chalk');
 const green = chalk.green;
 const yellow = chalk.yellow;
 const cyan = chalk.cyan;
@@ -16,7 +16,7 @@ module.exports = meow(
 	Options
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
-	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse the order of sorted data
+	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
@@ -34,19 +34,20 @@ module.exports = meow(
 		inferType: false,
 		flags: {
 			xcolor: {
-				type: "boolean",
+				type: 'boolean',
 				default: false,
-				alias: "x"
+				alias: 'x',
 			},
 			sort: {
-				type: "string",
-				default: "cases",
-				alias: "s"
+				type: 'string',
+				default: 'cases',
+				alias: 's',
 			},
 			reverse: {
-				type: "string",
-				alias: "r"
-			}
-		}
+				type: 'boolean',
+				default: false,
+				alias: 'r',
+			},
+		},
 	}
 );
