@@ -10,6 +10,9 @@
 		"url": "https://twitter.com/MrAhmadAwais"
 	},
 	"main": "index.js",
+	"engines": {
+		"node": ">=12.x"
+	},
 	"bin": {
 		"corona": "index.js",
 		"corona-cli": "index.js"
