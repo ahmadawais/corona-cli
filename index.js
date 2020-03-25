@@ -18,6 +18,8 @@ const getStates = require('./utils/getStates.js');
 const getCountry = require('./utils/getCountry.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
+const deleteColumns = require('./utils/deleteColumns');
+
 const {
 	style,
 	single,
@@ -33,6 +35,13 @@ const limit = Math.abs(cli.flags.limit);
 const minimal = cli.flags.minimal;
 const options = { sortBy, limit, reverse, minimal };
 
+// const consoleLogTable = (spinner, table, sortBy) => {
+// 	spinner.stopAndPersist();
+// 	if(sortBy) spinner.info(`${chalk.cyan(`Sorted by:`)} ${sortBy}`);
+// 	console.log(table.toString())
+// };
+
+
 (async () => {
 	// Init.
 	init(minimal);
@@ -44,6 +53,10 @@ const options = { sortBy, limit, reverse, minimal };
 	// Table
 	const head = xcolor ? single : colored;
 	const headStates = xcolor ? singleStates : coloredStates;
+
+	// let tableHead = states ? headStates : head;
+	// const table = new Table( { head: tableHead, style });
+
 	const border = minimal ? borderless : {};
 	const table = !states
 		? new Table({ head, style, chars: border })
