@@ -13,9 +13,9 @@ module.exports = async (
 	table,
 	states,
 	countryName,
-	{ sortBy, limit, reverse }
+	{ sortBy, limit, reverse, compare }
 ) => {
-	if (!countryName && !states) {
+	if (!countryName && !states && !compare) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/countries`)
 		);
