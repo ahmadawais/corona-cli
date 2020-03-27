@@ -55,16 +55,17 @@ module.exports = async (spinner, table, compareCountries, { compare }) => {
 				) {
 					highestValueIndex = innerIndex;
 				}
-				tableArr[innerIndex][index] = comma(
-					tableArr[innerIndex][index]
+				tableArr[innerIndex][index] = tableArr[innerIndex][index];
+			}
+			if (tableArr[highestValueIndex][index]) {
+				tableArr[highestValueIndex][index] = red(
+					comma(tableArr[highestValueIndex][index])
 				);
 			}
-			tableArr[0][index] = comma(tableArr[0][index]);
 
-			if (tableArr[highestValueIndex][index])
-				tableArr[highestValueIndex][index] = red(
-					tableArr[highestValueIndex][index]
-				);
+			tableArr.forEach((row) => {
+				row[index] = comma(row[index]);
+			});
 		}
 
 		table.push(...tableArr);

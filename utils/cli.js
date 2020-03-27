@@ -18,7 +18,9 @@ module.exports = meow(
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
 	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
 	  ${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
-	  ${yellow(`--compare`)}, ${yellow(`-c`)}          Statistical comparison between countries 
+	  ${yellow(`--compare`)}, ${yellow(
+		`-c`
+	)}          Statistical comparison between countries 
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
