@@ -1,14 +1,13 @@
 <h4 align="center">
     <a href="https://github.com/ahmadawais/corona-cli">
-        <img src="./.github/logo.jpg" alt="corona-cli" />
+        <img src="https://github.com/ahmadawais/corona-cli/raw/master/.github/logo.jpg" alt="corona-cli" />
     </a>
     <br>
     <br>
 
 Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 
-[![Learn VSCode](https://img.shields.io/badge/-VSCODE.pro%20%E2%86%92-gray.svg?colorB=007C92&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
-[![Follow @MrAhmadAwais on Twitter](https://img.shields.io/badge/FOLLOW%20@MRAHMADAWAIS%20%E2%86%92-gray.svg?colorA=007C92&colorB=007C92&style=flat)](https://twitter.com/mrahmadawais/)
+[![DOWNLOADS](https://img.shields.io/npm/dt/corona-cli?label=DOWNLOADS%20%20%E2%9D%AF&colorA=007C92&colorB=007C92&style=flat)](https://www.npmjs.com/package/corona-cli) [![Learn VSCode](https://img.shields.io/badge/-VSCODE.pro%20%E2%86%92-gray.svg?colorB=007C92&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS) [![Follow @MrAhmadAwais on Twitter](https://img.shields.io/badge/FOLLOW%20@MRAHMADAWAIS%20%E2%86%92-gray.svg?colorA=007C92&colorB=007C92&style=flat)](https://twitter.com/mrahmadawais/)
 
 </h4>
 
@@ -18,7 +17,9 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 
 - 🚀 Get worldwide Coronavirus disease (COVID-19) reporting
 - 🤯 Active daily reporting of your country's COVID-19 statistics
+- 🇺🇸 Get US States data for Coronavirus disease reports across the US
 - 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million
+- 📟 Sort: `cases`, `cases-today`, `deaths`, `deaths-today`, `recovered`, `active`, `critical`, `per-million`
 
 <br>
 
@@ -104,9 +105,25 @@ corona -s recovered
 corona -s active
 corona -s critical
 corona -s per-million
+
+# Reverse sort data
+corona --sort active --reverse
+corona -s active -r
 ```
 
 [![📟](./.github/sort.gif)](./../../)
+
+### Limit the output
+
+````sh
+# Print a limited number of entries to the output.
+corona --limit 10
+corona -l 10
+
+# Print a bare bones table with no info.
+corona --minimal
+corona -m
+````
 
 #### CLI Help
 

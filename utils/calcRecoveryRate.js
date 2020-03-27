@@ -6,26 +6,13 @@
  * @return {String}  A parsed string percentage string of recoveries rounded to one decimal place.
  */
 function calcRecoveryRate(numDeaths, numRecoveries) {
-    return ((numRecoveries / (numDeaths + numRecoveries)) * 100).toFixed(1) + '%';
-}
-
-/**
- * Calculates the recovery rate from an array of data and splices the recovery rate
- * into the middle of the array for table formatting.
- * 
- * @param  {Array} one data about the element we are processing. (e.g. state, country, etc.)
- * @return {Array} A spliced array almost as it was before but now with a string formatted recovery rate.
- */
-function spliceRecoveryRate(one) {
-    const numRecoveries = one[5];
-    const numDeaths = one[3];
-    const oneRecovery = ((numRecoveries / (numRecoveries + numDeaths)) * 100);
-    var oneRecoveryStr = oneRecovery.toFixed(1) + '%';
-    if(isNaN(oneRecovery) || oneRecovery === 0){
-        oneRecoveryStr = '—';
+    const factor = numRecoveries / (numDeaths + numRecoveries);
+    const percentage = (factor * 100).toFixed(1) + '%';
+    if(isNaN(factor) || factor === 0) {
+        return '-';
+    }else {
+        return percentage;
     }
-    one.splice(6, 0, oneRecoveryStr);
-    return one;
 }
 
 module.exports = {
@@ -42,23 +29,13 @@ module.exports = {
     },
 
     /**
-     * Calculates the recovery rate for a set of objects.
+     * Calculates the recovery rate and puts it in a nice looking string format.
      * 
-     * @param  {Array} data The objects to calculate the recovery rate on.
-     * @return {Array} The data almost as it was before, but now has the recovery rate included.
+     * @param  {int}     numDeaths     The number of deaths for a unit
+     * @param  {int}     numRecoveries The number of recoveries for a unit
+     * @return {String}  A parsed string percentage string of recoveries rounded to one decimal place.
      */
-    calculateMultipleRecoveryRate: function(data) {
-        return data.map(one => {
-            return spliceRecoveryRate(one)
-        });
-    },
-
-    /**
-     * Calculates the recovery rate for a single object. (e.g. China)
-     * 
-     * @param {Array} data A single object of data for a unit. 
-     */
-    calculateSingleRecoveryRate: function(data) {
-        return spliceRecoveryRate(data);
+    calculateRecoveryRate: function(numDeaths, numRecoveries) {
+        return calcRecoveryRate(numDeaths, numRecoveries);
     }
 };

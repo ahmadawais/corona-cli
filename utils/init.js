@@ -12,6 +12,7 @@ module.exports = async () => {
 	});
 	updateNotifier({
 		pkg: pkgJSON,
-		shouldNotifyInNpmScript: true
+		shouldNotifyInNpmScript: true,
+		updateCheckInterval: 1000 * 60 * 60 * 24 // 24 hours.
 	}).notify({ isGlobal: true });
 };

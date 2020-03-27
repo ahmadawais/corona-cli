@@ -67,6 +67,9 @@ assets/bower_components/*
 library/vendors/composer
 assets/img/.DS_Store
 
+# Visual Studio Project Files #
+.vs/
+
 # No lock files.
 package-lock.json
 yarn.lock

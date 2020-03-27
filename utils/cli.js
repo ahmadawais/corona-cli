@@ -16,9 +16,11 @@ module.exports = meow(
 	Options
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
+	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
+	  ${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
 
 	Examples
-		${green(`corona`)} ${cyan(`china`)}
+	  ${green(`corona`)} ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`states`)}
 	  ${green(`corona`)} ${yellow(`-x`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
@@ -39,8 +41,23 @@ module.exports = meow(
 			},
 			sort: {
 				type: 'string',
-				default: 'cases-today',
+				default: 'cases',
 				alias: 's'
+			},
+			reverse: {
+				type: 'boolean',
+				default: false,
+				alias: 'r'
+			},
+			limit: {
+				type: 'number',
+				default: Number.MAX_SAFE_INTEGER,
+				alias: 'l'
+			},
+			minimal: {
+				type: 'boolean',
+				defualt: false,
+				alias: 'm'
 			}
 		}
 	}

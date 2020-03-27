@@ -29,10 +29,322 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [3.8.4](https://github.com/ahmadawais/corona-cli/compare/3.8.2...3.8.4)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Lingo [`a01a9e9`](https://github.com/ahmadawais/corona-cli/commit/a01a9e9f96ad28da7e6628b3e730bc62e04da3ad) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Help text [`397b51d`](https://github.com/ahmadawais/corona-cli/commit/397b51d027af6775399b98348fc416a3194d1962) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`d40bd56`](https://github.com/ahmadawais/corona-cli/commit/d40bd5693e2a4fe80ba91cd1c86f6c7181ea643f) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.8.2](https://github.com/ahmadawais/corona-cli/compare/3.8.1...3.8.2)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Logo [`adbe02f`](https://github.com/ahmadawais/corona-cli/commit/adbe02ffff302e1476559b0f5d5490572353e9bf) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`8500b28`](https://github.com/ahmadawais/corona-cli/commit/8500b28adfd289c9c96fb337b3904c4a27958479) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.8.1](https://github.com/ahmadawais/corona-cli/compare/3.8.0...3.8.1)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Extraneous [`69ac9ed`](https://github.com/ahmadawais/corona-cli/commit/69ac9ede85ba093ee27922a13200faa327c2cf3e) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`485ca06`](https://github.com/ahmadawais/corona-cli/commit/485ca067edeede00ec254626d94367159a02b746) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.8.0](https://github.com/ahmadawais/corona-cli/compare/3.7.2...3.8.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Node Engine [`96cc8f4`](https://github.com/ahmadawais/corona-cli/commit/96cc8f4008f6579a7ed785590f0368a9c4fa4713) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Dependency [`b4a62b8`](https://github.com/ahmadawais/corona-cli/commit/b4a62b8b95bdf063aedc424bbebb182cf28f02a0) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`03aee1e`](https://github.com/ahmadawais/corona-cli/commit/03aee1e38cbc2aff58f655703d1d750ac5987a58) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.7.2](https://github.com/ahmadawais/corona-cli/compare/3.7.1...3.7.2)
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`1c58641`](https://github.com/ahmadawais/corona-cli/commit/1c586414b74cd8db855f5398911beb485058aaff) <br>
+> 📖 Alias [`44a9360`](https://github.com/ahmadawais/corona-cli/commit/44a9360fa47fef837a94d31174f126c39d100d60) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.7.1](https://github.com/ahmadawais/corona-cli/compare/3.7.0...3.7.1)
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`535cc12`](https://github.com/ahmadawais/corona-cli/commit/535cc1270673ba02cf5630720a95021fb00ca2ee) <br>
+> 📖 Minimal [`875e3bb`](https://github.com/ahmadawais/corona-cli/commit/875e3bb7a3ad2764429c5d94c68b67c8243b78e7) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.7.0](https://github.com/ahmadawais/corona-cli/compare/3.6.0...3.7.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Minimal [`4c2e393`](https://github.com/ahmadawais/corona-cli/commit/4c2e393ced22d517061645f999877a23a66cc274) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`111d20b`](https://github.com/ahmadawais/corona-cli/commit/111d20b08baf42b8456b12611de0d63a6e425c8d) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.6.0](https://github.com/ahmadawais/corona-cli/compare/3.5.1...3.6.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌  Limit [`4bc3f58`](https://github.com/ahmadawais/corona-cli/commit/4bc3f5899d187ba42db742fbc1ecb99f9a676c02) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`0f0550f`](https://github.com/ahmadawais/corona-cli/commit/0f0550f1e4f51122166b1f556d8554807967a480) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.5.1](https://github.com/ahmadawais/corona-cli/compare/3.5.0...3.5.1)
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`2ba122a`](https://github.com/ahmadawais/corona-cli/commit/2ba122a2e4b2e2884f50e8f2f9b8fbfa3735e195) <br>
+> 📖 Lingo [`d7c8671`](https://github.com/ahmadawais/corona-cli/commit/d7c86719443356fa58eb0d901d655b89f119f5ee) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.5.0](https://github.com/ahmadawais/corona-cli/compare/3.4.0...3.5.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Reverse [`5cb3f2b`](https://github.com/ahmadawais/corona-cli/commit/5cb3f2bd85a95d0b7d33f6fdca9246c0f6bf763c) <br>
+> 👌 Lingo [`7f4a751`](https://github.com/ahmadawais/corona-cli/commit/7f4a751f451a6b17cb522b0d5282cdfa5d09caba) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`e070bd2`](https://github.com/ahmadawais/corona-cli/commit/e070bd2798efa792d9dce86df28e38a66055438c) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.4.0](https://github.com/ahmadawais/corona-cli/compare/3.3.0...3.4.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Lingo [`36d3f89`](https://github.com/ahmadawais/corona-cli/commit/36d3f89d31cf6f1f067d009c4697e52b1666b6c3) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`c318abd`](https://github.com/ahmadawais/corona-cli/commit/c318abdbfd5100ffe7206f25596532fc56a1d90f) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.3.0](https://github.com/ahmadawais/corona-cli/compare/3.2.0...3.3.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Time update [`c8f2f6a`](https://github.com/ahmadawais/corona-cli/commit/c8f2f6a23a25b56ed65fd052c1b8da0524d67b8a) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Order + Flexibility [`7a6e824`](https://github.com/ahmadawais/corona-cli/commit/7a6e824c60a0f50793ca7536a47ac151e82c81e1) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`e73216b`](https://github.com/ahmadawais/corona-cli/commit/e73216bb4d895dd7d664aaff77408c51794a43ec) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.2.0](https://github.com/ahmadawais/corona-cli/compare/3.1.4...3.2.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 API down handler [`afb399c`](https://github.com/ahmadawais/corona-cli/commit/afb399ce516907a5897e18eb78499453fb4f2c52) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Update notifier [`d60b318`](https://github.com/ahmadawais/corona-cli/commit/d60b3183974d1d046fd40d9b88ef544e1f26865e) <br>
+> 👌 Update modules [`b50586e`](https://github.com/ahmadawais/corona-cli/commit/b50586ed6693a5957b5eb19cc66c7c06de125c2d) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`2c14ada`](https://github.com/ahmadawais/corona-cli/commit/2c14ada19f109ac584e89d8f085ca465cdb8c92c) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.1.4](https://github.com/ahmadawais/corona-cli/compare/3.1.3...3.1.4)
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`4ab3a9c`](https://github.com/ahmadawais/corona-cli/commit/4ab3a9c79d1b8d841f7c72f8ef5d68f9f7250f10) <br>
+> 📖 Info [`b974b04`](https://github.com/ahmadawais/corona-cli/commit/b974b045d68b31ec524629083c93f52175f04c93) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.1.3](https://github.com/ahmadawais/corona-cli/compare/3.1.2...3.1.3)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Downloads [`ea311ee`](https://github.com/ahmadawais/corona-cli/commit/ea311ee40719f205b1087479246a501965298026) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`5bd9445`](https://github.com/ahmadawais/corona-cli/commit/5bd944502f9188cf27cb2837edd72e9d8ccc5ae6) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.1.2](https://github.com/ahmadawais/corona-cli/compare/3.1.1...3.1.2)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Help [`644da39`](https://github.com/ahmadawais/corona-cli/commit/644da392f3de3bf519f4dba12ab0d82e7ca4445c) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`e2d72cd`](https://github.com/ahmadawais/corona-cli/commit/e2d72cd9d4901a3d21603d03334a08f38743eeb9) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.1.1](https://github.com/ahmadawais/corona-cli/compare/3.1.0...3.1.1)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Lingo [`9dd764a`](https://github.com/ahmadawais/corona-cli/commit/9dd764ad9a0df53016bc5274113bd70deada2ba4) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`5cda1d8`](https://github.com/ahmadawais/corona-cli/commit/5cda1d89613b4461662ca6dbbf393ede2a854a8d) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.1.0](https://github.com/ahmadawais/corona-cli/compare/3.0.0...3.1.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Perf filter [`8eb48fd`](https://github.com/ahmadawais/corona-cli/commit/8eb48fd410411a0b4123ee915dde307a9d29f79e) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`3de06d2`](https://github.com/ahmadawais/corona-cli/commit/3de06d29bc6bc56b7d32dae790a1b9296793aa72) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.0.0](https://github.com/ahmadawais/corona-cli/compare/2.5.0...3.0.0)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Sort + API Outcome [`f35cf99`](https://github.com/ahmadawais/corona-cli/commit/f35cf993f6b629aa6bd9bfed076db5bc962e3e71) <br>
+> 🐛 Extraneous [`5e54736`](https://github.com/ahmadawais/corona-cli/commit/5e547362783a9950b852b5540d5bfa065aa7d332) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`4484d34`](https://github.com/ahmadawais/corona-cli/commit/4484d341ba79830500ab24da5e601ebc5213dc42) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [2.5.0](https://github.com/ahmadawais/corona-cli/compare/2.4.0...2.5.0)
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+> 📖 Changelog [`75a4b51`](https://github.com/ahmadawais/corona-cli/commit/75a4b514a32a223958c0ffa644103858e7ad9eb6) <br>
 > 📖 Format [`364e72d`](https://github.com/ahmadawais/corona-cli/commit/364e72d52b20ae00791d3697be85f2319037c6c3) <br>
 
 <br>

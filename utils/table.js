@@ -1,10 +1,12 @@
-const chalk = require("chalk");
+const chalk = require('chalk');
 const green = chalk.green;
 const red = chalk.red;
+const yellow = chalk.yellow;
 const dim = chalk.dim;
 
 module.exports = {
 	single: [
+		`#`,
 		`Country`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -17,6 +19,7 @@ module.exports = {
 		`Per Million`
 	],
 	colored: [
+		`#`,
 		`Country`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
@@ -24,53 +27,63 @@ module.exports = {
 		`${red(`Deaths (today)`)}`,
 		`${green(`Recovered`)}`,
 		`${green(`Recovery Rate`)}`,
-		`Active`,
+		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
 		`Per Million`
 	],
-	sortKeys: [
-		`country`,
-		`cases`,
-		`cases-today`,
-		`deaths`,
-		`deaths-today`,
-		`recovered`,
-		`recovery-rate`,
-		`active`,
-		`critical`,
-		`per-million`
-	],
 	singleStates: [
+		`#`,
 		`State`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
-		`Recovered`,
-		`Recovery Rate`,
 		`Active`
 	],
 	coloredStates: [
+		`#`,
 		`State`,
 		`Cases`,
 		`Cases ${dim(`(today)`)}`,
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
-		`${green(`Recovered`)}`,
-		`${green(`Recovery Rate`)}`,
-		`Active`
+		`${yellow(`Active`)}`
 	],
-	sortStateKeys: [
-		`state`,
-		`cases`,
-		`cases-today`,
-		`deaths`,
-		`deaths-today`,
-		`recovered`,
-		`recovery-rate`,
-		`active`
-	],
-	sortOrders: [1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
-	sortStateOrders: [1, -1, -1, -1, -1, -1, -1, -1],
-	style: { head: ["cyan"] }
+	style: { head: ['cyan'] },
+	borderless: {
+		top: '',
+		'top-mid': '',
+		'top-left': '',
+		'top-right': '',
+		bottom: '',
+		'bottom-mid': '',
+		'bottom-left': '',
+		'bottom-right': '',
+		left: '',
+		'left-mid': '',
+		mid: '',
+		'mid-mid': '',
+		right: '',
+		'right-mid': '',
+		middle: ' '
+	},
+	sortingKeys: {
+		country: 'country',
+		cases: 'cases',
+		'cases-today': 'todayCases',
+		deaths: 'deaths',
+		'deaths-today': 'todayDeaths',
+		recovered: 'recovered',
+		active: 'active',
+		critical: 'critical',
+		'per-million': 'casesPerOneMillion'
+	},
+	sortingStateKeys: {
+		state: 'state',
+		cases: 'cases',
+		'cases-today': 'todayCases',
+		deaths: 'deaths',
+		'deaths-today': 'todayDeaths',
+		active: 'active'
+	}
 };
