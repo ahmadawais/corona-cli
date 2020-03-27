@@ -56,7 +56,7 @@ module.exports = meow(
 			},
 			minimal: {
 				type: 'boolean',
-				defualt: false,
+				default: false,
 				alias: 'm'
 			}
 		}
