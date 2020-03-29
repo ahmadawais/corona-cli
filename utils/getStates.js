@@ -8,7 +8,12 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 
-module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
+module.exports = async (
+	spinner,
+	table,
+	states,
+	{ sortBy, limit, reverse, date }
+) => {
 	if (states) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/states`)
