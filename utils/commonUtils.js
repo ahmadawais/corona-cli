@@ -5,7 +5,7 @@ const handleError = require('cli-handle-error');
 
 const dim = chalk.dim;
 const red = chalk.red;
-const DATE_CHAR = 8;
+const DATE_CHAR = 6;
 
 let validateDateFormat = function (inputDate) {
 	var inputDateLength = inputDate.length;
@@ -21,13 +21,14 @@ let validateDateFormat = function (inputDate) {
 };
 
 let getNinjaDateFormat = function (inputDate) {
-	// convert YYYYMMDD to YYYY-MM--DD
+	// convert DDMMYY to YYYY-MM-DD
 	var formattedDate =
-		inputDate.slice(0, 4) +
-		'-' +
+		'20' +
 		inputDate.slice(4, 6) +
 		'-' +
-		inputDate.slice(6, 8);
+		inputDate.slice(2, 4) +
+		'-' +
+		inputDate.slice(0, 2);
 	var newDate = new Date(formattedDate);
 	var year = newDate.getFullYear().toString().substr(-2);
 	var month = newDate.getMonth() + 1 + '';
@@ -52,11 +53,12 @@ let throwError = function (error) {
 
 let isPastDate = function (inputDate) {
 	var formatInputDate = new Date(
-		inputDate.slice(0, 4) +
-			'-' +
+		'20' +
 			inputDate.slice(4, 6) +
 			'-' +
-			inputDate.slice(6, 8)
+			inputDate.slice(2, 4) +
+			'-' +
+			inputDate.slice(0, 2)
 	);
 	var today = new Date();
 	today.setHours(0, 0, 0, 0);
