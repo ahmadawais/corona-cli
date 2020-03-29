@@ -22,9 +22,6 @@ module.exports = async (
 		handleError(`API is down, try again later.`, err, false);
 		let allCountries = response.data;
 
-		// Limit.
-		allCountries = allCountries.slice(0, limit);
-
 		// Sort & reverse.
 		const direction = reverse ? 'asc' : 'desc';
 		allCountries = orderBy(
@@ -33,7 +30,10 @@ module.exports = async (
 			[direction]
 		);
 
-		// Push selected data.
+		// Limit.
+		allCountries = allCountries.slice(0, limit);
+
+// Push selected data.
 		allCountries.map((oneCountry, count) => {
 			table.push([
 				count + 1,
