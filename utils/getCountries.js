@@ -7,14 +7,16 @@ const { sortingKeys } = require('./table.js');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
+const { parseCli, deleteColumns } = require('./deleteColumns');
 
-module.exports = async (
+module.exports = async ({
 	spinner,
 	table,
 	states,
 	countryName,
-	{ sortBy, limit, reverse }
-) => {
+	options: { sortBy, limit, reverse },
+	tableHead
+}) => {
 	if (!countryName && !states) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/countries`)
@@ -48,6 +50,9 @@ module.exports = async (
 				comma(oneCountry.casesPerOneMillion)
 			]);
 		});
+
+		const input = parseCli(states);
+		deleteColumns(table, tableHead, input);
 
 		spinner.stopAndPersist();
 		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;

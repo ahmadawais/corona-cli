@@ -38,23 +38,23 @@ const options = { sortBy, limit, reverse, minimal };
 	init(minimal);
 	const [input] = cli.input;
 	input === 'help' && (await cli.showHelp(0));
-	const states = input === 'states' ? true : false;
+	const states = input === 'states';
 	const country = input;
 
 	// Table
 	const head = xcolor ? single : colored;
 	const headStates = xcolor ? singleStates : coloredStates;
+
 	const border = minimal ? borderless : {};
-	const table = !states
-		? new Table({ head, style, chars: border })
-		: new Table({ head: headStates, style, chars: border });
+	const tableHead = states ? headStates : head;
+	const table = new Table({ head: tableHead, style, chars: border });
 
 	// Display data.
 	spinner.start();
 	const lastUpdated = await getWorldwide(table, states);
-	await getCountry(spinner, table, states, country);
-	await getStates(spinner, table, states, options);
-	await getCountries(spinner, table, states, country, options);
+	await getCountry({ spinner, table, states, country, tableHead });
+	await getStates({ spinner, table, states, options, tableHead });
+	await getCountries({ spinner, table, states, country, options, tableHead });
 
 	theEnd(lastUpdated, states, minimal);
 })();

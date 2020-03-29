@@ -5,8 +5,9 @@ const comma = require('comma-number');
 const red = chalk.red;
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
+const { deleteColumns } = require('./deleteColumns');
 
-module.exports = async (spinner, table, states, countryName) => {
+module.exports = async ({ spinner, table, states, countryName, tableHead }) => {
 	if (countryName && !states) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/countries/${countryName}`)
@@ -36,6 +37,9 @@ module.exports = async (spinner, table, states, countryName) => {
 			comma(thisCountry.critical),
 			comma(thisCountry.casesPerOneMillion)
 		]);
+		const input = parseCli(states);
+		deleteColumns(table, tableHead, input);
+
 		spinner.stopAndPersist();
 		console.log(table.toString());
 	}
