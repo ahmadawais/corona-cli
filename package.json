@@ -46,13 +46,11 @@
 		"test": "node test.js"
 	},
 	"dependencies": {
-		"asciichart": "^1.5.15",
 		"await-to-js": "^2.1.1",
 		"axios": "^0.19.2",
 		"blessed": "^0.1.81",
 		"blessed-contrib": "^4.8.19",
 		"chalk": "^3.0.0",
-		"cli-chart": "^0.3.1",
 		"cli-handle-error": "^4.1.0",
 		"cli-table3": "^0.5.1",
 		"cli-welcome": "^1.4.0",
