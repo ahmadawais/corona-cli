@@ -6,8 +6,8 @@ const red = chalk.red;
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
-module.exports = async (spinner, table, states, countryName) => {
-	if (countryName && !states) {
+module.exports = async (spinner, table, states, countryName,options) => {
+	if (countryName && !states && !options.chart) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/countries/${countryName}`)
 		);
