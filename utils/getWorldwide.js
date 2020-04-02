@@ -7,7 +7,7 @@ module.exports = async (table, states) => {
 	const [err, all] = await to(axios.get(`https://corona.lmao.ninja/all`));
 	handleError(`API is down, try again later.`, err, false);
 	let data = Object.values(all.data);
-	data = data.map((d) => comma(d));
+	data = data.map(d => comma(d));
 
 	if (!states) {
 		table.push([

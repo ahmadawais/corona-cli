@@ -41,17 +41,15 @@
 		"Ahmad Awais",
 		"ahmadawais"
 	],
-	"scripts": {
-		"format": "prettier --write \"./**/*.{js,json}\"",
-		"test": "node test.js"
-	},
 	"dependencies": {
 		"await-to-js": "^2.1.1",
 		"axios": "^0.19.2",
 		"blessed": "^0.1.81",
 		"blessed-contrib": "^4.8.19",
 		"chalk": "^3.0.0",
+		"cli-check-node": "^1.3.0",
 		"cli-handle-error": "^4.1.0",
+		"cli-handle-unhandled": "^1.1.0",
 		"cli-table3": "^0.5.1",
 		"cli-welcome": "^1.4.0",
 		"comma-number": "^2.0.1",
@@ -64,5 +62,9 @@
 	},
 	"devDependencies": {
 		"prettier": "^2.0.2"
+	},
+	"scripts": {
+		"format": "prettier --write \"./**/*.{js,json}\"",
+		"test": "node test.js"
 	}
 }

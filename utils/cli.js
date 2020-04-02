@@ -54,14 +54,14 @@ module.exports = meow(
 				default: Number.MAX_SAFE_INTEGER,
 				alias: 'l'
 			},
-			chart:{
-				type:'boolean',
-				default:false,
-				alias:'c'
+			chart: {
+				type: 'boolean',
+				default: false,
+				alias: 'c'
 			},
-			log:{
-				type:'boolean',
-				default:false
+			log: {
+				type: 'boolean',
+				default: false
 			},
 			minimal: {
 				type: 'boolean',

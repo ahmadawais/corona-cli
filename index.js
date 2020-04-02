@@ -3,7 +3,7 @@
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', err => {
 	handleError(`UNHANDLED ERROR`, err);
 });
 
@@ -27,19 +27,21 @@ const {
 	coloredStates,
 	borderless
 } = require('./utils/table.js');
+
+// Cli.
+const [input] = cli.input;
 const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
 const reverse = cli.flags.reverse;
 const limit = Math.abs(cli.flags.limit);
-const chart = cli.flags.chart
-const log = cli.flags.log
+const chart = cli.flags.chart;
+const log = cli.flags.log;
 const minimal = cli.flags.minimal;
-const options = { sortBy, limit, reverse, minimal,chart ,log};
+const options = { sortBy, limit, reverse, minimal, chart, log };
 
 (async () => {
 	// Init.
 	init(minimal);
-	const [input] = cli.input;
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states' ? true : false;
 	const country = input;
@@ -55,10 +57,10 @@ const options = { sortBy, limit, reverse, minimal,chart ,log};
 	// Display data.
 	spinner.start();
 	const lastUpdated = await getWorldwide(table, states);
-	await getCountry(spinner, table, states, country,options);
+	await getCountry(spinner, table, states, country, options);
 	await getStates(spinner, table, states, options);
 	await getCountries(spinner, table, states, country, options);
-	await getCountryChart(spinner,country,options)
+	await getCountryChart(spinner, country, options);
 
 	theEnd(lastUpdated, states, minimal);
 })();
