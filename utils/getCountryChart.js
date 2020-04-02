@@ -47,7 +47,7 @@ module.exports = async (spinner, countryName, options) => {
 		var recovered = Object.values(response.data.timeline.recovered)
 
 		var casesSeries = {
-			title: `cases__${cases.reduce(cumulative)}`,
+			title: `cases__${cases[cases.length -1]}`,
 			x: dates,
 			y: cases.map(logScale),
 			style: {
@@ -55,7 +55,7 @@ module.exports = async (spinner, countryName, options) => {
 			}
 		}
 		var deathsSeries = {
-			title: `deaths__${deaths.reduce(cumulative)}`,
+			title: `deaths__${deaths[deaths.length -1]}`,
 			x: dates,
 			y: deaths.map(logScale),
 			style: {
@@ -63,7 +63,7 @@ module.exports = async (spinner, countryName, options) => {
 			}
 		}
 		var recoveredSeries = {
-			title: `recovered__${recovered.reduce(cumulative)}`,
+			title: `recovered__${recovered[deaths.length -1]}`,
 			x: dates,
 			y: recovered.map(logScale),
 			style: {
