@@ -1,7 +1,8 @@
 const sym = require('log-symbols');
 const chalk = require('chalk');
-const cyan = chalk.cyan;
-const dim = chalk.dim;
+
+const { cyan } = chalk;
+const { dim } = chalk;
 
 const infoStates = () =>
 	console.log(

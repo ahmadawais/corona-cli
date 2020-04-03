@@ -61,10 +61,14 @@
 		"update-notifier": "^4.1.0"
 	},
 	"devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-standard": "^3.1.0",
 		"prettier": "^2.0.2"
 	},
 	"scripts": {
 		"format": "prettier --write \"./**/*.{js,json}\"",
+		"lint": "eslint ./utils/",
+		"lint:fix": "eslint ./utils/ --fix",
 		"test": "node test.js"
 	}
 }

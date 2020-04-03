@@ -1,8 +1,9 @@
 const meow = require('meow');
 const chalk = require('chalk');
-const green = chalk.green;
-const yellow = chalk.yellow;
-const cyan = chalk.cyan;
+
+const { green } = chalk;
+const { yellow } = chalk;
+const { cyan } = chalk;
 
 module.exports = meow(
 	`

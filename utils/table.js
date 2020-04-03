@@ -1,8 +1,9 @@
 const chalk = require('chalk');
-const green = chalk.green;
-const red = chalk.red;
-const yellow = chalk.yellow;
-const dim = chalk.dim;
+
+const { green } = chalk;
+const { red } = chalk;
+const { yellow } = chalk;
+const { dim } = chalk;
 
 module.exports = {
 	single: [
