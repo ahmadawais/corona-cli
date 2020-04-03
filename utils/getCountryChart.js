@@ -76,9 +76,7 @@ module.exports = async (spinner, countryName, { chart, log }) => {
 		line.setData([casesSeries, deathsSeries, recoveredSeries]);
 		screen.render();
 		await new Promise((resolve, _) => {
-			screen.key(['escape', 'q', 'C-c', 'enter', 'space'], (ch, key) =>
-				process.exit(0)
-			);
+			screen.key(['escape', 'q', 'C-c', 'enter', 'space'], (ch, key) => process.exit(0));
 		});
 	}
 };

@@ -4,7 +4,10 @@
 		"commonjs": true,
 		"es6": true
 	},
-	"extends": ["airbnb-standard"],
+	"plugins": [
+		"security"
+	],
+	"extends": ["airbnb-standard","plugin:security/recommended"],
 	"globals": {
 		"Atomics": "readonly",
 		"SharedArrayBuffer": "readonly"
@@ -23,6 +26,7 @@
 		"no-const-assign": 0,
 		"no-unused-vars": 0,
 		"no-param-reassign": 0,
-		"promise/param-names": 0
+		"promise/param-names": 0,
+		"security/detect-object-injection":0
 	}
 }
