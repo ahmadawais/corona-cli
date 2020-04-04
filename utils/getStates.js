@@ -10,7 +10,6 @@ const orderBy = require('lodash.orderby');
 
 module.exports = async (spinner, table, states, { stateName, sortBy, limit, reverse }) => {
 	if (states) {
-		const state = stateName;
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/states`)
 		);
@@ -26,10 +25,11 @@ module.exports = async (spinner, table, states, { stateName, sortBy, limit, reve
 
 		// Push selected data.
 		if (stateName) {
+		const state = stateName;
 		allStates.map((oneState, count) => {
 			if (oneState.state === state)
 					table.push([
-						count + 1,
+						'-',
 						oneState.state,
 						comma(oneState.cases),
 						comma(oneState.todayCases),

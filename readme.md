@@ -79,6 +79,11 @@ corona usa
 # Display data for all the US states.
 corona states
 
+# Display data for single US state.
+corona states --stateName Tennessee
+or
+corona states --stateName "New York"
+
 # Display states data sorted by active cases.
 corona states --sort active
 
