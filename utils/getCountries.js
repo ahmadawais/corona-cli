@@ -1,12 +1,10 @@
-const axios = require('axios');
 const chalk = require('chalk');
 const cyan = chalk.cyan;
 const dim = chalk.dim;
 const comma = require('comma-number');
 const { sortingKeys } = require('./table.js');
-const to = require('await-to-js').default;
-const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
+const fetchAndHandleErrors = require('./fetchAndHandleErrors.js');
 
 module.exports = async (
 	spinner,
@@ -16,10 +14,10 @@ module.exports = async (
 	{ sortBy, limit, reverse }
 ) => {
 	if (!countryName && !states) {
-		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/countries`)
+		const { response } = await fetchAndHandleErrors(
+			`https://corona.lmao.ninja/countries`
 		);
-		handleError(`API is down, try again later.`, err, false);
+
 		let allCountries = response.data;
 
 		// Limit.
@@ -27,11 +25,7 @@ module.exports = async (
 
 		// Sort & reverse.
 		const direction = reverse ? 'asc' : 'desc';
-		allCountries = orderBy(
-			allCountries,
-			[sortingKeys[sortBy]],
-			[direction]
-		);
+		allCountries = orderBy(allCountries, [sortingKeys[sortBy]], [direction]);
 
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {

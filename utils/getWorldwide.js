@@ -1,11 +1,11 @@
-const axios = require('axios');
 const comma = require('comma-number');
-const to = require('await-to-js').default;
-const handleError = require('cli-handle-error');
+const fetchAndHandleErrors = require('./fetchAndHandleErrors.js');
 
 module.exports = async (table, states) => {
-	const [err, all] = await to(axios.get(`https://corona.lmao.ninja/all`));
-	handleError(`API is down, try again later.`, err, false);
+	const { response: all } = await fetchAndHandleErrors(
+		`https://corona.lmao.ninja/all`
+	);
+
 	let data = Object.values(all.data);
 	data = data.map(d => comma(d));
 
