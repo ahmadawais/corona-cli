@@ -25,9 +25,8 @@ module.exports = async (spinner, table, states, { stateName, sortBy, limit, reve
 
 		// Push selected data.
 		if (stateName) {
-		const state = stateName;
-		allStates.map((oneState, count) => {
-			if (oneState.state === state)
+			allStates.map((oneState, count) => {
+			if (oneState.state === stateName)
 					table.push([
 						'-',
 						oneState.state,
