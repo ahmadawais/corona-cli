@@ -18,7 +18,7 @@ module.exports = meow(
 	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
 	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
 	  ${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
-	  ${yellow(`--json`)}, ${yellow(`-j`)}		 	 Print JSON data output
+	  ${yellow(`--json`)}, ${yellow(`-j`)}		 Print JSON data output
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
@@ -66,6 +66,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'm'
+			},
+			json: {
+				type: 'boolean',
+				default: false,
+				alias: 'j'
 			}
 		}
 	}

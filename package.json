@@ -1,65 +1,68 @@
 {
-	"name": "corona-cli",
-	"version": "3.8.6",
-	"description": "Track the Coronavirus disease (COVID-19).",
-	"license": "MIT",
-	"repository": "ahmadawais/corona-cli",
-	"author": {
-		"name": "Ahmad Awais",
-		"email": "me@AhmadAwais.com",
-		"url": "https://twitter.com/MrAhmadAwais"
-	},
-	"main": "index.js",
-	"engines": {
-		"node": ">=12.x"
-	},
-	"bin": {
-		"corona": "index.js",
-		"corona-cli": "index.js"
-	},
-	"files": [
-		"index.js",
-		"utils/*"
-	],
-	"keywords": [
-		"corona-cli",
-		"coronavirus",
-		"corona",
-		"coronavirus-tracking",
-		"coronavirus-real-time",
-		"coronavirus-analysis",
-		"coronavirus-info",
-		"covid-19",
-		"covid-19",
-		"covid19",
-		"coronavirus",
-		"cdc",
-		"cdc",
-		"novel",
-		"corona",
-		"virus",
-		"Ahmad Awais",
-		"ahmadawais"
-	],
-	"scripts": {
-		"format": "prettier --write \"./**/*.{js,json}\"",
-		"test": "node test.js"
-	},
-	"dependencies": {
-		"await-to-js": "^2.1.1",
-		"axios": "^0.19.2",
-		"chalk": "^3.0.0",
-		"cli-handle-error": "^4.1.0",
-		"cli-table3": "^0.5.1",
-		"cli-welcome": "^1.4.0",
-		"comma-number": "^2.0.1",
-		"lodash.orderby": "^4.6.0",
-		"log-symbols": "^3.0.0",
-		"meow": "^6.1.0",
-		"ora": "^4.0.3",
-		"update-notifier": "^4.1.0"
-	},
-	"devDependencies": {
-		"prettier": "^2.0.2"
-	}
+  "name": "init.js",
+  "version": "3.8.6",
+  "description": "Track the Coronavirus disease (COVID-19).",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadawais/corona-cli.git"
+  },
+  "author": "Ahmad Awais <me@AhmadAwais.com> (https://twitter.com/MrAhmadAwais)",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.x"
+  },
+  "bin": {
+    "corona": "index.js",
+    "corona-cli": "index.js"
+  },
+  "files": [
+    "index.js",
+    "utils/*"
+  ],
+  "keywords": [
+    "corona-cli",
+    "coronavirus",
+    "corona",
+    "coronavirus-tracking",
+    "coronavirus-real-time",
+    "coronavirus-analysis",
+    "coronavirus-info",
+    "covid-19",
+    "covid-19",
+    "covid19",
+    "coronavirus",
+    "cdc",
+    "cdc",
+    "novel",
+    "corona",
+    "virus",
+    "Ahmad Awais",
+    "ahmadawais"
+  ],
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,json}\"",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "await-to-js": "^2.1.1",
+    "axios": "^0.19.2",
+    "chalk": "^3.0.0",
+    "cli-handle-error": "^4.1.0",
+    "cli-table3": "^0.5.1",
+    "cli-welcome": "^1.4.0",
+    "comma-number": "^2.0.1",
+    "lodash.orderby": "^4.6.0",
+    "log-symbols": "^3.0.0",
+    "meow": "^6.1.0",
+    "ora": "^4.0.3",
+    "update-notifier": "^4.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmadawais/corona-cli/issues"
+  },
+  "homepage": "https://github.com/ahmadawais/corona-cli#readme"
 }

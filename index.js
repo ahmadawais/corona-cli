@@ -18,6 +18,7 @@ const getStates = require('./utils/getStates.js');
 const getCountry = require('./utils/getCountry.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
+const getJson = require('./utils/getJson.js');
 const {
 	style,
 	single,
@@ -32,6 +33,7 @@ const reverse = cli.flags.reverse;
 const limit = Math.abs(cli.flags.limit);
 const minimal = cli.flags.minimal;
 const options = { sortBy, limit, reverse, minimal };
+
 
 (async () => {
 	// Init.
@@ -48,13 +50,18 @@ const options = { sortBy, limit, reverse, minimal };
 	const table = !states
 		? new Table({ head, style, chars: border })
 		: new Table({ head: headStates, style, chars: border });
-
+	
+		
 	// Display data.
 	spinner.start();
-	const lastUpdated = await getWorldwide(table, states);
-	await getCountry(spinner, table, states, country);
-	await getStates(spinner, table, states, options);
-	await getCountries(spinner, table, states, country, options);
-
-	theEnd(lastUpdated, states, minimal);
+	if (cli.flags.json === false) {
+		const lastUpdated = await getWorldwide(table, states);
+		await getCountry(spinner, table, states, country);
+		await getStates(spinner, table, states, options);
+		await getCountries(spinner, table, states, country, options);
+		theEnd(lastUpdated, states, minimal);
+	} else {
+		const lastUpdated = await getJson(spinner, states, country);
+		theEnd(lastUpdated, states, minimal);
+	}
 })();
