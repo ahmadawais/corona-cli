@@ -6,24 +6,24 @@ const handleError = require('cli-handle-error');
 module.exports = async (table, states) => {
 	const [err, all] = await to(axios.get(`https://corona.lmao.ninja/all`));
 	handleError(`API is down, try again later.`, err, false);
-	let data = Object.values(all.data);
-	data = data.map(d => comma(d));
+
+	const { data } = all;
 
 	if (!states) {
 		table.push([
 			`—`,
 			`Worldwide`,
-			data[0],
-			`—`,
-			data[1],
-			`—`,
-			data[2],
-			`—`,
-			`—`,
-			`—`
+			comma(data.cases),
+			comma(data.todayCases),
+			comma(data.deaths),
+			comma(data.todayDeaths),
+			comma(data.recovered),
+			comma(data.active),
+			comma(data.critical),
+			comma(data.casesPerOneMillion),
 		]);
 	}
 
-	const lastUpdated = Date(data[3]);
+	const lastUpdated = Date(data.updated);
 	return lastUpdated;
 };
