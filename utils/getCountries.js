@@ -22,9 +22,6 @@ module.exports = async (
 		handleError(`API is down, try again later.`, err, false);
 		let allCountries = response.data;
 
-		// Limit.
-		allCountries = allCountries.slice(0, limit);
-
 		// Format.
 		const format = numberFormat(json);
 
@@ -35,6 +32,9 @@ module.exports = async (
 			[sortingKeys[sortBy]],
 			[direction]
 		);
+
+		// Limit.
+		allCountries = allCountries.slice(0, limit);
 
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {
