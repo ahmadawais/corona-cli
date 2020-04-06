@@ -4,26 +4,29 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
 module.exports = async (table, states) => {
-	const [err, all] = await to(axios.get(`https://corona.lmao.ninja/all`));
+	const [err, response] = await to(
+		axios.get(`https://corona.lmao.ninja/all`)
+	);
 	handleError(`API is down, try again later.`, err, false);
-	let data = Object.values(all.data);
-	data = data.map(d => comma(d));
+	const allData = response.data;
+	// console.log('allData: ', allData);
 
+	// Don't print coz for states we still need that data of updated data.
 	if (!states) {
 		table.push([
-			`—`,
+			`→`,
 			`Worldwide`,
-			data[0],
-			`—`,
-			data[1],
-			`—`,
-			data[2],
-			`—`,
-			`—`,
-			`—`
+			comma(allData.cases),
+			comma(allData.todayCases),
+			comma(allData.deaths),
+			comma(allData.todayDeaths),
+			comma(allData.recovered),
+			comma(allData.active),
+			comma(allData.critical),
+			comma(allData.casesPerOneMillion)
 		]);
 	}
 
-	const lastUpdated = Date(data[3]);
+	const lastUpdated = Date(allData.updated);
 	return lastUpdated;
 };
