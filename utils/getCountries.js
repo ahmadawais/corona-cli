@@ -56,7 +56,7 @@ module.exports = async (
 		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
 		if (!json) {
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
-			console.log(output.toString());
 		}
+		console.log(output.toString());
 	}
 };

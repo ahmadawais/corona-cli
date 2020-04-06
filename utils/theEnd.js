@@ -1,6 +1,5 @@
 const sym = require('log-symbols');
 const chalk = require('chalk');
-const JsonOutput = require('./JsonOutput');
 const cyan = chalk.cyan;
 const dim = chalk.dim;
 
@@ -34,8 +33,7 @@ ${dim(`❯ `)}${cyan(`Per Million:`)} Affected patients per million
 `)
 	);
 
-module.exports = async (lastUpdated, states, minimal, output) => {
-	if (output instanceof JsonOutput) return console.log(output.format());
+module.exports = async (lastUpdated, states, minimal) => {
 	if (minimal) return console.log();
 	console.log(dim(`${sym.info} ${cyan(`Last Updated:`)} ${lastUpdated}`));
 	states && infoStates();

@@ -17,7 +17,7 @@ class JsonOutput {
     this.values.push(value);
   }
 
-  format() {
+  toString() {
     return JSON.stringify(this.asObject);
   }
 }
