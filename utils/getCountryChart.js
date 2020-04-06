@@ -21,7 +21,7 @@ module.exports = async (spinner, countryName, { chart, log }) => {
 			);
 			process.exit(0);
 		}
-		const logScale = x => x;
+		let logScale = x => x;
 		if (log) {
 			logScale = x => (x === 0 ? undefined : Math.log(x));
 		}
