@@ -13,6 +13,7 @@ module.exports = {
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
 		`Recovered`,
+		`Recovery Rate`,
 		`Active`,
 		`Critical`,
 		`Per Million`
@@ -25,6 +26,7 @@ module.exports = {
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
 		`${green(`Recovered`)}`,
+		`${green(`Recovery Rate`)}`,
 		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
 		`Per Million`

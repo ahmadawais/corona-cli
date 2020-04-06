@@ -4,6 +4,7 @@ const cyan = chalk.cyan;
 const dim = chalk.dim;
 const comma = require('comma-number');
 const { sortingKeys } = require('./table.js');
+const { calculateRecoveryRate } = require("./calcRecoveryRate");
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
@@ -43,6 +44,7 @@ module.exports = async (
 				comma(oneCountry.deaths),
 				comma(oneCountry.todayDeaths),
 				comma(oneCountry.recovered),
+				calculateRecoveryRate(oneCountry.deaths, oneCountry.recovered),
 				comma(oneCountry.active),
 				comma(oneCountry.critical),
 				comma(oneCountry.casesPerOneMillion)

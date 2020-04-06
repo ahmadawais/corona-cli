@@ -1,7 +1,9 @@
-const chalk = require('chalk');
-const axios = require('axios');
+const chalk = require("chalk");
+const axios = require("axios");
+const logSymbols = require("log-symbols");
+const comma = require("comma-number");
+const { calculateRecoveryRate } = require("./calcRecoveryRate");
 const sym = require('log-symbols');
-const comma = require('comma-number');
 const red = chalk.red;
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
@@ -23,6 +25,10 @@ module.exports = async (spinner, table, states, countryName, options) => {
 			);
 			process.exit(0);
 		}
+		// let data = Object.values(api.data);
+		// data = calculateSingleRecoveryRate(data);
+		// data = data.map(d => comma(d));
+		// table.push(data);
 
 		table.push([
 			`—`,
@@ -32,6 +38,7 @@ module.exports = async (spinner, table, states, countryName, options) => {
 			comma(thisCountry.deaths),
 			comma(thisCountry.todayDeaths),
 			comma(thisCountry.recovered),
+			calculateRecoveryRate(thisCountry.deaths, thisCountry.recovered),
 			comma(thisCountry.active),
 			comma(thisCountry.critical),
 			comma(thisCountry.casesPerOneMillion)
