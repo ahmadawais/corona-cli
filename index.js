@@ -59,7 +59,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json };
 
 	// Display data.
 	spinner.start();
-	const lastUpdated = await getWorldwide(output, states);
+	const lastUpdated = await getWorldwide(output, states, json);
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
 	await getCountries(spinner, output, states, country, options);

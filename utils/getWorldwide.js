@@ -1,13 +1,14 @@
 const axios = require('axios');
-const comma = require('comma-number');
+const numberFormat = require('./numberFormat');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
-module.exports = async (table, states) => {
+module.exports = async (table, states, json) => {
 	const [err, all] = await to(axios.get(`https://corona.lmao.ninja/all`));
 	handleError(`API is down, try again later.`, err, false);
 	let data = Object.values(all.data);
-	data = data.map(d => comma(d));
+	const format = numberFormat(json);
+	data = data.map(d => format(d));
 
 	if (!states) {
 		table.push([
