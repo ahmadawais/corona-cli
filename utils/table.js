@@ -15,7 +15,9 @@ module.exports = {
 		`Recovered`,
 		`Active`,
 		`Critical`,
-		`Per Million`
+		`Cases Per Million`,
+		`Tests`,
+		`Tests Per Million`,
 	],
 	colored: [
 		`#`,
@@ -27,7 +29,9 @@ module.exports = {
 		`${green(`Recovered`)}`,
 		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
-		`Per Million`
+		`Cases Per Million`,
+		`Tests`,
+		`Tests Per Million`,
 	],
 	singleStates: [
 		`#`,
@@ -74,7 +78,9 @@ module.exports = {
 		recovered: 'recovered',
 		active: 'active',
 		critical: 'critical',
-		'per-million': 'casesPerOneMillion'
+		'per-million': 'casesPerOneMillion',
+		'tests': 'tests',
+		'tests-per-million': 'testsPerOneMillion',
 	},
 	sortingStateKeys: {
 		state: 'state',

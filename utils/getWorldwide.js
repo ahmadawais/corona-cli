@@ -23,7 +23,9 @@ module.exports = async (table, states) => {
 			comma(allData.recovered),
 			comma(allData.active),
 			comma(allData.critical),
-			comma(allData.casesPerOneMillion)
+			comma(allData.casesPerOneMillion),
+			comma(allData.tests),
+			comma(allData.testsPerOneMillion)
 		]);
 	}
 

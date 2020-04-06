@@ -45,7 +45,9 @@ module.exports = async (
 				comma(oneCountry.recovered),
 				comma(oneCountry.active),
 				comma(oneCountry.critical),
-				comma(oneCountry.casesPerOneMillion)
+				comma(oneCountry.casesPerOneMillion),
+				comma(oneCountry.tests),
+				comma(oneCountry.testsPerOneMillion)
 			]);
 		});
 
