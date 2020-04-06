@@ -114,20 +114,6 @@ corona -s active -r
 
 [![📟](./.github/sort.gif)](./../../)
 
-### Limit the output
-
-````sh
-# Print a limited number of entries to the output.
-corona --limit 10
-corona -l 10
-
-# Print a bare bones table with no info.
-corona --minimal
-corona -m
-````
-
-[![📟](./.github/charts.gif)](./../../)
-
 ### Charts: Regular & Logarithmic
 
 ```sh
@@ -139,6 +125,20 @@ corona usa --c
 corona china --chart --log
 corona china -c -g
 ```
+
+[![📟](./.github/charts.gif)](./../../)
+
+### Limit the output
+
+````sh
+# Print a limited number of entries to the output.
+corona --limit 10
+corona -l 10
+
+# Print a bare bones table with no info.
+corona --minimal
+corona -m
+````
 
 #### CLI Help
 
