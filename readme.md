@@ -19,6 +19,7 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 - 🤯 Active daily reporting of your country's COVID-19 statistics
 - 🇺🇸 Get US States data for Coronavirus disease reports across the US
 - 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million
+- 📈 Charts: Plot statistics in the form of line charts both regular and logarithmic
 - 📟 Sort: `cases`, `cases-today`, `deaths`, `deaths-today`, `recovered`, `active`, `critical`, `per-million`
 
 <br>
@@ -117,6 +118,20 @@ corona -s active -r
 ```
 
 [![📟](./.github/sort.gif)](./../../)
+
+### Charts: Regular & Logarithmic
+
+```sh
+# Print a country line chart.
+corona usa --chart
+corona usa --c
+
+# Print a country line chart with logarithmic data.
+corona china --chart --log
+corona china -c -g
+```
+
+[![📟](./.github/charts.gif)](./../../)
 
 ### Limit the output
 
