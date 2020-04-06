@@ -67,6 +67,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'm'
+			},
+			json: {
+				type: 'boolean',
+				default: false,
+				alias: 'j'
 			}
 		}
 	}
