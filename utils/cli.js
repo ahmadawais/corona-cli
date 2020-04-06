@@ -61,7 +61,8 @@ module.exports = meow(
 			},
 			log: {
 				type: 'boolean',
-				default: false
+				default: false,
+				alias: 'g'
 			},
 			minimal: {
 				type: 'boolean',
