@@ -10,6 +10,7 @@ process.on('unhandledRejection', err => {
 const ora = require('ora');
 const spinner = ora({ text: '' });
 const Table = require('cli-table3');
+const JsonOutput = require('./utils/JsonOutput.js');
 const cli = require('./utils/cli.js');
 const init = require('./utils/init.js');
 const theEnd = require('./utils/theEnd.js');
@@ -37,11 +38,12 @@ const limit = Math.abs(cli.flags.limit);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
 const minimal = cli.flags.minimal;
-const options = { sortBy, limit, reverse, minimal, chart, log };
+const json = cli.flags.json;
+const options = { sortBy, limit, reverse, minimal, chart, log, json };
 
 (async () => {
 	// Init.
-	init(minimal);
+	init(minimal || json);
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states' ? true : false;
 	const country = input;
@@ -50,17 +52,18 @@ const options = { sortBy, limit, reverse, minimal, chart, log };
 	const head = xcolor ? single : colored;
 	const headStates = xcolor ? singleStates : coloredStates;
 	const border = minimal ? borderless : {};
-	const table = !states
-		? new Table({ head, style, chars: border })
-		: new Table({ head: headStates, style, chars: border });
+	const OutputFormat = json ? JsonOutput : Table;
+	const output = !states
+		? new OutputFormat({ head, style, chars: border })
+		: new OutputFormat({ head: headStates, style, chars: border });
 
 	// Display data.
 	spinner.start();
-	const lastUpdated = await getWorldwide(table, states);
-	await getCountry(spinner, table, states, country, options);
-	await getStates(spinner, table, states, options);
-	await getCountries(spinner, table, states, country, options);
+	const lastUpdated = await getWorldwide(output, states);
+	await getCountry(spinner, output, states, country, options);
+	await getStates(spinner, output, states, options);
+	await getCountries(spinner, output, states, country, options);
 	await getCountryChart(spinner, country, options);
 
-	theEnd(lastUpdated, states, minimal);
+	theEnd(lastUpdated, states, minimal, output);
 })();
