@@ -8,7 +8,7 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 
-module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
+module.exports = async (spinner, table, states, { stateName, sortBy, limit, reverse }) => {
 	if (states) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/states`)
@@ -24,17 +24,32 @@ module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
 		allStates = orderBy(allStates, [sortingStateKeys[sortBy]], [direction]);
 
 		// Push selected data.
-		allStates.map((oneState, count) => {
-			table.push([
-				count + 1,
-				oneState.state,
-				comma(oneState.cases),
-				comma(oneState.todayCases),
-				comma(oneState.deaths),
-				comma(oneState.todayDeaths),
-				comma(oneState.active)
-			]);
+		if (stateName) {
+			allStates.map((oneState, count) => {
+			if (oneState.state === stateName)
+					table.push([
+						'-',
+						oneState.state,
+						comma(oneState.cases),
+						comma(oneState.todayCases),
+						comma(oneState.deaths),
+						comma(oneState.todayDeaths),
+						comma(oneState.active)
+					]);
+				});
+		}
+		else { allStates.map((oneState, count) => {
+						table.push([
+							count + 1,
+							oneState.state,
+							comma(oneState.cases),
+							comma(oneState.todayCases),
+							comma(oneState.deaths),
+							comma(oneState.todayDeaths),
+							comma(oneState.active)
+						]);
 		});
+	};
 
 		spinner.stopAndPersist();
 		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
