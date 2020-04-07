@@ -24,9 +24,6 @@ module.exports = async (
 		const direction = reverse ? 'asc' : 'desc';
 		allCountries = orderBy(allCountries, [sortingKeys[sortBy]], [direction]);
 
-		// Limit.
-		allCountries = allCountries.slice(0, limit);
-
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {
 			table.push([
