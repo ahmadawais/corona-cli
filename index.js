@@ -39,13 +39,27 @@ const log = cli.flags.log;
 const minimal = cli.flags.minimal;
 const add = cli.flags.add;
 
-// Allowed Keys should match keys inside the API response
-const allowedColumnKeys = ['tests', 'testsPerOneMillion'];
-// Column Names - display name shown in table header
-const allowedColumnNames = ['Tests', 'Tests Per Million'];
+// API response optional fields that can be added
+const apiColumnFields = ['tests', 'testsPerOneMillion'];
 
-const extraColumns = // parse and validate allowed extra columns
-	add.split(',').filter(col => allowedColumnKeys.includes(col));
+// Column Keys - allowed keys passed as cli flag
+const extraColumnKeys = ['tests', 'tests-per-million'];
+
+// Column Names - display name shown in table header + hint in "theEnd"
+const extraColumnNames = [
+	{ name: 'Tests', hint: 'Total number of tested patients' },
+	{ name: 'Tests Per Million', hint: 'Tested patients per million' }
+];
+
+// Equivalent columns api fields
+const extraColumns = add.split(',')
+	.filter(col => extraColumnKeys.includes(col))
+	.map(col => apiColumnFields[extraColumnKeys.indexOf(col)]);
+
+// Equivalent columns name/hint objects
+const extraColumnsData = extraColumns.map(col =>
+	extraColumnNames[apiColumnFields.indexOf(col)],
+);
 
 const options = { sortBy, limit, reverse, minimal, chart, log, extraColumns };
 
@@ -64,11 +78,8 @@ const options = { sortBy, limit, reverse, minimal, chart, log, extraColumns };
 		? new Table({ head, style, chars: border })
 		: new Table({ head: headStates, style, chars: border });
 
-	// Inject extra columns.
-	head.push(...extraColumns.map(col =>
-		// Fetch column header name from key
-		allowedColumnNames[allowedColumnKeys.indexOf(col)],
-	));
+	// Inject extra columns names.
+	head.push(...extraColumnsData.map(col => col.name));
 
 	// Display data.
 	spinner.start();
@@ -78,5 +89,5 @@ const options = { sortBy, limit, reverse, minimal, chart, log, extraColumns };
 	await getCountries(spinner, table, states, country, options);
 	await getCountryChart(spinner, country, options);
 
-	theEnd(lastUpdated, states, minimal);
+	theEnd(lastUpdated, states, minimal, extraColumnsData);
 })();

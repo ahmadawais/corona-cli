@@ -17,7 +17,7 @@ ${dim(`❯ `)}${cyan(`Active:`)}  Total number of active patients
 `)
 	);
 
-const infoCountries = () =>
+const infoCountries = (extraColumns = []) =>
 	console.log(
 		dim(`
 			\n${sym.info} ${cyan(`KEY:`)}
@@ -30,16 +30,15 @@ ${dim(`❯ `)}${cyan(`Recovered:`)} Total number of recovered people
 ${dim(`❯ `)}${cyan(`Active:`)}  Total number of active patients
 ${dim(`❯ `)}${cyan(`Critical:`)} Total number of critical patients
 ${dim(`❯ `)}${cyan(`Cases Per Million:`)} Affected patients per million
-${dim(`❯ `)}${cyan(`Tests:`)} Total number of tested patients
-${dim(`❯ `)}${cyan(`Tests Per Million:`)} Tested patients per million
+${extraColumns.map(field => `${dim(`❯ `)}${cyan(`${field.name}:`)} ${field.hint}`)}
 `)
 	);
 
-module.exports = async (lastUpdated, states, minimal) => {
+module.exports = async (lastUpdated, states, minimal, extraColumns) => {
 	if (minimal) return console.log();
 	console.log(dim(`${sym.info} ${cyan(`Last Updated:`)} ${lastUpdated}`));
 	states && infoStates();
-	!states && infoCountries();
+	!states && infoCountries(extraColumns);
 	console.log(
 		`\n${sym.success} ${dim(
 			`Star the repo for updates → https://git.io/corona-cli`

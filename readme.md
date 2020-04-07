@@ -20,7 +20,7 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 - 🇺🇸 Get US States data for Coronavirus disease reports across the US
 - 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million
 - 📈 Charts: Plot statistics in the form of line charts both regular and logarithmic
-- 📟 Sort: `cases`, `cases-today`, `deaths`, `deaths-today`, `recovered`, `active`, `critical`, `per-million`
+- 📟 Sort: `cases`, `cases-today`, `deaths`, `deaths-today`, `recovered`, `active`, `critical`, `per-million`, `tests`, `tests-per-million`
 
 <br>
 
