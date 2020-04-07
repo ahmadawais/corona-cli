@@ -16,8 +16,6 @@ module.exports = {
 		`Active`,
 		`Critical`,
 		`Cases Per Million`,
-		`Tests`,
-		`Tests Per Million`,
 	],
 	colored: [
 		`#`,
@@ -30,8 +28,6 @@ module.exports = {
 		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
 		`Cases Per Million`,
-		`Tests`,
-		`Tests Per Million`,
 	],
 	singleStates: [
 		`#`,

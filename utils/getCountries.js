@@ -13,7 +13,7 @@ module.exports = async (
 	table,
 	states,
 	countryName,
-	{ sortBy, limit, reverse }
+	{ sortBy, limit, reverse, extraColumns }
 ) => {
 	if (!countryName && !states) {
 		const [err, response] = await to(
@@ -46,8 +46,8 @@ module.exports = async (
 				comma(oneCountry.active),
 				comma(oneCountry.critical),
 				comma(oneCountry.casesPerOneMillion),
-				comma(oneCountry.tests),
-				comma(oneCountry.testsPerOneMillion)
+				// dynamically injects extra columns from API to output
+				...extraColumns.map(col => comma(oneCountry[col]))
 			]);
 		});
 

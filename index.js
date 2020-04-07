@@ -37,7 +37,17 @@ const limit = Math.abs(cli.flags.limit);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
 const minimal = cli.flags.minimal;
-const options = { sortBy, limit, reverse, minimal, chart, log };
+const add = cli.flags.add;
+
+// Allowed Keys should match keys inside the API response
+const allowedColumnKeys = ['tests', 'testsPerOneMillion'];
+// Column Names - display name shown in table header
+const allowedColumnNames = ['Tests', 'Tests Per Million'];
+
+const extraColumns = // parse and validate allowed extra columns
+	add.split(',').filter(col => allowedColumnKeys.includes(col));
+
+const options = { sortBy, limit, reverse, minimal, chart, log, extraColumns };
 
 (async () => {
 	// Init.
@@ -54,9 +64,15 @@ const options = { sortBy, limit, reverse, minimal, chart, log };
 		? new Table({ head, style, chars: border })
 		: new Table({ head: headStates, style, chars: border });
 
+	// Inject extra columns.
+	head.push(...extraColumns.map(col =>
+		// Fetch column header name from key
+		allowedColumnNames[allowedColumnKeys.indexOf(col)],
+	));
+
 	// Display data.
 	spinner.start();
-	const lastUpdated = await getWorldwide(table, states);
+	const lastUpdated = await getWorldwide(table, states, options);
 	await getCountry(spinner, table, states, country, options);
 	await getStates(spinner, table, states, options);
 	await getCountries(spinner, table, states, country, options);

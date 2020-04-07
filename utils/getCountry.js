@@ -35,8 +35,8 @@ module.exports = async (spinner, table, states, countryName, options) => {
 			comma(thisCountry.active),
 			comma(thisCountry.critical),
 			comma(thisCountry.casesPerOneMillion),
-			comma(thisCountry.tests),
-			comma(thisCountry.testsPerOneMillion)
+			// dynamically injects extra columns from API to output
+			...options.extraColumns.map(col => comma(thisCountry[col]))
 		]);
 		spinner.stopAndPersist();
 		console.log(table.toString());

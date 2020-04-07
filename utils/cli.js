@@ -21,6 +21,7 @@ module.exports = meow(
 	${yellow(`--log`)}, ${yellow(`-g`)}            Print logarithmic chart
 	${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	${yellow(`--minimal`)}, ${yellow(`-m`)}        Minimalistic CLI output
+	${yellow(`--add`)}, ${yellow(`-a`)}            Add extra columns to output
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
@@ -32,6 +33,9 @@ module.exports = meow(
 
 	❯ You can also run command + option at once:
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`-x`)} ${yellow(`-s cases`)}
+		
+	❯ You can also add extra comma-separated fields:
+	  ${green(`corona`)} ${cyan(`usa`)} ${yellow(`--add=tests,testsPerOneMillion`)}
 `,
 	{
 		booleanDefault: undefined,
@@ -72,6 +76,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'm'
+			},
+			add: {
+				type: 'string',
+				default: '',
+				alias: 'a'
 			}
 		}
 	}

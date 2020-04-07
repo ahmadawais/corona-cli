@@ -3,7 +3,7 @@ const comma = require('comma-number');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
-module.exports = async (table, states) => {
+module.exports = async (table, states, options) => {
 	const [err, response] = await to(
 		axios.get(`https://corona.lmao.ninja/all`)
 	);
@@ -24,8 +24,8 @@ module.exports = async (table, states) => {
 			comma(allData.active),
 			comma(allData.critical),
 			comma(allData.casesPerOneMillion),
-			comma(allData.tests),
-			comma(allData.testsPerOneMillion)
+			// dynamically injects extra columns from API to output
+			...options.extraColumns.map(col => comma(allData[col]))
 		]);
 	}
 
