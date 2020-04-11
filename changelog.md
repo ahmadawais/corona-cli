@@ -29,6 +29,122 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [4.1.3](https://github.com/ahmadawais/corona-cli/compare/4.1.2...4.1.3)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Node version check to 10 [`1412add`](https://github.com/ahmadawais/corona-cli/commit/1412addfd950896b160782f719ad394f31ff523e) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [4.1.2](https://github.com/ahmadawais/corona-cli/compare/4.1.1...4.1.2)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Lingo [`d468c4a`](https://github.com/ahmadawais/corona-cli/commit/d468c4a9f5fe24e60f6d4d6ea549086085e94b67) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`fcbff7c`](https://github.com/ahmadawais/corona-cli/commit/fcbff7c5273ecf5c45c2a4a244bca747fc8c7ce5) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [4.1.1](https://github.com/ahmadawais/corona-cli/compare/4.1.0...4.1.1)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Help [`dbe69e5`](https://github.com/ahmadawais/corona-cli/commit/dbe69e5a8025b307bd93b12f10588e3a8797effd) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`abc1e61`](https://github.com/ahmadawais/corona-cli/commit/abc1e61398b5d812b2a1efb28ebb8949bb6cd6fb) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [4.1.0](https://github.com/ahmadawais/corona-cli/compare/4.0.0...4.1.0)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Worldwide cases [`09e21ba`](https://github.com/ahmadawais/corona-cli/commit/09e21ba64bf37248be7bdb899fbf9fc4111cbada) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`6dd4396`](https://github.com/ahmadawais/corona-cli/commit/6dd439625d8a5f150d893e15f513a88ff8ae1062) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [4.0.0](https://github.com/ahmadawais/corona-cli/compare/3.8.6...4.0.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Chart for country queries (#66) thanks @ozanerturk [`9dff8fe`](https://github.com/ahmadawais/corona-cli/commit/9dff8fe28aa303bbdacccd510a23b6f44e688d33) <br>
+> 📦 Charts [`6d5b21a`](https://github.com/ahmadawais/corona-cli/commit/6d5b21aba98cb35a143ebd33a1152a9bd232e606) <br>
+> 📦 FOSS Funding [`7a5c07d`](https://github.com/ahmadawais/corona-cli/commit/7a5c07d29e48659335467f7270ea2e48ad77cc4f) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Node check [`079da16`](https://github.com/ahmadawais/corona-cli/commit/079da16f8acb61a43e0ca64556e9c2a0bee9c876) <br>
+> 👌 Charts [`964b1c4`](https://github.com/ahmadawais/corona-cli/commit/964b1c42363d2807b5bee908dd88d2db9b9c2c66) <br>
+> 👌 Chart [`86b889a`](https://github.com/ahmadawais/corona-cli/commit/86b889a9210216f7074efe26b2c498b40d526461) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Sorting China [`e3c67e5`](https://github.com/ahmadawais/corona-cli/commit/e3c67e529f1ede28b0263e642af67a60a213182e) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`bd32c4e`](https://github.com/ahmadawais/corona-cli/commit/bd32c4e81fcf249f4ee222c2db869482b53b779e) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.8.6](https://github.com/ahmadawais/corona-cli/compare/3.8.5...3.8.6)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Keywords [`02916cd`](https://github.com/ahmadawais/corona-cli/commit/02916cd10d2e93da0ce5e24c2e80a000b5251e6b) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`148004a`](https://github.com/ahmadawais/corona-cli/commit/148004a2dbca4b05579ea9d7eed6fe9cd277fe71) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [3.8.5](https://github.com/ahmadawais/corona-cli/compare/3.8.4...3.8.5)
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`87c0a0f`](https://github.com/ahmadawais/corona-cli/commit/87c0a0fefe0df392b2452400d692ccb18f2e9798) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [3.8.4](https://github.com/ahmadawais/corona-cli/compare/3.8.2...3.8.4)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -42,6 +158,7 @@ I have released a video course to help you become a better developer — <a href
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
 > 📖 Changelog [`d40bd56`](https://github.com/ahmadawais/corona-cli/commit/d40bd5693e2a4fe80ba91cd1c86f6c7181ea643f) <br>
+> 📖 Changelog [`344458e`](https://github.com/ahmadawais/corona-cli/commit/344458ec2a54374ee82492774f983b1b0384cc8d) <br>
 
 <br>
 

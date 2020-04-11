@@ -10,22 +10,25 @@ module.exports = meow(
 	  ${green(`corona`)} ${cyan(`<command>`)} ${yellow(`[--option]`)}
 
 	Commands
-	  ${cyan(`country-name`)}         Get data for a given country
-	  ${cyan(`states`)}               Get data for all USA states
+	  ${cyan(`country-name`)}       Get data for a given country
+	  ${cyan(`states`)}             Get data for all USA states
 
 	Options
-	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
-	  ${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
-	  ${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
-	  ${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
-	  ${yellow(`--compare`)}, ${yellow(
-		`-c`
-	)}          Statistical comparison between countries 
+	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}       Single colored output
+	  ${yellow(`--compare`)}, ${yellow(`-c`)}      Compare countries 
+	${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
+	${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
+	${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
+	${yellow(`--chart`)}, ${yellow(`-c`)}          Print chart for a country
+	${yellow(`--log`)}, ${yellow(`-g`)}            Print logarithmic chart
+	${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
+	${yellow(`--minimal`)}, ${yellow(`-m`)}        Minimalistic CLI output
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`states`)}
-	  ${green(`corona`)} ${yellow(`-x`)}
+	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}
+	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
 	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}
 
@@ -57,9 +60,19 @@ module.exports = meow(
 				default: Number.MAX_SAFE_INTEGER,
 				alias: 'l'
 			},
+			chart: {
+				type: 'boolean',
+				default: false,
+				alias: 'c'
+			},
+			log: {
+				type: 'boolean',
+				default: false,
+				alias: 'g'
+			},
 			minimal: {
 				type: 'boolean',
-				defualt: false,
+				default: false,
 				alias: 'm'
 			},
 			compare: {
