@@ -21,6 +21,9 @@ module.exports = meow(
 	${yellow(`--log`)}, ${yellow(`-g`)}            Print logarithmic chart
 	${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	${yellow(`--minimal`)}, ${yellow(`-m`)}        Minimalistic CLI output
+	${yellow(`--dangerous`)}, ${yellow(
+		`-d`
+	)}      Avoids node version check when launching the cli
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
@@ -72,6 +75,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'm'
+			},
+			dangerous: {
+				type: 'boolean',
+				default: false,
+				alias: 'd'
 			}
 		}
 	}

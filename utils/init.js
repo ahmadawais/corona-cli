@@ -4,9 +4,13 @@ const pkgJSON = require('./../package.json');
 const updateNotifier = require('update-notifier');
 const unhandledError = require('cli-handle-unhandled');
 
-module.exports = async () => {
+const MINIMUM_NODE_JS_VERSION = '12';
+
+module.exports = async dangerous => {
 	unhandledError();
-	checkNode(`12`);
+	if (!dangerous) {
+		checkNode(MINIMUM_NODE_JS_VERSION);
+	}
 	welcome(`corona-cli`, `by Awais.dev\n${pkgJSON.description}`, {
 		bgColor: `#007C91`,
 		color: `#FFFFFF`,

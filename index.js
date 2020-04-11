@@ -37,11 +37,12 @@ const limit = Math.abs(cli.flags.limit);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
 const minimal = cli.flags.minimal;
+const dangerous = cli.flags.dangerous;
 const options = { sortBy, limit, reverse, minimal, chart, log };
 
 (async () => {
 	// Init.
-	init(minimal);
+	init(dangerous);
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states' ? true : false;
 	const country = input;
