@@ -4,7 +4,7 @@ const pkgJSON = require('./../package.json');
 const updateNotifier = require('update-notifier');
 const unhandledError = require('cli-handle-unhandled');
 
-const MINIMUM_NODE_JS_VERSION = '12';
+const MINIMUM_NODE_JS_VERSION = '10';
 
 module.exports = async dangerous => {
 	unhandledError();
