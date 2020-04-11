@@ -1,17 +1,14 @@
 const chalk = require('chalk');
-const axios = require('axios');
 const sym = require('log-symbols');
 const comma = require('comma-number');
 const red = chalk.red;
-const to = require('await-to-js').default;
-const handleError = require('cli-handle-error');
+const fetchAndHandleErrors = require('./fetchAndHandleErrors.js');
 
 module.exports = async (spinner, table, states, countryName, options) => {
 	if (countryName && !states && !options.chart) {
-		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/countries/${countryName}`)
+		const { response } = await fetchAndHandleErrors(
+			`https://corona.lmao.ninja/countries/${countryName}`
 		);
-		handleError(`API is down, try again later.`, err, false);
 		const thisCountry = response.data;
 
 		if (response.data === 'Country not found') {

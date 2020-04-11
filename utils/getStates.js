@@ -1,19 +1,16 @@
-const axios = require('axios');
 const chalk = require('chalk');
 const cyan = chalk.cyan;
 const dim = chalk.dim;
 const comma = require('comma-number');
 const { sortingStateKeys } = require('./table.js');
-const to = require('await-to-js').default;
-const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
+const fetchAndHandleErrors = require('./fetchAndHandleErrors.js');
 
 module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
 	if (states) {
-		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/states`)
+		const { response } = await fetchAndHandleErrors(
+			`https://corona.lmao.ninja/states`
 		);
-		handleError(`API is down, try again later.`, err, false);
 		let allStates = response.data;
 
 		// Limit.

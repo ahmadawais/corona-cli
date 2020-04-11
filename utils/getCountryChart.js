@@ -1,17 +1,14 @@
 const comma = require('comma-number');
-const handleError = require('cli-handle-error');
-const axios = require('axios');
-const to = require('await-to-js').default;
 const moment = require('moment');
 const blessed = require('blessed');
 const contrib = require('blessed-contrib');
+const fetchAndHandleErrors = require('./fetchAndHandleErrors.js');
 
 module.exports = async (spinner, countryName, { chart, log }) => {
 	if (countryName && chart) {
-		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/historical/${countryName}`)
+		const { response } = await fetchAndHandleErrors(
+			`https://corona.lmao.ninja/v2/historical/${countryName}`
 		);
-		handleError(`API is down, try again later.`, err, false);
 		if (response.status === 404) {
 			spinner.stopAndPersist();
 			console.log(

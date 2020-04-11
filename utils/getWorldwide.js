@@ -1,15 +1,13 @@
-const axios = require('axios');
 const comma = require('comma-number');
-const to = require('await-to-js').default;
-const handleError = require('cli-handle-error');
+const fetchAndHandleErrors = require('./fetchAndHandleErrors.js');
 
 module.exports = async (table, states) => {
-	const [err, response] = await to(
-		axios.get(`https://corona.lmao.ninja/all`)
+	const { response: all } = await fetchAndHandleErrors(
+		`https://corona.lmao.ninja/all`
 	);
-	handleError(`API is down, try again later.`, err, false);
-	const allData = response.data;
-	// console.log('allData: ', allData);
+
+	let data = Object.values(all.data);
+	data = data.map(d => comma(d));
 
 	// Don't print coz for states we still need that data of updated data.
 	if (!states) {
