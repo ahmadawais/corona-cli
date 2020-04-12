@@ -73,6 +73,7 @@ assets/img/.DS_Store
 # No lock files.
 package-lock.json
 yarn.lock
+settings.dat
 
 # Visual Studio Code debug files
 .vscode/
