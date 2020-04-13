@@ -6,7 +6,7 @@ const unhandledError = require('cli-handle-unhandled');
 
 module.exports = async (skipWelcome = false) => {
 	unhandledError();
-	checkNode(`12`);
+	checkNode(`10`);
 	!skipWelcome && welcome(`corona-cli`, `by Awais.dev\n${pkgJSON.description}`, {
 		bgColor: `#007C91`,
 		color: `#FFFFFF`,
