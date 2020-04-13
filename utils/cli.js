@@ -11,6 +11,7 @@ module.exports = meow(
 
 	Commands
 	  ${cyan(`country-name`)}       Get data for a given country
+	  ${cyan(`country1,country2`)}  Get data for selected countries
 	  ${cyan(`states`)}             Get data for all USA states
 
 	Options
@@ -25,6 +26,8 @@ module.exports = meow(
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`states`)}
+	  ${green(`corona`)} ${cyan(`us,italy,spain`)}
+	  ${green(`corona`)} ${cyan(`us,italy,spain`)} ${yellow(`-s`)} ${cyan(`active`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
