@@ -34,9 +34,6 @@ npm install -g corona-cli
 
 # Or run directly with npx (installs CLI on every run).
 npx corona-cli
-
-# Or run as a Docker container
-docker run -it --rm sbkg0002/corona-cli:latest
 ```
 
 [![📟](./.github/install.gif)](./../../)
