@@ -15,7 +15,7 @@ I have released a video course to help you become a better developer — <a href
 
 [![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
 
-**CHANGELOG KEY**: `📦 NEW`, `👌 IMPROVE`, `🐛 FIX`, `📖 DOC`, `🚀 RELEASE`, and `✅ TEST`
+**CHANGELOG KEY**: `📦 NEW`, `👌 IMPROVE`, `🐛 FIX`, `📖 DOC`, `🚀 RELEASE`, `🤖 TEST`, and `‼️ BREAKING`.
 
 <small>
 
@@ -29,11 +29,32 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [4.2.0](https://github.com/ahmadawais/corona-cli/compare/4.1.3...4.2.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Merge [`16c0a8c`](https://github.com/ahmadawais/corona-cli/commit/16c0a8cd83bb3f77f5a0f9ee54232efdc98b73b8) <br>
+> 👌 Ignore [`17ed508`](https://github.com/ahmadawais/corona-cli/commit/17ed5086d811656f585d251b10301bcbf1817b40) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 API v2 [`277349f`](https://github.com/ahmadawais/corona-cli/commit/277349f53a1adb391b5a35c48bff87dd5271350f) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [4.1.3](https://github.com/ahmadawais/corona-cli/compare/4.1.2...4.1.3)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
 > 📦 Node version check to 10 [`1412add`](https://github.com/ahmadawais/corona-cli/commit/1412addfd950896b160782f719ad394f31ff523e) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`07441e4`](https://github.com/ahmadawais/corona-cli/commit/07441e4c279d322db85c67340ac883d14542f551) <br>
 
 <br>
 
