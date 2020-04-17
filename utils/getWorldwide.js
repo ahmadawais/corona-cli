@@ -5,7 +5,7 @@ const handleError = require('cli-handle-error');
 
 module.exports = async (table, states) => {
 	const [err, response] = await to(
-		axios.get(`https://corona.lmao.ninja/all`)
+		axios.get(`https://corona.lmao.ninja/v2/all`)
 	);
 	handleError(`API is down, try again later.`, err, false);
 	const allData = response.data;

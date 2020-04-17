@@ -17,7 +17,7 @@ module.exports = async (
 ) => {
 	if (!countryName && !states) {
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/countries`)
+			axios.get(`https://corona.lmao.ninja/v2/countries`)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		let allCountries = response.data;
