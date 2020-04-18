@@ -4,7 +4,9 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
 module.exports = async (table, states, json) => {
-	const [err, response] = await to(axios.get(`https://corona.lmao.ninja/all`));
+	const [err, response] = await to(
+		axios.get(`https://corona.lmao.ninja/v2/all`)
+	);
   handleError(`API is down, try again later.`, err, false);
 
   const allData = response.data;

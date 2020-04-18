@@ -11,7 +11,7 @@ const orderBy = require('lodash.orderby');
 module.exports = async (spinner, output, states, { sortBy, limit, reverse, json }) => {
 	if (states) {
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/states`)
+			axios.get(`https://corona.lmao.ninja/v2/states`)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		let allStates = response.data;

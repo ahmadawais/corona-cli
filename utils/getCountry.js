@@ -9,7 +9,7 @@ const handleError = require('cli-handle-error');
 module.exports = async (spinner, table, states, countryName, options) => {
 	if (countryName && !states && !options.chart) {
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/countries/${countryName}`)
+			axios.get(`https://corona.lmao.ninja/v2/countries/${countryName}`)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		const thisCountry = response.data;
