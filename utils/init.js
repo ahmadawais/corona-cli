@@ -1,8 +1,8 @@
 const welcome = require('cli-welcome');
 const checkNode = require('cli-check-node');
-const pkgJSON = require('./../package.json');
 const updateNotifier = require('update-notifier');
 const unhandledError = require('cli-handle-unhandled');
+const pkgJSON = require('./../package.json');
 
 module.exports = async () => {
 	unhandledError();

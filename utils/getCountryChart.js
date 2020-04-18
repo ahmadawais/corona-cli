@@ -26,7 +26,7 @@ module.exports = async (spinner, countryName, { chart, log }) => {
 			logScale = x => (x === 0 ? undefined : Math.log(x));
 		}
 		const shortDate = x => moment(x, 'MM/DD/YY').format('D MMM');
-		const cumulative = (a, b) => (a = a + b);
+		const cumulative = (a, b) => (a += b);
 		const screen = blessed.screen();
 		const line = contrib.line({
 			style: {
@@ -76,9 +76,7 @@ module.exports = async (spinner, countryName, { chart, log }) => {
 		line.setData([casesSeries, deathsSeries, recoveredSeries]);
 		screen.render();
 		await new Promise((resolve, _) => {
-			screen.key(['escape', 'q', 'C-c', 'enter', 'space'], (ch, key) => {
-				return process.exit(0);
-			});
+			screen.key(['escape', 'q', 'C-c', 'enter', 'space'], (ch, key) => process.exit(0));
 		});
 	}
 };
