@@ -5,6 +5,7 @@ const comma = require('comma-number');
 const red = chalk.red;
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
+const format = require('./format');
 
 module.exports = async (spinner, table, states, countryName, options) => {
 	if (countryName && !states && !options.chart) {
@@ -34,7 +35,8 @@ module.exports = async (spinner, table, states, countryName, options) => {
 			comma(thisCountry.recovered),
 			comma(thisCountry.active),
 			comma(thisCountry.critical),
-			comma(thisCountry.casesPerOneMillion)
+			comma(thisCountry.casesPerOneMillion),
+			comma(format((thisCountry.deaths/thisCountry.cases)*100))
 		]);
 		spinner.stopAndPersist();
 		console.log(table.toString());
