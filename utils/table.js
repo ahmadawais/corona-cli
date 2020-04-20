@@ -47,7 +47,8 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
-		`${yellow(`Active`)}`
+		`${yellow(`Active`)}`,
+		`${red(`Mortality Rate`)}`
 	],
 	style: { head: ['cyan'] },
 	borderless: {
