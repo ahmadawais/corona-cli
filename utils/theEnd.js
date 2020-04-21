@@ -14,6 +14,7 @@ ${dim(`❯ `)}${cyan(`Deaths:`)} Total number of deaths in a state
 ${dim(`❯ `)}${cyan(`Deaths (today):`)} Deaths in 24 hours GMT/UTC
 ${dim(`❯ `)}${cyan(`Recovered:`)} Total number of recovered people
 ${dim(`❯ `)}${cyan(`Active:`)}  Total number of active patients
+${dim(`❯ `)}${cyan(`Mortality Rate:`)} Death percentage
 `)
 	);
 
@@ -30,6 +31,7 @@ ${dim(`❯ `)}${cyan(`Recovered:`)} Total number of recovered people
 ${dim(`❯ `)}${cyan(`Active:`)}  Total number of active patients
 ${dim(`❯ `)}${cyan(`Critical:`)} Total number of critical patients
 ${dim(`❯ `)}${cyan(`Per Million:`)} Affected patients per million
+${dim(`❯ `)}${cyan(`Mortality Rate:`)} Death percentage
 `)
 	);
 

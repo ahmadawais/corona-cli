@@ -15,7 +15,8 @@ module.exports = {
 		`Recovered`,
 		`Active`,
 		`Critical`,
-		`Per Million`
+		`Per Million`,
+		`Mortality Rate`
 	],
 	colored: [
 		`#`,
@@ -27,7 +28,8 @@ module.exports = {
 		`${green(`Recovered`)}`,
 		`${yellow(`Active`)}`,
 		`${red(`Critical`)}`,
-		`Per Million`
+		`Per Million`,
+		`${red(`Mortality Rate`)}`,
 	],
 	singleStates: [
 		`#`,
@@ -36,7 +38,7 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
-		`Active`
+		`Active`,
 	],
 	coloredStates: [
 		`#`,
@@ -45,7 +47,8 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
-		`${yellow(`Active`)}`
+		`${yellow(`Active`)}`,
+		`${red(`Mortality Rate`)}`
 	],
 	style: { head: ['cyan'] },
 	borderless: {

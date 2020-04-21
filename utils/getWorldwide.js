@@ -2,6 +2,7 @@ const axios = require('axios');
 const comma = require('comma-number');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
+const format = require('./format');
 
 module.exports = async (table, states) => {
 	const [err, response] = await to(
@@ -23,7 +24,8 @@ module.exports = async (table, states) => {
 			comma(allData.recovered),
 			comma(allData.active),
 			comma(allData.critical),
-			comma(allData.casesPerOneMillion)
+			comma(allData.casesPerOneMillion),
+			comma(format((allData.deaths/allData.cases)*100))
 		]);
 	}
 

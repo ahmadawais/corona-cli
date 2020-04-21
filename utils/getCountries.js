@@ -7,6 +7,7 @@ const { sortingKeys } = require('./table.js');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
+const format = require('./format');
 
 module.exports = async (
 	spinner,
@@ -45,7 +46,8 @@ module.exports = async (
 				comma(oneCountry.recovered),
 				comma(oneCountry.active),
 				comma(oneCountry.critical),
-				comma(oneCountry.casesPerOneMillion)
+				comma(oneCountry.casesPerOneMillion),
+				comma(format((oneCountry.deaths/oneCountry.cases)*100))
 			]);
 		});
 

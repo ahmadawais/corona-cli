@@ -7,6 +7,7 @@ const { sortingStateKeys } = require('./table.js');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
+const format = require('./format');
 
 module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
 	if (states) {
@@ -32,7 +33,8 @@ module.exports = async (spinner, table, states, { sortBy, limit, reverse }) => {
 				comma(oneState.todayCases),
 				comma(oneState.deaths),
 				comma(oneState.todayDeaths),
-				comma(oneState.active)
+				comma(oneState.active),
+				comma(format((oneState.deaths/oneState.cases)*100))
 			]);
 		});
 
