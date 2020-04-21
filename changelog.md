@@ -29,6 +29,18 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [4.3.0](https://github.com/ahmadawais/corona-cli/compare/4.2.0...4.3.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Update notice [`a282339`](https://github.com/ahmadawais/corona-cli/commit/a282339169052cebc68882f1830867b7b71faed5) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [4.2.0](https://github.com/ahmadawais/corona-cli/compare/4.1.3...4.2.0)
 
 ![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
@@ -39,6 +51,10 @@ I have released a video course to help you become a better developer — <a href
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 API v2 [`277349f`](https://github.com/ahmadawais/corona-cli/commit/277349f53a1adb391b5a35c48bff87dd5271350f) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`5253102`](https://github.com/ahmadawais/corona-cli/commit/52531022abbf5c70d17b8ea7fa3d8c2e1ba03aa5) <br>
 
 <br>
 
