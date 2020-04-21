@@ -5,9 +5,15 @@ const comma = require('comma-number');
 const red = chalk.red;
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
+const { isCountriesMultiple } = require('./getCountriesMultiple.js');
 
 module.exports = async (spinner, table, states, countryName, options) => {
-	if (countryName && !states && !options.chart) {
+	if (
+		countryName &&
+		!isCountriesMultiple(countryName) &&
+		!states &&
+		!options.chart
+	) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries/${countryName}`)
 		);
