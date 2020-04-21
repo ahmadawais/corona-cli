@@ -8,7 +8,6 @@ process.on('unhandledRejection', err => {
 });
 
 const ora = require('ora');
-const spinner = ora({ text: '' });
 const Table = require('cli-table3');
 const cli = require('./utils/cli.js');
 const init = require('./utils/init.js');
@@ -41,7 +40,8 @@ const options = { sortBy, limit, reverse, minimal, chart, log };
 
 (async () => {
 	// Init.
-	init(minimal);
+	await init(minimal);
+	const spinner = ora({ text: '' });
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states' ? true : false;
 	const country = input;
