@@ -30,13 +30,14 @@ const {
 // Cli.
 const [input] = cli.input;
 const xcolor = cli.flags.xcolor;
+const stateName = cli.flags.stateName;
 const sortBy = cli.flags.sort;
 const reverse = cli.flags.reverse;
 const limit = Math.abs(cli.flags.limit);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
 const minimal = cli.flags.minimal;
-const options = { sortBy, limit, reverse, minimal, chart, log };
+const options = { stateName, sortBy, limit, reverse, minimal, chart, log };
 
 (async () => {
 	// Init.
