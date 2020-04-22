@@ -45,10 +45,12 @@ module.exports = async (spinner, countryName, states, { bar, log, sortBy, limit,
         const names = Object.keys(barCountries);
         const data = Object.values(barCountries);
 
+		const cumulative = (a, b) => (a = a + b);
+
         const screen = blessed.screen();
 
         const stack = contrib.stackedBar(
-           { label: 'Total Case Comparison'
+           { label: 'Total Cases'
            , barWidth: 10
            , barSpacing: 10
            , xOffset: 0
