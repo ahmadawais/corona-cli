@@ -14,6 +14,8 @@ module.exports = meow(
 	  ${cyan(`states`)}             Get data for all USA states
 
 	Options
+	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}       Single colored output
+	  ${yellow(`--compare`)}, ${yellow(`-c`)}      Compare countries 
 	${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
 	${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
 	${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
@@ -72,6 +74,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'm'
+			},
+			compare: {
+				type: 'array',
+				default: [],
+				alias: 'c'
 			}
 		}
 	}

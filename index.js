@@ -18,6 +18,7 @@ const getCountry = require('./utils/getCountry.js');
 const getCountryChart = require('./utils/getCountryChart.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
+const getCountriesCompare = require('./utils/getCountriesCompare.js');
 const {
 	style,
 	single,
@@ -36,7 +37,8 @@ const limit = Math.abs(cli.flags.limit);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
 const minimal = cli.flags.minimal;
-const options = { sortBy, limit, reverse, minimal, chart, log };
+const compare = cli.flags.compare.length > 1;
+const options = { sortBy, limit, reverse, minimal, chart, log, compare };
 
 (async () => {
 	// Init.
@@ -45,6 +47,8 @@ const options = { sortBy, limit, reverse, minimal, chart, log };
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states' ? true : false;
 	const country = input;
+	const [...compareCountries] =
+		cli.input.length > 0 ? cli.input : cli.flags.compare;
 
 	// Table
 	const head = xcolor ? single : colored;
@@ -58,6 +62,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log };
 	spinner.start();
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country, options);
+	await getCountriesCompare(spinner, table, compareCountries, options);
 	await getStates(spinner, table, states, options);
 	await getCountries(spinner, table, states, country, options);
 	await getCountryChart(spinner, country, options);
