@@ -7,6 +7,7 @@ const blessed = require('blessed');
 const contrib = require('blessed-contrib');
 
 module.exports = async (spinner, countryName, { chart, log }) => {
+    console.log("CHART: " + log)
 	if (countryName && chart) {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/historical/${countryName}`)

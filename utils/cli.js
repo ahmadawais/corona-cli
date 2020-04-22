@@ -19,6 +19,7 @@ module.exports = meow(
 	${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
 	${yellow(`--chart`)}, ${yellow(`-c`)}          Print chart for a country
 	${yellow(`--log`)}, ${yellow(`-g`)}            Print logarithmic chart
+    ${yellow('--bar')},${yellow('-b')}             Print bar chart of cases per country
 	${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
 	${yellow(`--minimal`)}, ${yellow(`-m`)}        Minimalistic CLI output
 
@@ -68,6 +69,13 @@ module.exports = meow(
 				default: false,
 				alias: 'g'
 			},
+            //ME
+            bar: {
+				type: 'boolean',
+				default: false,
+				alias: 'b'
+			},
+            //
 			minimal: {
 				type: 'boolean',
 				default: false,
