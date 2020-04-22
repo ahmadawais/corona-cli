@@ -63,7 +63,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log , bar};
 	await getStates(spinner, table, states, options);
 	await getCountries(spinner, table, states, country, bar, options);
 	await getCountryChart(spinner, country, options);
-    await getBar(spinner, country, states, options);
+	await getBar(spinner, country, states, options);
 
 	theEnd(lastUpdated, states, minimal);
 })();

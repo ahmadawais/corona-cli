@@ -13,7 +13,7 @@ module.exports = async (
 	table,
 	states,
 	countryName,
-    bar,
+	bar,
 	{ sortBy, limit, reverse }
 ) => {
 	if (!countryName && !states && !bar) {
