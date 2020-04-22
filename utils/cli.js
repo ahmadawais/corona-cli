@@ -69,13 +69,11 @@ module.exports = meow(
 				default: false,
 				alias: 'g'
 			},
-            //ME
-            bar: {
+			bar: {
 				type: 'boolean',
 				default: false,
 				alias: 'b'
 			},
-            //
 			minimal: {
 				type: 'boolean',
 				default: false,
