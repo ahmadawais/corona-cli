@@ -114,7 +114,25 @@ corona -s active -r
 
 [![📟](./.github/sort.gif)](./../../)
 
-### Charts: Regular & Logarithmic
+### Bar Charts
+
+```sh
+# Print bar charts for max 10 countries.
+corona --bar
+corona -b
+
+# Print bar charts for top 5 countries w.r.t deaths.
+corona --bar --sort deaths --limit 5
+corona -b -s deaths -l 5
+
+# Print bar charts countries w.r.t recovered cases.
+corona --bar --sort recovered
+corona -b -s recovered
+```
+
+[![📟](./.github/bars.gif)](./../../)
+
+### Line Charts: Regular & Logarithmic
 
 ```sh
 # Print a country line chart.

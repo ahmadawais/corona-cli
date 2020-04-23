@@ -33,7 +33,7 @@ module.exports = async (
 		);
 
 		// Limit.
-		limit = limit > 12 ? 12 : limit;
+		limit = limit > 10 ? 10 : limit;
 		allCountries = allCountries.slice(0, limit);
 
 		let logScale = x => x;
