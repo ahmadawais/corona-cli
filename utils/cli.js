@@ -22,7 +22,7 @@ module.exports = meow(
 	  ${yellow(`--log`)}, ${yellow(`-g`)}       Print logarithmic chart
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}    Single colored output
 	  ${yellow(`--minimal`)}, ${yellow(`-m`)}   Minimalistic CLI output
-	  ${yellow(`--json`)}, ${yellow(`-j`)}      Output as JSON
+	  ${yellow(`--json`)}, ${yellow(`-j`)}      Output JSON only data
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}

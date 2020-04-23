@@ -8,15 +8,16 @@ const { yellow, green } = require('chalk');
 const boxen = require('boxen');
 
 module.exports = async (skipWelcome = false) => {
-	unhandledError();
+	await unhandledError();
 	checkNode(`10`);
-	!skipWelcome && welcome(`corona-cli`, `by Awais.dev\n${pkgJSON.description}`, {
-		bgColor: `#007C91`,
-		color: `#FFFFFF`,
-		bold: true,
-		clear: true,
-		version: `v${pkgJSON.version}`
-	});
+	!skipWelcome &&
+		welcome(`corona-cli`, `by Awais.dev\n${pkgJSON.description}`, {
+			bgColor: `#007C91`,
+			color: `#FFFFFF`,
+			bold: true,
+			clear: true,
+			version: `v${pkgJSON.version}`
+		});
 
 	const update = await checkForUpdate(pkgJSON);
 	if (update) {

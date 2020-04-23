@@ -9,7 +9,12 @@ const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 const sortStateValidation = require('./sortStateValidation.js');
 
-module.exports = async (spinner, output, states, { sortBy, limit, reverse, json }) => {
+module.exports = async (
+	spinner,
+	output,
+	states,
+	{ sortBy, limit, reverse, json }
+) => {
 	if (states) {
 		sortStateValidation(sortBy, spinner);
 		const [err, response] = await to(

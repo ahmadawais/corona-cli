@@ -7,9 +7,9 @@ module.exports = async (table, states, json) => {
 	const [err, response] = await to(
 		axios.get(`https://corona.lmao.ninja/v2/all`)
 	);
-  handleError(`API is down, try again later.`, err, false);
+	handleError(`API is down, try again later.`, err, false);
 
-  const allData = response.data;
+	const allData = response.data;
 	const format = numberFormat(json);
 
 	// Don't print coz for states we still need that data of updated data.

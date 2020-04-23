@@ -44,7 +44,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 
 (async () => {
 	// Init.
-	init(minimal || json);
+	await init(minimal || json);
 	const spinner = ora({ text: '' });
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states' ? true : false;
