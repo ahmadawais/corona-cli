@@ -1,9 +1,1 @@
-custom:
-    [
-        'https://NodeCLI.com',
-        'https://VSCode.pro'
-        'https://Awais.dev/sponsor-USD-10-pm',
-        'https://Awais.dev/sponsor-USD-10',
-        'https://Awais.dev/sponsor-USD-100',
-        'https://Awais.dev/sponsor-USD-50',
-    ]
+custom: ['https://NodeCLI.com', 'https://VSCode.pro','https://Awais.dev/sponsor-USD-10-pm', 'https://Awais.dev/sponsor-USD-10', 'https://Awais.dev/sponsor-USD-100', 'https://Awais.dev/sponsor-USD-50']
