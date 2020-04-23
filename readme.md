@@ -190,7 +190,6 @@ corona --help
 
 - MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/)
 - [Code of Conduct](code-of-conduct.md)
-- SOURCES: , and all of the following:
 
 ### Sources
 
