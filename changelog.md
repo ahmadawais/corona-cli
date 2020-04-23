@@ -29,11 +29,41 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [5.0.0](https://github.com/ahmadawais/corona-cli/compare/4.3.0...5.0.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Sort Validation [`73432df`](https://github.com/ahmadawais/corona-cli/commit/73432df133e61b8b4bf93e811838421ba070bb33) <br>
+> 📦 Sort validation [`252c299`](https://github.com/ahmadawais/corona-cli/commit/252c299ecc61f0a36b4a1f8237345b7ca0a2925a) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Categories [`47ba82f`](https://github.com/ahmadawais/corona-cli/commit/47ba82ff6be511e1950d19b13e578382c8c40192) <br>
+> 👌 Label Colors [`76d2d70`](https://github.com/ahmadawais/corona-cli/commit/76d2d703ccac79a0cf426ef7019bdda871e13ae1) <br>
+> 👌 Formatting & Exmaples [`47aeaed`](https://github.com/ahmadawais/corona-cli/commit/47aeaedb80928b05988f7e9e4da9413b9f34b91b) <br>
+> 👌 Single or Stacked bars [`757af7a`](https://github.com/ahmadawais/corona-cli/commit/757af7a388d4c4edd6a1f4d911f67df9f814f91e) <br>
+> 👌 Format [`1a09647`](https://github.com/ahmadawais/corona-cli/commit/1a096470ed3fc33a768d1261af46f4c708439f66) <br>
+> 👌 Sort Validation [`0a1c934`](https://github.com/ahmadawais/corona-cli/commit/0a1c934ba26c83c4aadcf61c54641647d9de5d74) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Bars [`b8cee57`](https://github.com/ahmadawais/corona-cli/commit/b8cee57c91ec9097513fe5cb29fddf90e57e06c6) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [4.3.0](https://github.com/ahmadawais/corona-cli/compare/4.2.0...4.3.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
 > 📦 Update notice [`a282339`](https://github.com/ahmadawais/corona-cli/commit/a282339169052cebc68882f1830867b7b71faed5) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`6be89f5`](https://github.com/ahmadawais/corona-cli/commit/6be89f53c6565db9161d11d9fb1ce9e191fd96c4) <br>
 
 <br>
 
