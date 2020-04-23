@@ -7,6 +7,8 @@ const blessed = require('blessed');
 const contrib = require('blessed-contrib');
 const { sortingKeys } = require('./table.js');
 const orderBy = require('lodash.orderby');
+const { cyan, dim } = require('chalk');
+const sortValidation = require('./sortValidation.js');
 
 module.exports = async (spinner, countryName, states, { bar, log, sortBy, limit, reverse }) => {
 	if (!countryName && !states && bar) {
