@@ -1,8 +1,10 @@
 const chalk = require('chalk');
-const green = chalk.green;
-const red = chalk.red;
-const yellow = chalk.yellow;
-const dim = chalk.dim;
+const cli = require('./cli');
+const plain = text => text;
+const green = cli.flags.json ? plain : chalk.green;
+const red = cli.flags.json ? plain : chalk.red;
+const yellow = cli.flags.json ? plain : chalk.yellow;
+const dim = cli.flags.json ? plain : chalk.dim;
 
 module.exports = {
 	single: [

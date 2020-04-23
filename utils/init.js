@@ -7,10 +7,10 @@ const checkForUpdate = require('update-check');
 const { yellow, green } = require('chalk');
 const boxen = require('boxen');
 
-module.exports = async () => {
+module.exports = async (skipWelcome = false) => {
 	unhandledError();
 	checkNode(`10`);
-	welcome(`corona-cli`, `by Awais.dev\n${pkgJSON.description}`, {
+	!skipWelcome && welcome(`corona-cli`, `by Awais.dev\n${pkgJSON.description}`, {
 		bgColor: `#007C91`,
 		color: `#FFFFFF`,
 		bold: true,

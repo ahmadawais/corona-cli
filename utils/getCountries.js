@@ -2,7 +2,7 @@ const axios = require('axios');
 const chalk = require('chalk');
 const cyan = chalk.cyan;
 const dim = chalk.dim;
-const comma = require('comma-number');
+const numberFormat = require('./numberFormat');
 const { sortingKeys } = require('./table.js');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
@@ -11,11 +11,11 @@ const sortValidation = require('./sortValidation.js');
 
 module.exports = async (
 	spinner,
-	table,
+	output,
 	states,
 	countryName,
 	bar,
-	{ sortBy, limit, reverse }
+	{ sortBy, limit, reverse, json }
 ) => {
 	if (!countryName && !states && !bar) {
 		sortValidation(sortBy, spinner);
@@ -25,6 +25,9 @@ module.exports = async (
 		);
 		handleError(`API is down, try again later.`, err, false);
 		let allCountries = response.data;
+
+		// Format.
+		const format = numberFormat(json);
 
 		// Sort & reverse.
 		const direction = reverse ? 'asc' : 'desc';
@@ -39,23 +42,25 @@ module.exports = async (
 
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {
-			table.push([
+			output.push([
 				count + 1,
 				oneCountry.country,
-				comma(oneCountry.cases),
-				comma(oneCountry.todayCases),
-				comma(oneCountry.deaths),
-				comma(oneCountry.todayDeaths),
-				comma(oneCountry.recovered),
-				comma(oneCountry.active),
-				comma(oneCountry.critical),
-				comma(oneCountry.casesPerOneMillion)
+				format(oneCountry.cases),
+				format(oneCountry.todayCases),
+				format(oneCountry.deaths),
+				format(oneCountry.todayDeaths),
+				format(oneCountry.recovered),
+				format(oneCountry.active),
+				format(oneCountry.critical),
+				format(oneCountry.casesPerOneMillion)
 			]);
 		});
 
 		spinner.stopAndPersist();
 		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
-		spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
-		console.log(table.toString());
+		if (!json) {
+			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
+		}
+		console.log(output.toString());
 	}
 };
