@@ -55,19 +55,33 @@ module.exports = async (spinner, countryName, states, { bar, log, sortBy, limit,
         const names = Object.keys(barCountries);
         const data = Object.values(barCountries);
 
-		const cumulative = (a, b) => (a = a + b);
+		// Better colors.
+		const getColors = {
+			cases: 'cyan',
+			'cases-today': 'cyan',
+			deaths: 'red',
+			'deaths-today': 'red',
+			recovered: 'green',
+			active: 'yellow',
+			critical: 'red',
+			'per-million': 'cyan'
+		};
+		const firstColor = customSort ? getColors[sortBy] : 'cyan';
 
-        const screen = blessed.screen();
-
-        const stack = contrib.stackedBar(
-           { label: 'Total Cases'
-           , barWidth: 10
-           , barSpacing: 10
-           , xOffset: 0
-           //, maxValue: 15
-           , height: "100%"
-           , width: "100%"
-           , barBgColor: [ 'cyan', 'red', 'green' ]})
+		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
+		const label = `${cyan(`Sorted by:`)} ${sortBy}${isRev}`;
+		const stack = contrib.stackedBar({
+			label,
+			barWidth: 10,
+			barSpacing: 10,
+			xOffset: 2,
+			height: '100%',
+			width: '100%',
+			barBgColor: [firstColor, 'red', 'green'],
+			barFgColor: 'black',
+			labelColor: 'white',
+			legend: { width: 20, padding: 5 }
+		});
 
         screen.append(stack);
         spinner.stop();
