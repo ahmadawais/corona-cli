@@ -10,22 +10,23 @@ module.exports = meow(
 	  ${green(`corona`)} ${cyan(`<command>`)} ${yellow(`[--option]`)}
 
 	Commands
-	  ${cyan(`country-name`)}       Get data for a given country
-	  ${cyan(`states`)}             Get data for all USA states
+	  ${cyan(`country-name`)}  Get data for a given country
+	  ${cyan(`states`)}        Get data for all USA states
 
 	Options
-	${yellow(`--sort`)}, ${yellow(`-s`)}           Sort data by type
-	${yellow(`--reverse`)}, ${yellow(`-r`)}        Reverse print order
-	${yellow(`--limit`)}, ${yellow(`-l`)}          Print only N entries
-	${yellow(`--chart`)}, ${yellow(`-c`)}          Print chart for a country
-	${yellow(`--log`)}, ${yellow(`-g`)}            Print logarithmic chart
-	${yellow('--bar')},${yellow('-b')}             Print bar chart of cases per country
-	${yellow(`--xcolor`)}, ${yellow(`-x`)}         Single colored output
-	${yellow(`--minimal`)}, ${yellow(`-m`)}        Minimalistic CLI output
+	  ${yellow(`--sort`)}, ${yellow(`-s`)}      Sort data by type
+	  ${yellow(`--reverse`)}, ${yellow(`-r`)}   Reverse print order
+	  ${yellow(`--limit`)}, ${yellow(`-l`)}     Print only N entries
+	  ${yellow(`--bar`)}, ${yellow(`-b`)}       Print stats in bar charts
+	  ${yellow(`--chart`)}, ${yellow(`-c`)}     Print chart for a country
+	  ${yellow(`--log`)}, ${yellow(`-g`)}       Print logarithmic chart
+	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}    Single colored output
+	  ${yellow(`--minimal`)}, ${yellow(`-m`)}   Minimalistic CLI output
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`states`)}
+	  ${green(`corona`)} ${yellow(`--bar`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
