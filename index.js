@@ -38,7 +38,7 @@ const chart = cli.flags.chart;
 const log = cli.flags.log;
 const bar = cli.flags.bar;
 const minimal = cli.flags.minimal;
-const options = { sortBy, limit, reverse, minimal, chart, log , bar};
+const options = { sortBy, limit, reverse, minimal, chart, log, bar };
 
 (async () => {
 	// Init.
