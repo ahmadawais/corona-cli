@@ -2,14 +2,14 @@
 
 All notable changes in this project's [released versions](../../releases) are documented in this file.
 
-[![VSCode](https://img.shields.io/badge/-VSCode.pro%20%E2%86%92-gray.svg?colorB=4D2AFF)](https://VSCode.pro/?utm_source=GitHubFOSS)
+[![Node.js CLI Automation](https://img.shields.io/badge/-NodeCLI.com%20%E2%86%92-gray.svg?colorB=3D873A)](https://NodeCLI.com/?utm_source=FOSS)
 [![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
 
 <br>
 
-I have released a video course to help you become a better developer — <a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank">Become a VSCode Power User →</a></p>
+I have released a video course to help you build <a href="https://NodeCLI.com/?utm_source=FOSS" target="_blank">Node.js CLIs for Automation</a> →</p>
 
-<a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/images/vscodepro/VSCode.jpeg" /><br>VSCode</a> →
+<a href="https://NodeCLI.com/?utm_source=FOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/nodecli/featured.jpg" /><br>NodeCLI.com</a> →
 
 <br>
 
@@ -22,6 +22,23 @@ I have released a video course to help you become a better developer — <a href
 > _I use [Emoji-log](https://github.com/ahmadawais/Emoji-Log), you should try it and simplify your git commits._
 
 </small>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [5.0.1](https://github.com/ahmadawais/corona-cli/compare/5.0.0...5.0.1)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Funding [`0ef28a1`](https://github.com/ahmadawais/corona-cli/commit/0ef28a1ac9bfd8454f7a9f259419a846b14a062f) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Format [`d114b3d`](https://github.com/ahmadawais/corona-cli/commit/d114b3dbcc58645073d50237e468a3a463235849) <br>
+> 🐛 Format [`2fe0263`](https://github.com/ahmadawais/corona-cli/commit/2fe0263af9cc824df4de908a7e9e928980491497) <br>
 
 <br>
 
@@ -47,6 +64,7 @@ I have released a video course to help you become a better developer — <a href
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+> 📖 Changelog [`8b31f55`](https://github.com/ahmadawais/corona-cli/commit/8b31f5535b200e9ea2fb4a06d8007e7a911771ff) <br>
 > 📖 Bars [`b8cee57`](https://github.com/ahmadawais/corona-cli/commit/b8cee57c91ec9097513fe5cb29fddf90e57e06c6) <br>
 
 <br>
@@ -827,11 +845,13 @@ Me ([Ahmad Awais](https://twitter.com/mrahmadawais/)) and my incredible wife ([M
 
 <br>
 
-Or you can back me by checking out my super fun video course. As developers, we spend over 200 Hrs/month with our code editors — it's only fair to learn your next editor deeply. This course will save you 15-20 hours every month.  <a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank">Become a VSCode Power User</a> →</p>
+Or you can back me by checking out my super fun video course. After building hundreds of developer automation tools used by millions of developers, I am sharing exactly how you can do it yourself with minimum effective effort. Learn to build Node.js & JavaScript based CLI (Command Line Interface) apps. Automate the grunt work, do more in less time, impress your manager, and help the community.
+→ I'm sharing it all in this online video course. <a href="https://nodecli.com/?utm_source=FOSS" target="_blank">Node CLI Automation
+without wasting a 1,000 hours</a> →</p>
 
-<a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/images/vscodepro/VSCode.jpeg" /><br><strong>VSCODE</strong></a>
+<a href="https://nodecli.com/?utm_source=FOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/nodecli/featured.jpg" /><br><strong>Node CLI</strong></a>
 
 <br>
 
-[![VSCode](https://img.shields.io/badge/-VSCode.pro%20%E2%86%92-gray.svg?colorB=4D2AFF&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
+[![Node CLI](https://img.shields.io/badge/-NodeCLI.com%20%E2%86%92-gray.svg?colorB=3D873A)](https://nodecli.com/?utm_source=FOSS)
 [![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
