@@ -1,7 +1,5 @@
 const axios = require('axios');
-const chalk = require('chalk');
-const cyan = chalk.cyan;
-const dim = chalk.dim;
+const { cyan, dim } = require('chalk');
 const numberFormat = require('./numberFormat');
 const { sortingKeys } = require('./table.js');
 const to = require('await-to-js').default;

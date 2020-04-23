@@ -1,8 +1,7 @@
-const chalk = require('chalk');
+const { red } = require('chalk');
 const axios = require('axios');
 const sym = require('log-symbols');
 const numberFormat = require('./numberFormat');
-const red = chalk.red;
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
