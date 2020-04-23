@@ -12,6 +12,8 @@ const sortValidation = require('./sortValidation.js');
 
 module.exports = async (spinner, countryName, states, { bar, log, sortBy, limit, reverse }) => {
 	if (!countryName && !states && bar) {
+		// Handle custom sorting and validate it.
+		const customSort = sortValidation(sortBy, spinner);
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries`)
 		);
