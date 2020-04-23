@@ -38,13 +38,19 @@ module.exports = async (spinner, countryName, states, { bar, log, sortBy, limit,
 		}
         // Format Stack Data
         barCountries = {};
-        allCountries.map((country, count)=>{
-            barCountries[country.country]=[
-                logScale(country.cases),
-                logScale(country.deaths),
-                logScale(country.recovered)
-            ];
-        });
+		allCountries.map(country => {
+			if (customSort) {
+				barCountries[country.country] = [
+					logScale(country[sortingKeys[sortBy]])
+				];
+			} else {
+				barCountries[country.country] = [
+					logScale(country.cases),
+					logScale(country.deaths),
+					logScale(country.recovered)
+				];
+			}
+		});
 
         const names = Object.keys(barCountries);
         const data = Object.values(barCountries);
