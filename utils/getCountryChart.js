@@ -75,6 +75,7 @@ module.exports = async (spinner, countryName, { chart, log }) => {
 		spinner.stop();
 		line.setData([casesSeries, deathsSeries, recoveredSeries]);
 		screen.render();
+
 		await new Promise((resolve, _) => {
 			screen.key(['escape', 'q', 'C-c', 'enter', 'space'], (ch, key) => {
 				return process.exit(0);

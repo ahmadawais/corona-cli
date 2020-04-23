@@ -2,14 +2,14 @@
 
 All notable changes in this project's [released versions](../../releases) are documented in this file.
 
-[![VSCode](https://img.shields.io/badge/-VSCode.pro%20%E2%86%92-gray.svg?colorB=4D2AFF)](https://VSCode.pro/?utm_source=GitHubFOSS)
+[![Node.js CLI Automation](https://img.shields.io/badge/-NodeCLI.com%20%E2%86%92-gray.svg?colorB=3D873A)](https://NodeCLI.com/?utm_source=FOSS)
 [![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
 
 <br>
 
-I have released a video course to help you become a better developer — <a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank">Become a VSCode Power User →</a></p>
+I have released a video course to help you build <a href="https://NodeCLI.com/?utm_source=FOSS" target="_blank">Node.js CLIs for Automation</a> →</p>
 
-<a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/images/vscodepro/VSCode.jpeg" /><br>VSCode</a> →
+<a href="https://NodeCLI.com/?utm_source=FOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/nodecli/featured.jpg" /><br>NodeCLI.com</a> →
 
 <br>
 
@@ -29,6 +29,66 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [5.0.1](https://github.com/ahmadawais/corona-cli/compare/5.0.0...5.0.1)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Funding [`0ef28a1`](https://github.com/ahmadawais/corona-cli/commit/0ef28a1ac9bfd8454f7a9f259419a846b14a062f) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Format [`d114b3d`](https://github.com/ahmadawais/corona-cli/commit/d114b3dbcc58645073d50237e468a3a463235849) <br>
+> 🐛 Format [`2fe0263`](https://github.com/ahmadawais/corona-cli/commit/2fe0263af9cc824df4de908a7e9e928980491497) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [5.0.0](https://github.com/ahmadawais/corona-cli/compare/4.3.0...5.0.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Sort Validation [`73432df`](https://github.com/ahmadawais/corona-cli/commit/73432df133e61b8b4bf93e811838421ba070bb33) <br>
+> 📦 Sort validation [`252c299`](https://github.com/ahmadawais/corona-cli/commit/252c299ecc61f0a36b4a1f8237345b7ca0a2925a) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Categories [`47ba82f`](https://github.com/ahmadawais/corona-cli/commit/47ba82ff6be511e1950d19b13e578382c8c40192) <br>
+> 👌 Label Colors [`76d2d70`](https://github.com/ahmadawais/corona-cli/commit/76d2d703ccac79a0cf426ef7019bdda871e13ae1) <br>
+> 👌 Formatting & Exmaples [`47aeaed`](https://github.com/ahmadawais/corona-cli/commit/47aeaedb80928b05988f7e9e4da9413b9f34b91b) <br>
+> 👌 Single or Stacked bars [`757af7a`](https://github.com/ahmadawais/corona-cli/commit/757af7a388d4c4edd6a1f4d911f67df9f814f91e) <br>
+> 👌 Format [`1a09647`](https://github.com/ahmadawais/corona-cli/commit/1a096470ed3fc33a768d1261af46f4c708439f66) <br>
+> 👌 Sort Validation [`0a1c934`](https://github.com/ahmadawais/corona-cli/commit/0a1c934ba26c83c4aadcf61c54641647d9de5d74) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`8b31f55`](https://github.com/ahmadawais/corona-cli/commit/8b31f5535b200e9ea2fb4a06d8007e7a911771ff) <br>
+> 📖 Bars [`b8cee57`](https://github.com/ahmadawais/corona-cli/commit/b8cee57c91ec9097513fe5cb29fddf90e57e06c6) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [4.3.0](https://github.com/ahmadawais/corona-cli/compare/4.2.0...4.3.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Update notice [`a282339`](https://github.com/ahmadawais/corona-cli/commit/a282339169052cebc68882f1830867b7b71faed5) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`6be89f5`](https://github.com/ahmadawais/corona-cli/commit/6be89f53c6565db9161d11d9fb1ce9e191fd96c4) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [4.2.0](https://github.com/ahmadawais/corona-cli/compare/4.1.3...4.2.0)
 
 ![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
@@ -39,6 +99,10 @@ I have released a video course to help you become a better developer — <a href
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 API v2 [`277349f`](https://github.com/ahmadawais/corona-cli/commit/277349f53a1adb391b5a35c48bff87dd5271350f) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`5253102`](https://github.com/ahmadawais/corona-cli/commit/52531022abbf5c70d17b8ea7fa3d8c2e1ba03aa5) <br>
 
 <br>
 
@@ -781,11 +845,13 @@ Me ([Ahmad Awais](https://twitter.com/mrahmadawais/)) and my incredible wife ([M
 
 <br>
 
-Or you can back me by checking out my super fun video course. As developers, we spend over 200 Hrs/month with our code editors — it's only fair to learn your next editor deeply. This course will save you 15-20 hours every month.  <a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank">Become a VSCode Power User</a> →</p>
+Or you can back me by checking out my super fun video course. After building hundreds of developer automation tools used by millions of developers, I am sharing exactly how you can do it yourself with minimum effective effort. Learn to build Node.js & JavaScript based CLI (Command Line Interface) apps. Automate the grunt work, do more in less time, impress your manager, and help the community.
+→ I'm sharing it all in this online video course. <a href="https://nodecli.com/?utm_source=FOSS" target="_blank">Node CLI Automation
+without wasting a 1,000 hours</a> →</p>
 
-<a href="https://vscode.pro/?utm_source=GitHubFOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/images/vscodepro/VSCode.jpeg" /><br><strong>VSCODE</strong></a>
+<a href="https://nodecli.com/?utm_source=FOSS" target="_blank"><img src="https://raw.githubusercontent.com/ahmadawais/stuff/master/nodecli/featured.jpg" /><br><strong>Node CLI</strong></a>
 
 <br>
 
-[![VSCode](https://img.shields.io/badge/-VSCode.pro%20%E2%86%92-gray.svg?colorB=4D2AFF&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
+[![Node CLI](https://img.shields.io/badge/-NodeCLI.com%20%E2%86%92-gray.svg?colorB=3D873A)](https://nodecli.com/?utm_source=FOSS)
 [![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)

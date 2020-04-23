@@ -7,15 +7,19 @@ const { sortingKeys } = require('./table.js');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
+const sortValidation = require('./sortValidation.js');
 
 module.exports = async (
 	spinner,
 	output,
 	states,
 	countryName,
+	bar,
 	{ sortBy, limit, reverse, json }
 ) => {
-	if (!countryName && !states) {
+	if (!countryName && !states && !bar) {
+		sortValidation(sortBy, spinner);
+
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries`)
 		);

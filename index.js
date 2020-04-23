@@ -8,7 +8,6 @@ process.on('unhandledRejection', err => {
 });
 
 const ora = require('ora');
-const spinner = ora({ text: '' });
 const Table = require('cli-table3');
 const JsonOutput = require('./utils/JsonOutput.js');
 const cli = require('./utils/cli.js');
@@ -18,6 +17,7 @@ const handleError = require('cli-handle-error');
 const getStates = require('./utils/getStates.js');
 const getCountry = require('./utils/getCountry.js');
 const getCountryChart = require('./utils/getCountryChart.js');
+const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
 const {
@@ -37,13 +37,15 @@ const reverse = cli.flags.reverse;
 const limit = Math.abs(cli.flags.limit);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
+const bar = cli.flags.bar;
 const minimal = cli.flags.minimal;
 const json = cli.flags.json;
-const options = { sortBy, limit, reverse, minimal, chart, log, json };
+const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 
 (async () => {
 	// Init.
 	init(minimal || json);
+	const spinner = ora({ text: '' });
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states' ? true : false;
 	const country = input;
@@ -62,8 +64,9 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json };
 	const lastUpdated = await getWorldwide(output, states, json);
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
-	await getCountries(spinner, output, states, country, options);
+	await getCountries(spinner, output, states, country, bar, options);
 	await getCountryChart(spinner, country, options);
+	await getBar(spinner, country, states, options);
 
 	theEnd(lastUpdated, states, minimal || json);
 })();
