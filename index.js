@@ -16,6 +16,7 @@ const handleError = require('cli-handle-error');
 const getStates = require('./utils/getStates.js');
 const getCountry = require('./utils/getCountry.js');
 const getCountryChart = require('./utils/getCountryChart.js');
+const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
 const {
@@ -35,8 +36,9 @@ const reverse = cli.flags.reverse;
 const limit = Math.abs(cli.flags.limit);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
+const bar = cli.flags.bar;
 const minimal = cli.flags.minimal;
-const options = { sortBy, limit, reverse, minimal, chart, log };
+const options = { sortBy, limit, reverse, minimal, chart, log , bar};
 
 (async () => {
 	// Init.
@@ -59,8 +61,9 @@ const options = { sortBy, limit, reverse, minimal, chart, log };
 	const lastUpdated = await getWorldwide(table, states);
 	await getCountry(spinner, table, states, country, options);
 	await getStates(spinner, table, states, options);
-	await getCountries(spinner, table, states, country, options);
+	await getCountries(spinner, table, states, country, bar, options);
 	await getCountryChart(spinner, country, options);
+	await getBar(spinner, country, states, options);
 
 	theEnd(lastUpdated, states, minimal);
 })();
