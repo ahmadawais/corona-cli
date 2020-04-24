@@ -20,14 +20,13 @@ class JsonOutput {
 	}
 
 	getKeys() {
-		const keys = this.options.head.map(this.toKebabCase);
-		return keys;
+		return this.options.head.map(this.toKebabCase);
 	}
 
 	toKebabCase(str) {
 		return str.toLowerCase()
-			.replace(/ {1,}/gi, '-')
-			.replace(/\(|\)/gi, '');
+			.replace(/ {1,}/g, '-')
+			.replace(/\(|\)/g, '');
 	}
 
 	push(value) {
