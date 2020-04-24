@@ -5,12 +5,29 @@ class JsonOutput {
 	}
 
 	get asObject() {
+		const keys = this.getKeys();
+
 		return this.values.map(values => {
 			return values.reduce((acc, value, index) => {
-				acc[this.options.head[index]] = value;
+				if(index === 0) { // skip # column
+					return acc;
+				}
+
+				acc[keys[index]] = value;
 				return acc;
 			}, {});
 		});
+	}
+
+	getKeys() {
+		const keys = this.options.head.map(this.toKebabCase);
+		return keys;
+	}
+
+	toKebabCase(str) {
+		return str.toLowerCase()
+			.replace(/ {1,}/gi, '-')
+			.replace(/\(|\)/gi, '');
 	}
 
 	push(value) {
