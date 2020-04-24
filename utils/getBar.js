@@ -25,17 +25,6 @@ module.exports = async (
 			logScale = x => (x === 0 ? undefined : Math.log(x));
 		}
 
-		// Better colors.
-		const getColors = {
-			cases: 'cyan',
-			'cases-today': 'cyan',
-			deaths: 'red',
-			'deaths-today': 'red',
-			recovered: 'green',
-			active: 'yellow',
-			critical: 'red',
-			'per-million': 'cyan'
-		};
 		const screen = blessed.screen();
 
 		const statesURL = `https://corona.lmao.ninja/v2/states`;
@@ -78,6 +67,17 @@ module.exports = async (
 		const names = Object.keys(barRegions);
 		const data = Object.values(barRegions);
 
+		// Better colors.
+		const getColors = {
+			cases: 'cyan',
+			'cases-today': 'cyan',
+			deaths: 'red',
+			'deaths-today': 'red',
+			recovered: 'green',
+			active: 'yellow',
+			critical: 'red',
+			'per-million': 'cyan'
+		};
 		const firstColor = customSort ? getColors[sortBy] : 'cyan';
 
 		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
