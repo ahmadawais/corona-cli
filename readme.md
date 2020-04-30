@@ -121,9 +121,15 @@ corona -s active -r
 corona --bar
 corona -b
 
+# Bar charts for US States.
+corona states -b
+
 # Print bar charts for top 5 countries w.r.t deaths.
 corona --bar --sort deaths --limit 5
 corona -b -s deaths -l 5
+
+# Bar charts by active cases in the US States.
+corona states -b -s active
 
 # Print bar charts countries w.r.t recovered cases.
 corona --bar --sort recovered
