@@ -32,6 +32,18 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [5.3.0](https://github.com/ahmadawais/corona-cli/compare/5.2.0...5.3.0)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Debug [`d7ca7e4`](https://github.com/ahmadawais/corona-cli/commit/d7ca7e4fdcb5e0e2b95aa6eba81e4b617bff0197) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [5.2.0](https://github.com/ahmadawais/corona-cli/compare/5.1.0...5.2.0)
 
 ![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
@@ -39,6 +51,10 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 > 👌 Missing Country [`eb42bab`](https://github.com/ahmadawais/corona-cli/commit/eb42bab5faf1a3f6ce1f9a8ae40892174cad2afb) <br>
 > 👌 Chalk ref [`491b2de`](https://github.com/ahmadawais/corona-cli/commit/491b2de86fc9c55d446fd9ee535cd6b478f1e12b) <br>
 > 👌 Dependencies [`1226523`](https://github.com/ahmadawais/corona-cli/commit/1226523284405dc33f6ace30bfea303b9ba2e2b7) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`b573528`](https://github.com/ahmadawais/corona-cli/commit/b5735288797f51c0d35ab59601726a610fac8f50) <br>
 
 <br>
 
