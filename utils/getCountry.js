@@ -1,7 +1,6 @@
-const { red } = require('chalk');
 const axios = require('axios');
-const sym = require('log-symbols');
 const numberFormat = require('./numberFormat');
+const exitCountry = require('./exitCountry');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
@@ -10,17 +9,8 @@ module.exports = async (spinner, table, states, countryName, options) => {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries/${countryName}`)
 		);
-
-		if (err && err.response.status === 404) {
-			spinner.stopAndPersist();
-			console.log(
-				`${red(
-					`${sym.error} Oops. A country named "${countryName}" does not exist or has no cases...`
-				)}\n`
-			);
-			process.exit(0);
-		}
-		
+		exitCountry(err, spinner, countryName);
+		err && spinner.stopAndPersist();
 		handleError(`API is down, try again later.`, err, false);
 		const thisCountry = response.data;
 
