@@ -12,12 +12,10 @@ module.exports = async (
 	output,
 	states,
 	countryName,
-	bar,
-	{ sortBy, limit, reverse, json }
+	{ sortBy, limit, reverse, bar, json }
 ) => {
 	if (!countryName && !states && !bar) {
 		sortValidation(sortBy, spinner);
-
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries`)
 		);
