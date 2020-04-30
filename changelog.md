@@ -32,6 +32,20 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [5.2.0](https://github.com/ahmadawais/corona-cli/compare/5.1.0...5.2.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Missing Country [`eb42bab`](https://github.com/ahmadawais/corona-cli/commit/eb42bab5faf1a3f6ce1f9a8ae40892174cad2afb) <br>
+> 👌 Chalk ref [`491b2de`](https://github.com/ahmadawais/corona-cli/commit/491b2de86fc9c55d446fd9ee535cd6b478f1e12b) <br>
+> 👌 Dependencies [`1226523`](https://github.com/ahmadawais/corona-cli/commit/1226523284405dc33f6ace30bfea303b9ba2e2b7) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [5.1.0](https://github.com/ahmadawais/corona-cli/compare/5.0.1...5.1.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -45,6 +59,10 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Lingo Format Await [`5e433ee`](https://github.com/ahmadawais/corona-cli/commit/5e433ee261185a1ac6d683cc7893bd5e755d64b7) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`e9450e1`](https://github.com/ahmadawais/corona-cli/commit/e9450e12c90d2f5c27e2d5cb4459501387ee07c6) <br>
 
 <br>
 
