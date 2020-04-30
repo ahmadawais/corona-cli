@@ -25,8 +25,6 @@ module.exports = async (
 			logScale = x => (x === 0 ? undefined : Math.log(x));
 		}
 
-		const screen = blessed.screen();
-
 		const statesURL = `https://corona.lmao.ninja/v2/states`;
 		const countriesURL = `https://corona.lmao.ninja/v2/countries`;
 
@@ -43,7 +41,6 @@ module.exports = async (
 		// Limit.
 		limit = limit > 10 ? 10 : limit;
 		allRegions = allRegions.slice(0, limit);
-		spinner.stop();
 
 		// Format Stack Data.
 		barRegions = {};
@@ -83,6 +80,8 @@ module.exports = async (
 
 		const isRev = reverse ? `${dim(` & `)}${cyan(`Order`)}: reversed` : ``;
 		const label = `${cyan(`Sorted by:`)} ${sortBy}${isRev}`;
+		const screen = blessed.screen();
+		spinner.stop();
 		const stack = contrib.stackedBar({
 			label,
 			barWidth: 10,
@@ -97,7 +96,7 @@ module.exports = async (
 		});
 
 		screen.append(stack);
-		// spinner.stop();
+
 		stack.setData({
 			barCategory: names,
 			stackedCategory:
