@@ -10,18 +10,19 @@ module.exports = async (spinner, table, states, countryName, options) => {
 		const [err, response] = await to(
 			axios.get(`https://corona.lmao.ninja/v2/countries/${countryName}`)
 		);
-		handleError(`API is down, try again later.`, err, false);
-		const thisCountry = response.data;
 
-		if (response.data === 'Country not found') {
+		if (err && err.response.status === 404) {
 			spinner.stopAndPersist();
 			console.log(
 				`${red(
-					`${sym.error} Nops. A country named "${countryName}" does not exist…`
+					`${sym.error} Oops. A country named "${countryName}" does not exist or has no cases...`
 				)}\n`
 			);
 			process.exit(0);
 		}
+		
+		handleError(`API is down, try again later.`, err, false);
+		const thisCountry = response.data;
 
 		// Format.
 		const format = numberFormat(options.json);
