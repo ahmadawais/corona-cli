@@ -1,13 +1,13 @@
-const handleError = require('cli-handle-error');
 const axios = require('axios');
-const to = require('await-to-js').default;
 const blessed = require('blessed');
+const { cyan, dim } = require('chalk');
+const orderBy = require('lodash.orderby');
+const to = require('await-to-js').default;
 const contrib = require('blessed-contrib');
 const { sortingKeys } = require('./table.js');
-const orderBy = require('lodash.orderby');
-const { cyan, dim } = require('chalk');
+const handleError = require('cli-handle-error');
 const sortValidation = require('./sortValidation.js');
-const sortStateValidation = require('./sortStateValidation.js');
+const sortStatesValidation = require('./sortStatesValidation.js');
 
 module.exports = async (
 	spinner,
@@ -15,10 +15,10 @@ module.exports = async (
 	states,
 	{ bar, log, sortBy, limit, reverse }
 ) => {
-	if (bar) {
+	if (!countryName && bar) {
 		// Handle custom sorting and validate it.
 		const customSort = states
-			? sortStateValidation(sortBy, spinner)
+			? sortStatesValidation(sortBy, spinner)
 			: sortValidation(sortBy, spinner);
 		let logScale = x => x;
 		if (log) {
@@ -30,12 +30,12 @@ module.exports = async (
 		const statesURL = `https://corona.lmao.ninja/v2/states`;
 		const countriesURL = `https://corona.lmao.ninja/v2/countries`;
 
-		const [err, response] = await to(
+		const [err, res] = await to(
 			axios.get(states ? statesURL : countriesURL)
 		);
-
 		handleError(`API is down, try again later.`, err, false);
-		let allRegions = response.data;
+		let allRegions = res.data;
+
 		// Sort & reverse.
 		const direction = reverse ? 'asc' : 'desc';
 		allRegions = orderBy(allRegions, [sortingKeys[sortBy]], [direction]);
@@ -43,6 +43,7 @@ module.exports = async (
 		// Limit.
 		limit = limit > 10 ? 10 : limit;
 		allRegions = allRegions.slice(0, limit);
+		spinner.stop();
 
 		// Format Stack Data.
 		barRegions = {};
@@ -96,7 +97,7 @@ module.exports = async (
 		});
 
 		screen.append(stack);
-		spinner.stop();
+		// spinner.stop();
 		stack.setData({
 			barCategory: names,
 			stackedCategory:

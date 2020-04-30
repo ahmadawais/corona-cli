@@ -7,7 +7,7 @@ module.exports = (sortBy, spinner) => {
 		if (Object.keys(sortingKeys).indexOf(sortBy) === -1) {
 			spinner.stop();
 			console.log(`${sym.error} ${red(`Wrong sorting key!`)}`);
-			console.log(`${sym.info} You can only sort by:
+			console.log(`${sym.info} You can only sort data by:
 ${dim(`-`)} ${green(`cases`)}
 ${dim(`-`)} ${green(`cases-today`)}
 ${dim(`-`)} ${green(`deaths`)}

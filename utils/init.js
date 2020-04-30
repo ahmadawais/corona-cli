@@ -1,11 +1,12 @@
+const boxen = require('boxen');
 const sym = require('log-symbols');
 const welcome = require('cli-welcome');
+const to = require('await-to-js').default;
+const { yellow, green } = require('chalk');
 const checkNode = require('cli-check-node');
 const pkgJSON = require('./../package.json');
-const unhandledError = require('cli-handle-unhandled');
 const checkForUpdate = require('update-check');
-const { yellow, green } = require('chalk');
-const boxen = require('boxen');
+const unhandledError = require('cli-handle-unhandled');
 
 module.exports = async (skipWelcome = false) => {
 	await unhandledError();
@@ -19,7 +20,7 @@ module.exports = async (skipWelcome = false) => {
 			version: `v${pkgJSON.version}`
 		});
 
-	const update = await checkForUpdate(pkgJSON);
+	const [err, update] = await to(checkForUpdate(pkgJSON));
 	if (update) {
 		console.log(
 			boxen(
