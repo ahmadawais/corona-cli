@@ -4,10 +4,10 @@ const exitCountry = require('./exitCountry');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
-module.exports = async (spinner, table, states, countryName, options) => {
-	if (countryName && !states && !options.chart) {
+module.exports = async (spinner, table, states, countryName, { chart, json, yesterday }) => {
+	if (countryName && !states && !chart) {
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/countries/${countryName}`)
+			axios.get(`https://corona.lmao.ninja/v2/countries/${countryName}?yesterday=${yesterday}`)
 		);
 		exitCountry(err, spinner, countryName);
 		err && spinner.stopAndPersist();
@@ -15,7 +15,7 @@ module.exports = async (spinner, table, states, countryName, options) => {
 		const thisCountry = response.data;
 
 		// Format.
-		const format = numberFormat(options.json);
+		const format = numberFormat(json);
 
 		table.push([
 			`—`,

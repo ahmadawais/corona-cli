@@ -50,6 +50,12 @@ npx corona-cli
 # Display data for all countries.
 corona
 
+# Display yesterday's data
+corona --yesterday
+
+# Alias: Display yesterday's data
+corona -y
+
 # Display data for all countries in single color.
 corona --xcolor
 

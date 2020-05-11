@@ -20,6 +20,7 @@ module.exports = meow(
 	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}    Single colored output
 	  ${yellow(`--minimal`)}, ${yellow(`-m`)}   Minimalistic CLI output
 	  ${yellow(`--json`)}, ${yellow(`-j`)}      Output JSON only data
+	  ${yellow(`--yesterday`)}, ${yellow(`-y`)}      Show yesterday data
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
@@ -82,6 +83,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'j'
+			},
+			yesterday: {
+				type: 'boolean',
+				default: false,
+				alias: 'y'
 			}
 		}
 	}

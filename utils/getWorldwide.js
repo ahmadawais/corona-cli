@@ -3,9 +3,9 @@ const numberFormat = require('./numberFormat');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 
-module.exports = async (table, states, json) => {
+module.exports = async (table, states, { json, yesterday }) => {
 	const [err, response] = await to(
-		axios.get(`https://corona.lmao.ninja/v2/all`)
+		axios.get(`https://corona.lmao.ninja/v2/all?yesterday=${yesterday}`)
 	);
 	handleError(`API is down, try again later.`, err, false);
 
