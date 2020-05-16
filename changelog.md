@@ -32,11 +32,27 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [5.3.1](https://github.com/ahmadawais/corona-cli/compare/5.3.0...5.3.1)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 CLI Help formatting [`3439d21`](https://github.com/ahmadawais/corona-cli/commit/3439d219492ddf179e06a18fdea28a65c39a8cd0) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [5.3.0](https://github.com/ahmadawais/corona-cli/compare/5.2.0...5.3.0)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Debug [`d7ca7e4`](https://github.com/ahmadawais/corona-cli/commit/d7ca7e4fdcb5e0e2b95aa6eba81e4b617bff0197) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`a52451f`](https://github.com/ahmadawais/corona-cli/commit/a52451fa4987384ddd6226a49c8d8b53b86a3b31) <br>
 
 <br>
 
