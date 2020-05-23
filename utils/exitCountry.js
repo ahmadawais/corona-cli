@@ -1,7 +1,7 @@
 const { red } = require('chalk');
 const sym = require('log-symbols');
 
-module.exports = (err, spinner, countryName) => {
+`module.exports = (err, spinner, countryName) => {
 	if (
 		err &&
 		err.response &&

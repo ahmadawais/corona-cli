@@ -20,6 +20,8 @@ const getCountryChart = require('./utils/getCountryChart.js');
 const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
+const getContinents = require('./utils/getContinents');
+
 const {
 	style,
 	single,
@@ -64,6 +66,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	const lastUpdated = await getWorldwide(output, states, json);
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
+	await getContinents(spinner, output, continent, options)
 	await getCountries(spinner, output, states, country, options);
 	await getCountryChart(spinner, country, options);
 	await getBar(spinner, country, states, options);
