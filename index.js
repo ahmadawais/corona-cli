@@ -21,6 +21,7 @@ const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
 const getContinents = require('./utils/getContinents');
+const { continents } = require('./utils/constants');
 
 const {
 	style,
@@ -51,7 +52,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states';
 	const continents = input === 'continents'
-	const country = states || continents ? false : input;
+	const country = states || continents || continents.c  ? false : input;
 
 	// Table
 	const head = xcolor ? single : colored;
