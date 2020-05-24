@@ -70,7 +70,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	await getContinents(spinner, output, states, continents, options)
 	await getCountries(spinner, output, states, country, continents, options);
 	await getCountryChart(spinner, country, options);
-	await getBar(spinner, country, states, options);
+	await getBar(spinner, country, states, continents, options);
 
 	theEnd(lastUpdated, states, minimal || json);
 })();
