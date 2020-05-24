@@ -49,8 +49,9 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	await init(minimal || json);
 	const spinner = ora({ text: '' });
 	input === 'help' && (await cli.showHelp(0));
-	const states = input === 'states' ? true : false;
-	const country = states ? '' : input;
+	const states = input === 'states';
+	const continents = input === 'continents'
+	const country = states || continents ? false : input;
 
 	// Table
 	const head = xcolor ? single : colored;
@@ -66,8 +67,8 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	const lastUpdated = await getWorldwide(output, states, json);
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
-	await getContinents(spinner, output, continent, options)
-	await getCountries(spinner, output, states, country, options);
+	await getContinents(spinner, output, states, continents, options)
+	await getCountries(spinner, output, states, country, continents, options);
 	await getCountryChart(spinner, country, options);
 	await getBar(spinner, country, states, options);
 
