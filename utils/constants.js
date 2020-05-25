@@ -1,11 +1,7 @@
-export const continents = {
-	"NORTH AMERICA": "North America",
-	"SOUTH AMERICA": "South America",
-	"EUROPE": "Europe",
-	"AFRICA":  "Africa",
-	"ASIA": "Asia",
-	"AUSTRALIA": "Australia",
-	"OCEANIA":  "Oceania",
-	"AUSTRALIA/OCEANIA": "Australia/Oceania",
-	"ANTARCTICA": "Antarctica"
+const continentsMap = new Set(["NORTH AMERICA","SOUTH AMERICA", "EUROPE",
+								"AFRICA", "ASIA", "AUSTRALIA","OCEANIA", "AUSTRALIA/OCEANIA", "ANTARCTICA"])
+
+module.exports = {
+	continentsMap: continentsMap
 }
+

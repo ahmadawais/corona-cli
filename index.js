@@ -21,7 +21,8 @@ const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
 const getContinents = require('./utils/getContinents');
-const { continents } = require('./utils/constants');
+const getContinent = require('./utils/getContinent')
+const { continentsMap } = require('./utils/constants');
 
 const {
 	style,
@@ -52,7 +53,8 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	input === 'help' && (await cli.showHelp(0));
 	const states = input === 'states';
 	const continents = input === 'continents'
-	const country = states || continents || continents.c  ? false : input;
+	const continent = input && continentsMap.has(input.toUpperCase()) ? input : false;
+	const country = continents || continent || states ? false : input;
 
 	// Table
 	const head = xcolor ? single : colored;
@@ -69,7 +71,8 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
 	await getContinents(spinner, output, states, continents, options)
-	await getCountries(spinner, output, states, country, continents, options);
+	await getContinent(spinner, output, continent, options)
+	await getCountries(spinner, output, states, country, continents || continent, options);
 	await getCountryChart(spinner, country, options);
 	await getBar(spinner, country, states, continents, options);
 
