@@ -11,16 +11,16 @@ module.exports = meow(
 	  ${cyan(`states`)}        Get data for all USA states
 
 	Options
-	  ${yellow(`--sort`)}, ${yellow(`-s`)}      Sort data by type
-	  ${yellow(`--reverse`)}, ${yellow(`-r`)}   Reverse print order
-	  ${yellow(`--limit`)}, ${yellow(`-l`)}     Print only N entries
-	  ${yellow(`--bar`)}, ${yellow(`-b`)}       Print stats in bar charts
-	  ${yellow(`--chart`)}, ${yellow(`-c`)}     Print chart for a country
-	  ${yellow(`--log`)}, ${yellow(`-g`)}       Print logarithmic chart
-	  ${yellow(`--xcolor`)}, ${yellow(`-x`)}    Single colored output
-	  ${yellow(`--minimal`)}, ${yellow(`-m`)}   Minimalistic CLI output
-	  ${yellow(`--json`)}, ${yellow(`-j`)}      Output JSON only data
-	  ${yellow(`--yesterday`)}, ${yellow(`-y`)}      Show yesterday data
+	  ${yellow(`-s`)}, ${yellow(`--sort`)}      Sort data by type
+	  ${yellow(`-r`)}, ${yellow(`--reverse`)}   Reverse print order
+	  ${yellow(`-l`)}, ${yellow(`--limit`)}     Print only N entries
+	  ${yellow(`-b`)}, ${yellow(`--bar`)}       Print stats in bar charts
+	  ${yellow(`-c`)}, ${yellow(`--chart`)}     Print chart for a country
+	  ${yellow(`-g`)}, ${yellow(`--log`)}       Print logarithmic chart
+	  ${yellow(`-x`)}, ${yellow(`--xcolor`)}    Single colored output
+	  ${yellow(`-m`)}, ${yellow(`--minimal`)}   Minimalistic CLI output
+	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
+	  ${yellow(`-y`)}, ${yellow(`--yesterday`)}      Show yesterday data
 
 	Examples
 	  ${green(`corona`)} ${cyan(`china`)}
