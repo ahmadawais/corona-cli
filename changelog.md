@@ -32,11 +32,37 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [5.3.2](https://github.com/ahmadawais/corona-cli/compare/5.3.1...5.3.2)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Scarf [`0be6583`](https://github.com/ahmadawais/corona-cli/commit/0be65833a53f0b2b21969199b397defbf135b8ad) <br>
+> 📦 RM Scarf [`9cbb5dd`](https://github.com/ahmadawais/corona-cli/commit/9cbb5dd964572d7311a977230c6c1695fefbd5c0) <br>
+> 📦 Scarf: Understand usage [`802ee22`](https://github.com/ahmadawais/corona-cli/commit/802ee22fda0ba2707d955e9be5244b80b7c5951b) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Connect & Sponsor [`bd6eb2f`](https://github.com/ahmadawais/corona-cli/commit/bd6eb2fae6c68819187b19ad431cfb47cc1c0ad5) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Color [`00d78fc`](https://github.com/ahmadawais/corona-cli/commit/00d78fc35c8875eab01d7b52ff3b03391a050e73) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [5.3.1](https://github.com/ahmadawais/corona-cli/compare/5.3.0...5.3.1)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
 > 📦 CLI Help formatting [`3439d21`](https://github.com/ahmadawais/corona-cli/commit/3439d219492ddf179e06a18fdea28a65c39a8cd0) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`e491117`](https://github.com/ahmadawais/corona-cli/commit/e4911179929833e4e6214b8cd6ce437662d8d923) <br>
 
 <br>
 
@@ -60,17 +86,33 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
-### RELEASE: [5.2.0](https://github.com/ahmadawais/corona-cli/compare/5.1.0...5.2.0)
+### RELEASE: [5.2.0](https://github.com/ahmadawais/corona-cli/compare/5.1.1...5.2.0)
 
 ![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
 
 > 👌 Missing Country [`eb42bab`](https://github.com/ahmadawais/corona-cli/commit/eb42bab5faf1a3f6ce1f9a8ae40892174cad2afb) <br>
-> 👌 Chalk ref [`491b2de`](https://github.com/ahmadawais/corona-cli/commit/491b2de86fc9c55d446fd9ee535cd6b478f1e12b) <br>
 > 👌 Dependencies [`1226523`](https://github.com/ahmadawais/corona-cli/commit/1226523284405dc33f6ace30bfea303b9ba2e2b7) <br>
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
 > 📖 Changelog [`b573528`](https://github.com/ahmadawais/corona-cli/commit/b5735288797f51c0d35ab59601726a610fac8f50) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
+### RELEASE: [5.1.1](https://github.com/ahmadawais/corona-cli/compare/5.1.0...5.1.1)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Chalk ref [`491b2de`](https://github.com/ahmadawais/corona-cli/commit/491b2de86fc9c55d446fd9ee535cd6b478f1e12b) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`6b500d5`](https://github.com/ahmadawais/corona-cli/commit/6b500d5e4780e87c4ebe1443cd3a1b901ab17074) <br>
+> 📖 Bar chart for the US States [`ecbd622`](https://github.com/ahmadawais/corona-cli/commit/ecbd622d1a9b2eaade35a8479a5a215f0eaeb5e1) <br>
 
 <br>
 
@@ -900,11 +942,11 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 ## Connect
 
 <div align="left">
-<p><a href="https://github.com/ahmadawais"><img alt="GitHub @AhmadAwais" align="center" src="https://img.shields.io/badge/GITHUB-gray.svg?colorB=6cc644&colorA=6cc644&style=flat" /></a>&nbsp;<small><strong>(follow)</strong> TO STAY UP TO DATE ON FREE & OPEN SOURCE SOFTWARE</small></p>
-<p><a href="https://twitter.com/MrAhmadAwais/"><img alt="Twitter @MrAhmadAwais" align="center" src="https://img.shields.io/badge/TWITTER-gray.svg?colorB=1da1f2&colorA=1da1f2&style=flat" /></a>&nbsp;<small><strong>(follow)</strong> TO GET ONE DEV MINUTE DAILY HOT TIPS & TROLLS</small></p>
-<p><a href="https://www.youtube.com/AhmadAwais"><img alt="YouTube AhmadAwais" align="center" src="https://img.shields.io/badge/YOUTUBE-gray.svg?colorB=ff0000&colorA=ff0000&style=flat" /></a>&nbsp;<small><strong>(subscribe)</strong> TO TECH TALKS & ONE DEV MINUTE VIDEOS</small></p>
-<p><a href="https://AhmadAwais.com/"><img alt="Blog: AhmadAwais.com" align="center" src="https://img.shields.io/badge/MY%20BLOG-gray.svg?colorB=4D2AFF&colorA=4D2AFF&style=flat" /></a>&nbsp;<small><strong>(read)</strong> MOSTLY LONG FORM TECHNICAL ARTICLES</small></p>
-<p><a href="https://www.linkedin.com/in/MrAhmadAwais/"><img alt="LinkedIn @MrAhmadAwais" align="center" src="https://img.shields.io/badge/LINKEDIN-gray.svg?colorB=0077b5&colorA=0077b5&style=flat" /></a>&nbsp;<small><strong>(connect)</strong> WITH THE LINKEDIN PROFILE Y'ALL</small></p>
+<p><a href="https://github.com/ahmadawais"><img alt="GitHub @AhmadAwais" align="center" src="https://img.shields.io/badge/GITHUB-gray.svg?colorB=6cc644&style=flat" /></a>&nbsp;<small><strong>(follow)</strong> TO STAY UP TO DATE ON FREE & OPEN SOURCE SOFTWARE</small></p>
+<p><a href="https://twitter.com/MrAhmadAwais/"><img alt="Twitter @MrAhmadAwais" align="center" src="https://img.shields.io/badge/TWITTER-gray.svg?colorB=1da1f2&style=flat" /></a>&nbsp;<small><strong>(follow)</strong> TO GET ONE DEV MINUTE DAILY HOT TIPS & TROLLS</small></p>
+<p><a href="https://www.youtube.com/AhmadAwais"><img alt="YouTube AhmadAwais" align="center" src="https://img.shields.io/badge/YOUTUBE-gray.svg?colorB=ff0000&style=flat" /></a>&nbsp;<small><strong>(subscribe)</strong> TO TECH TALKS & ONE DEV MINUTE VIDEOS</small></p>
+<p><a href="https://AhmadAwais.com/"><img alt="Blog: AhmadAwais.com" align="center" src="https://img.shields.io/badge/MY%20BLOG-gray.svg?colorB=4D2AFF&style=flat" /></a>&nbsp;<small><strong>(read)</strong> MOSTLY LONG FORM TECHNICAL ARTICLES</small></p>
+<p><a href="https://www.linkedin.com/in/MrAhmadAwais/"><img alt="LinkedIn @MrAhmadAwais" align="center" src="https://img.shields.io/badge/LINKEDIN-gray.svg?colorB=0077b5&style=flat" /></a>&nbsp;<small><strong>(connect)</strong> WITH THE LINKEDIN PROFILE Y'ALL</small></p>
 </div>
 
 <br>
@@ -937,5 +979,7 @@ without wasting a 1,000 hours</a> →</p>
 [![Sponsor Awais](https://img.shields.io/badge/-Sponsor%20Awais%20%E2%86%92-gray.svg?colorA=6A788D&colorB=6A788D&style=flat)](https://github.com/AhmadAwais/sponsor/?utm_source=FOSS) [![Node.js CLI Automation](https://img.shields.io/badge/-NodeCLI.com%20%E2%86%92-gray.svg?colorA=6A788D&colorB=6A788D&style=flat)](https://NodeCLI.com/?utm_source=FOSS)
 [![VSCode](https://img.shields.io/badge/-VSCode.pro%20%E2%86%92-gray.svg?colorA=6A788D&colorB=6A788D&style=flat)](https://VSCode.pro/?utm_source=GitHubFOSS)
 [![Follow @MrAhmadAwais on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
+
+[![Sponsor](https://raw.githubusercontent.com/ahmadawais/stuff/master/sponsor/sponsor.jpg)][sponsor]
 
 [sponsor]: https://github.com/AhmadAwais/sponsor

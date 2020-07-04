@@ -1,6 +1,6 @@
 {
 	"name": "corona-cli",
-	"version": "5.3.1",
+	"version": "5.3.2",
 	"description": "Track the Coronavirus disease (COVID-19).",
 	"license": "MIT",
 	"repository": "ahmadawais/corona-cli",
