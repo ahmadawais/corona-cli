@@ -32,6 +32,18 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [5.3.3](https://github.com/ahmadawais/corona-cli/compare/5.3.2...5.3.3)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Remove Scarf [`c0f43de`](https://github.com/ahmadawais/corona-cli/commit/c0f43dec7f3218439a5bb715d058178f1552fcb5) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [5.3.2](https://github.com/ahmadawais/corona-cli/compare/5.3.1...5.3.2)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -47,6 +59,10 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Color [`00d78fc`](https://github.com/ahmadawais/corona-cli/commit/00d78fc35c8875eab01d7b52ff3b03391a050e73) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`b590251`](https://github.com/ahmadawais/corona-cli/commit/b59025107322e92dd12b3810fd9570293829c09f) <br>
 
 <br>
 
