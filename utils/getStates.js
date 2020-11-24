@@ -69,7 +69,6 @@ module.exports = async (
 			  {id: 'active', title: 'Active'},
 			]
 		});
-
 		csvWriter.writeRecords(allStates);
 		console.log(output.toString());
 	}
