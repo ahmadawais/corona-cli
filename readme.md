@@ -24,6 +24,10 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 
 <br>
 
+[![Watch Awais talk about corona-cli](./.github/talk.jpg)](https://www.youtube.com/watch?v=8pMxyyApG8g)
+
+<br>
+
 [![📟](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/install.png)](./../../)
 
 ## Install
@@ -38,7 +42,6 @@ npx corona-cli
 
 [![📟](./.github/install.gif)](./../../)
 
-[![Watch Awais talk about corona-cli](./.github/talk.jpg)](https://www.youtube.com/watch?v=8pMxyyApG8g)
 
 <br>
 
