@@ -20,6 +20,10 @@ const getCountryChart = require('./utils/getCountryChart.js');
 const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
+const getContinents = require('./utils/getContinents');
+const getContinent = require('./utils/getContinent')
+const { continentsMap } = require('./utils/constants');
+
 const {
 	style,
 	single,
@@ -47,8 +51,10 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	await init(minimal || json);
 	const spinner = ora({ text: '' });
 	input === 'help' && (await cli.showHelp(0));
-	const states = input === 'states' ? true : false;
-	const country = states ? '' : input;
+	const states = input === 'states';
+	const continents = input === 'continents'
+	const continent = input && continentsMap.has(input.toUpperCase()) ? input : false;
+	const country = continents || continent || states ? false : input;
 
 	// Table
 	const head = xcolor ? single : colored;
@@ -64,9 +70,11 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 	const lastUpdated = await getWorldwide(output, states, json);
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
-	await getCountries(spinner, output, states, country, options);
+	await getContinents(spinner, output, states, continents, options)
+	await getContinent(spinner, output, continent, options)
+	await getCountries(spinner, output, states, country, continents || continent, options);
 	await getCountryChart(spinner, country, options);
-	await getBar(spinner, country, states, options);
+	await getBar(spinner, country, states, continents, options);
 
 	theEnd(lastUpdated, states, minimal || json);
 })();

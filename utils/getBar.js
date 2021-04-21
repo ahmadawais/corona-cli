@@ -9,10 +9,26 @@ const handleError = require('cli-handle-error');
 const sortValidation = require('./sortValidation.js');
 const sortStatesValidation = require('./sortStatesValidation.js');
 
+const statesURL = `https://corona.lmao.ninja/v2/states`;
+const countriesURL = `https://corona.lmao.ninja/v2/countries`;
+const continentsURL = 'https://corona.lmao.ninja/v2/continents';
+
+
+const getApiUrl = (states, countryName, continents) => {
+	if(states) {
+		return ['state', statesURL];
+	} else if(continents) {
+		return ['continent', continentsURL];
+	} else {
+		return ['country', countriesURL];
+	}
+}
+
 module.exports = async (
 	spinner,
 	countryName,
 	states,
+	continents,
 	{ bar, log, sortBy, limit, reverse }
 ) => {
 	if (!countryName && bar) {
@@ -25,11 +41,10 @@ module.exports = async (
 			logScale = x => (x === 0 ? undefined : Math.log(x));
 		}
 
-		const statesURL = `https://corona.lmao.ninja/v2/states`;
-		const countriesURL = `https://corona.lmao.ninja/v2/countries`;
+		const [regionType, regionApiUrl] = getApiUrl(states, countryName, continents);
 
 		const [err, res] = await to(
-			axios.get(states ? statesURL : countriesURL)
+			axios.get(regionApiUrl)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		let allRegions = res.data;
@@ -46,11 +61,11 @@ module.exports = async (
 		barRegions = {};
 		allRegions.map(region => {
 			if (customSort) {
-				barRegions[region[states ? 'state' : 'country']] = [
+				barRegions[region[regionType]] = [
 					logScale(region[sortingKeys[sortBy]])
 				];
 			} else {
-				barRegions[region[states ? 'state' : 'country']] = [
+				barRegions[region[regionType]] = [
 					logScale(region.cases),
 					logScale(region.deaths),
 					logScale(
