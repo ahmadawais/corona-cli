@@ -12,12 +12,12 @@ module.exports = async (
 	output,
 	states,
 	countryName,
-	{ sortBy, limit, reverse, bar, json }
+	{ sortBy, limit, reverse, bar, json, yesterday }
 ) => {
 	if (!countryName && !states && !bar) {
 		sortValidation(sortBy, spinner);
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/countries`)
+			axios.get(`https://corona.lmao.ninja/v2/countries?yesterday=${yesterday}`)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		let allCountries = response.data;

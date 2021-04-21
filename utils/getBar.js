@@ -13,7 +13,7 @@ module.exports = async (
 	spinner,
 	countryName,
 	states,
-	{ bar, log, sortBy, limit, reverse }
+	{ bar, log, sortBy, limit, reverse, yesterday }
 ) => {
 	if (!countryName && bar) {
 		// Handle custom sorting and validate it.
@@ -25,8 +25,8 @@ module.exports = async (
 			logScale = x => (x === 0 ? undefined : Math.log(x));
 		}
 
-		const statesURL = `https://corona.lmao.ninja/v2/states`;
-		const countriesURL = `https://corona.lmao.ninja/v2/countries`;
+		const statesURL = `https://corona.lmao.ninja/v2/states?yesterday=${yesterday}`;
+		const countriesURL = `https://corona.lmao.ninja/v2/countries?yesterday=${yesterday}`;
 
 		const [err, res] = await to(
 			axios.get(states ? statesURL : countriesURL)

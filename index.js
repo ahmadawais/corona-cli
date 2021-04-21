@@ -40,7 +40,8 @@ const log = cli.flags.log;
 const bar = cli.flags.bar;
 const minimal = cli.flags.minimal;
 const json = cli.flags.json;
-const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
+const yesterday = cli.flags.yesterday;
+const options = { sortBy, limit, reverse, minimal, chart, log, json, bar, yesterday };
 
 (async () => {
 	// Init.
@@ -61,7 +62,7 @@ const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
 
 	// Display data.
 	spinner.start();
-	const lastUpdated = await getWorldwide(output, states, json);
+	const lastUpdated = await getWorldwide(output, states, options);
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
 	await getCountries(spinner, output, states, country, options);
