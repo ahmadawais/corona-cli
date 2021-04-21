@@ -6,10 +6,14 @@ const moment = require('moment');
 const blessed = require('blessed');
 const contrib = require('blessed-contrib');
 
-module.exports = async (spinner, countryName, { chart, log }) => {
+module.exports = async (spinner, countryName, { chart, log, lastdays }) => {
 	if (countryName && chart) {
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/historical/${countryName}`)
+			axios.get(`https://corona.lmao.ninja/v2/historical/${countryName}`, {
+				params: {
+					lastdays
+				}
+			})
 		);
 		handleError(`API is down, try again later.`, err, false);
 		if (response.status === 404) {
@@ -39,7 +43,7 @@ module.exports = async (spinner, countryName, { chart, log }) => {
 			showLegend: true,
 			legend: { width: 20 },
 			wholeNumbersOnly: false,
-			label: countryName.toUpperCase()
+			label: `${countryName.toUpperCase()} cases in the last ${lastdays} days`
 		});
 		const dates = Object.keys(response.data.timeline.cases).map(shortDate);
 		const cases = Object.values(response.data.timeline.cases);

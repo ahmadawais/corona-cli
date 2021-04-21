@@ -35,12 +35,13 @@ const xcolor = cli.flags.xcolor;
 const sortBy = cli.flags.sort;
 const reverse = cli.flags.reverse;
 const limit = Math.abs(cli.flags.limit);
+const lastdays = Math.abs(cli.flags.lastdays);
 const chart = cli.flags.chart;
 const log = cli.flags.log;
 const bar = cli.flags.bar;
 const minimal = cli.flags.minimal;
 const json = cli.flags.json;
-const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
+const options = { sortBy, limit, reverse, minimal, chart, log, lastdays, json, bar };
 
 (async () => {
 	// Init.

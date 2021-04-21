@@ -25,7 +25,8 @@ module.exports = meow(
 	  ${green(`corona`)} ${cyan(`china`)}
 	  ${green(`corona`)} ${cyan(`states`)}
 	  ${green(`corona`)} ${yellow(`--bar`)}
-	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}
+		${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}
+		${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--lastdays 60`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
 	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}
@@ -62,6 +63,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'c'
+			},
+			lastdays: {
+				type: 'number',
+				default: 30,
+				alias: 'd'
 			},
 			log: {
 				type: 'boolean',
