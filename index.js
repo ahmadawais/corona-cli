@@ -20,13 +20,16 @@ const getCountryChart = require('./utils/getCountryChart.js');
 const getBar = require('./utils/getBar.js');
 const getWorldwide = require('./utils/getWorldwide.js');
 const getCountries = require('./utils/getCountries.js');
+const getVaccines = require('./utils/getVaccines');
 const {
 	style,
 	single,
 	colored,
 	singleStates,
 	coloredStates,
-	borderless
+	borderless,
+	vaccinesTable,
+	coloredVaccinesTable
 } = require('./utils/table.js');
 
 // Cli.
@@ -40,33 +43,41 @@ const log = cli.flags.log;
 const bar = cli.flags.bar;
 const minimal = cli.flags.minimal;
 const json = cli.flags.json;
-const options = { sortBy, limit, reverse, minimal, chart, log, json, bar };
+const vaccines = cli.flags.vaccines;
+const options = { sortBy, limit, reverse, minimal, chart, vaccines, log, json, bar };
 
 (async () => {
 	// Init.
 	await init(minimal || json);
 	const spinner = ora({ text: '' });
 	input === 'help' && (await cli.showHelp(0));
-	const states = input === 'states' ? true : false;
+	const states = input === 'states';
 	const country = states ? '' : input;
 
 	// Table
 	const head = xcolor ? single : colored;
 	const headStates = xcolor ? singleStates : coloredStates;
+	const headVaccines = xcolor ? vaccinesTable : coloredVaccinesTable;
 	const border = minimal ? borderless : {};
 	const OutputFormat = json ? JsonOutput : Table;
-	const output = !states
-		? new OutputFormat({ head, style, chars: border })
-		: new OutputFormat({ head: headStates, style, chars: border });
+	let output;
+	if(states){
+		output = new OutputFormat({ head: headStates, style, chars: border });
+	}else if(vaccines){
+		output = new OutputFormat({ head: headVaccines, style, chars: border });
+	}else{
+		output = new OutputFormat({ head, style, chars: border });
+	}
 
 	// Display data.
 	spinner.start();
-	const lastUpdated = await getWorldwide(output, states, json);
+	const lastUpdated = await getWorldwide(output, states,vaccines, json);
 	await getCountry(spinner, output, states, country, options);
 	await getStates(spinner, output, states, options);
+	await getVaccines(spinner, output, options);
 	await getCountries(spinner, output, states, country, options);
 	await getCountryChart(spinner, country, options);
 	await getBar(spinner, country, states, options);
 
-	theEnd(lastUpdated, states, minimal || json);
+	theEnd(lastUpdated, states, vaccines ,minimal || json);
 })();

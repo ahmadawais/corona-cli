@@ -12,12 +12,12 @@ module.exports = async (
 	output,
 	states,
 	countryName,
-	{ sortBy, limit, reverse, bar, json }
+	{ sortBy, limit, reverse, bar, vaccines, json }
 ) => {
-	if (!countryName && !states && !bar) {
+	if (!countryName && !states && !bar && !vaccines) {
 		sortValidation(sortBy, spinner);
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/countries`)
+			axios.get(`https://corona.lmao.ninja/v3/covid-19/countries`)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		let allCountries = response.data;
@@ -35,7 +35,6 @@ module.exports = async (
 
 		// Limit.
 		allCountries = allCountries.slice(0, limit);
-
 		// Push selected data.
 		allCountries.map((oneCountry, count) => {
 			output.push([

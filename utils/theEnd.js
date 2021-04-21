@@ -31,11 +31,27 @@ ${dim(`❯ `)}${cyan(`Per Million:`)} Affected patients per million
 `)
 	);
 
-module.exports = async (lastUpdated, states, minimal) => {
+const infoVaccins = () =>
+	console.log(
+		dim(`
+			\n${sym.info} ${cyan(`KEY:`)}
+${dim(`❯ `)}${cyan(`Candidate:`)} Name of the vaccine
+${dim(`❯ `)}${cyan(`Mechanism:`)} What mechanism the vaccine uses
+${dim(`❯ `)}${cyan(`TrialPhase:`)} Current trialPhase of vaccine
+${dim(`❯ `)}${cyan(`Institutions:`)} Institution which tests the vaccine
+`)
+	);
+
+module.exports = async (lastUpdated, states, vaccines, minimal) => {
 	if (minimal) return console.log();
 	console.log(dim(`${sym.info} ${cyan(`Last Updated:`)} ${lastUpdated}`));
-	states && infoStates();
-	!states && infoCountries();
+	if(states){
+		infoStates();
+	}else if(vaccines){
+		infoVaccins();
+	}else{
+		infoCountries();
+	}
 	console.log(
 		`\n${sym.success} ${dim(
 			`Star the repo for updates → https://git.io/corona-cli`

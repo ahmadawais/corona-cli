@@ -7,7 +7,7 @@ const handleError = require('cli-handle-error');
 module.exports = async (spinner, table, states, countryName, options) => {
 	if (countryName && !states && !options.chart) {
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/countries/${countryName}`)
+			axios.get(`https://corona.lmao.ninja/v3/covid-19/countries/${countryName}`)
 		);
 		exitCountry(err, spinner, countryName);
 		err && spinner.stopAndPersist();

@@ -19,6 +19,7 @@ module.exports = meow(
 	  ${yellow(`-g`)}, ${yellow(`--log`)}       Print logarithmic chart
 	  ${yellow(`-x`)}, ${yellow(`--xcolor`)}    Single colored output
 	  ${yellow(`-m`)}, ${yellow(`--minimal`)}   Minimalistic CLI output
+	  ${yellow(`-v`)}, ${yellow(`--vaccine`)}   Prints current vaccine data
 	  ${yellow(`-j`)}, ${yellow(`--json`)}      Output JSON only data
 
 	Examples
@@ -28,6 +29,7 @@ module.exports = meow(
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)}
 	  ${green(`corona`)} ${cyan(`china`)} ${yellow(`--chart`)} ${yellow(`--log`)}
 	  ${green(`corona`)} ${yellow(`--sort`)} ${cyan(`cases-today`)}
+	  ${green(`corona`)} ${yellow(`-v`)}
 	  ${green(`corona`)} ${yellow(`-s`)} ${cyan(`critical`)}
 
 	❯ You can also run command + option at once:
@@ -77,6 +79,11 @@ module.exports = meow(
 				type: 'boolean',
 				default: false,
 				alias: 'm'
+			},
+			vaccines: {
+				type: 'boolean',
+				default: false,
+				alias: 'v'
 			},
 			json: {
 				type: 'boolean',

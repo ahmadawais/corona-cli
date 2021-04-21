@@ -20,6 +20,20 @@ module.exports = {
 		`Critical`,
 		`Per Million`
 	],
+	vaccinesTable: [
+		`#`,
+		`Candidate`,
+		`Mechanism`,
+		`TrialPhase`,
+		`Institutions`,
+	],
+	coloredVaccinesTable: [
+		`#`,
+		`Candidate`,
+		`${red(`Mechanism`)}`,
+		`${green(`TrialPhase`)}`,
+		`${yellow(`Institutions`)}`,
+	],
 	colored: [
 		`#`,
 		`Country`,
@@ -86,5 +100,11 @@ module.exports = {
 		deaths: 'deaths',
 		'deaths-today': 'todayDeaths',
 		active: 'active'
+	},
+	sortingVaccineKeys:{
+		candidate: 'candidate',
+		mechanism: 'mechanism',
+		trialPhase: 'trialPhase',
+		institutions: 'institutions'
 	}
 };
