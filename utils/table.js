@@ -39,7 +39,8 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`Deaths`,
 		`Deaths ${dim(`(today)`)}`,
-		`Active`
+		`Active`,
+		`Per Million`
 	],
 	coloredStates: [
 		`#`,
@@ -48,7 +49,8 @@ module.exports = {
 		`Cases ${dim(`(today)`)}`,
 		`${red(`Deaths`)}`,
 		`${red(`Deaths (today)`)}`,
-		`${yellow(`Active`)}`
+		`${yellow(`Active`)}`,
+		`Per Million`
 	],
 	style: { head: ['cyan'] },
 	borderless: {
@@ -85,6 +87,7 @@ module.exports = {
 		'cases-today': 'todayCases',
 		deaths: 'deaths',
 		'deaths-today': 'todayDeaths',
-		active: 'active'
+		active: 'active',
+		'per-million': 'casesPerOneMillion'
 	}
 };
