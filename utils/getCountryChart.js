@@ -9,7 +9,9 @@ const contrib = require('blessed-contrib');
 module.exports = async (spinner, countryName, { chart, log }) => {
 	if (countryName && chart) {
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/historical/${countryName}`)
+			axios.get(
+				`https://disease.sh/v3/covid-19/historical/${countryName}`
+			)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		if (response.status === 404) {

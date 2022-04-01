@@ -16,7 +16,7 @@ module.exports = async (
 	if (states && !bar) {
 		sortStatesValidation(sortBy, spinner);
 		const [err, response] = await to(
-			axios.get(`https://corona.lmao.ninja/v2/states`)
+			axios.get(`https://disease.sh/v3/covid-19/states`)
 		);
 		handleError(`API is down, try again later.`, err, false);
 		let allStates = response.data;

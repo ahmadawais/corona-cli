@@ -25,8 +25,8 @@ module.exports = async (
 			logScale = x => (x === 0 ? undefined : Math.log(x));
 		}
 
-		const statesURL = `https://corona.lmao.ninja/v2/states`;
-		const countriesURL = `https://corona.lmao.ninja/v2/countries`;
+		const statesURL = `https://disease.sh/v3/covid-19/states`;
+		const countriesURL = `https://disease.sh/v3/covid-19/countries`;
 
 		const [err, res] = await to(
 			axios.get(states ? statesURL : countriesURL)
