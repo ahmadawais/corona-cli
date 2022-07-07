@@ -5,12 +5,28 @@ class JsonOutput {
 	}
 
 	get asObject() {
+		const keys = this.getKeys();
+
 		return this.values.map(values => {
 			return values.reduce((acc, value, index) => {
-				acc[this.options.head[index]] = value;
+				if(index === 0) { // skip # column
+					return acc;
+				}
+
+				acc[keys[index]] = value;
 				return acc;
 			}, {});
 		});
+	}
+
+	getKeys() {
+		return this.options.head.map(this.toKebabCase);
+	}
+
+	toKebabCase(str) {
+		return str.toLowerCase()
+			.replace(/ {1,}/g, '-')
+			.replace(/\(|\)/g, '');
 	}
 
 	push(value) {
