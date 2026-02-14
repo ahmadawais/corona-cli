@@ -14,8 +14,9 @@ Track the Coronavirus disease (COVID-19) or the Novel Coronavirus Strain.
 <br>
 
 # corona-cli
-
-- 🚀 Get worldwide Coronavirus disease (COVID-19) reporting
+- 🤘 Like Perplexity but for COVID data
+- 🚀 Served 12+ Billion queries when the world needed it
+- 🌎 Get worldwide Coronavirus disease (COVID-19) reporting
 - 🤯 Active daily reporting of your country's COVID-19 statistics
 - 🇺🇸 Get US States data for Coronavirus disease reports across the US
 - 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million
