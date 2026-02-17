@@ -40,7 +40,8 @@ module.exports = async (
 				format(oneState.todayCases),
 				format(oneState.deaths),
 				format(oneState.todayDeaths),
-				format(oneState.active)
+				format(oneState.active),
+				format(oneState.casesPerOneMillion)
 			]);
 		});
 
