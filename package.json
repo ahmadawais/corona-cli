@@ -54,6 +54,7 @@
 		"cli-table3": "^0.6.0",
 		"cli-welcome": "^1.4.0",
 		"comma-number": "^2.0.1",
+		"csv-writer": "^1.6.0",
 		"lodash.orderby": "^4.6.0",
 		"log-symbols": "^4.0.0",
 		"meow": "^6.1.0",

@@ -6,6 +6,7 @@ const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const orderBy = require('lodash.orderby');
 const sortStatesValidation = require('./sortStatesValidation.js');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 module.exports = async (
 	spinner,
@@ -49,6 +50,21 @@ module.exports = async (
 		if (!json) {
 			spinner.info(`${cyan(`Sorted by:`)} ${sortBy}${isRev}`);
 		}
+
+		const csvWriter = createCsvWriter({
+			path: 'output/chart.csv',
+			header: [
+			  {id: 'state', title: 'State'},
+			  {id: 'cases', title: 'Cases'},
+			  {id: 'todayCases', title: 'Cases (today)'},
+			  {id: 'deaths', title: 'Deaths'},
+			  {id: 'todayDeaths', title: 'Deaths (today)'},
+			  {id: 'active', title: 'Active'},
+			]
+		});
+
+		csvWriter.writeRecords(allStates);
+
 		console.log(output.toString());
 	}
 };
