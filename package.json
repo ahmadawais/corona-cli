@@ -67,6 +67,6 @@
 	},
 	"scripts": {
 		"format": "prettier --write \"./**/*.{js,json}\"",
-		"test": "node test.js"
+		"test": "bash tests/test.sh"
 	}
 }
